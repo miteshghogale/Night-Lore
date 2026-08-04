@@ -1,11 +1,197 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import StoryCard from '../components/StoryCard.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { getCollection } from 'astro:content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const allStories = await getCollection('stories', ({ data }) => !data.draft);
+const sortedStories = allStories.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const featuredStory = sortedStories.find(s => s.data.category === 'Real Paranormal Cases') || sortedStories[0];
+const recentStories = sortedStories.filter(s => s.id !== featuredStory.id);
+
+const categoriesList = [
+  { name: 'Real Paranormal Cases', desc: 'Researched police logs, court transcripts, and ballistics data.', icon: '📜' },
+  { name: 'Country Stories', desc: 'Regional folklore, rural apparitions, and local oral histories.', icon: '🌲' },
+  { name: 'Haunted Places', desc: 'Historical locations, architecture, and ongoing structural phenomena.', icon: '🏛️' },
+  { name: 'Unsolved Mysteries', desc: 'High strangeness, unexplained occurrences, and physical anomalies.', icon: '❓' },
+  { name: 'Urban Legends', desc: 'Modern myths, regional dread, and documented witness affidavits.', icon: '🏙️' },
+  { name: 'First-Person Accounts', desc: 'Direct eyewitness statements submitted for editorial review.', icon: '👁️' },
+  { name: 'Movie Inspiration', desc: 'Separating true archival events from cinematic exaggeration.', icon: '🎬' },
+  { name: 'Psychology of Fear', desc: 'Neurological, physiological, and sleep-cycle explanations.', icon: '🧠' },
+];
+
+const categoryCounts = categoriesList.map(cat => ({
+  ...cat,
+  count: allStories.filter(s => s.data.category === cat.name).length
+}));
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Night Lore — Researched Paranormal Archive & Unsolved Case Files">
+  <!-- Hero Section -->
+  <section class="relative py-16 sm:py-24 text-center hero-glow-bg border-b border-[var(--color-border)] mb-16 -mx-4 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-xs font-mono-meta text-[var(--color-text-muted)] mb-6">
+        <span class="w-2 h-2 rounded-full bg-[var(--glow)] animate-pulse"></span>
+        ARCHIVAL STATUS: ACTIVE & VERIFIED
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-[var(--color-text)] mb-6 leading-tight">
+        Real Hauntings. <br />
+        <span class="text-[var(--glow)]">Researched & Sourced.</span>
+      </h1>
+
+      <p class="text-lg text-[var(--color-text-muted)] leading-relaxed mb-8 max-w-2xl mx-auto">
+        Night Lore is a non-fictional paranormal repository documenting real-world anomalies, ballistics transcripts, and eyewitness testimonies—presenting both extraordinary claims and rigorous scientific skepticism.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#featured" class="btn-primary">
+          Explore Featured Case
+        </a>
+        <a href="/submit" class="btn-secondary">
+          Submit An Encounter
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Case Spotlight -->
+  {featuredStory && (
+    <section id="featured" class="mb-20">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
+          // FEATURED CASE DOSSIER
+        </h2>
+        <span class="font-mono-meta text-xs text-[var(--glow)]">SPOTLIGHT</span>
+      </div>
+
+      <div class="nl-card p-6 sm:p-8 relative overflow-hidden group">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-4 flex-wrap">
+              <StatusBadge status={featuredStory.data.status} />
+              <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+                {featuredStory.data.category}
+              </span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-bold text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-3">
+              <a href={`/story/${featuredStory.id}`}>
+                {featuredStory.data.title}
+              </a>
+            </h3>
+
+            <p class="text-base text-[var(--color-text-muted)] leading-relaxed mb-6">
+              {featuredStory.data.dek}
+            </p>
+
+            <div class="flex items-center gap-4 flex-wrap text-xs font-mono-meta text-[var(--color-text-dim)]">
+              <span>📍 {featuredStory.data.location}</span>
+              <span>📅 Event Date: {featuredStory.data.eventDate}</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-between h-full bg-[var(--color-surface-2)] p-6 rounded-md border border-[var(--color-border)] gap-6">
+            <div>
+              <h4 class="font-mono-meta text-xs uppercase text-[var(--color-text-dim)] mb-2">Audio Narration</h4>
+              <p class="text-xs text-[var(--color-text-muted)] mb-4">
+                Listen to the full audio reconstruction narrated by AI synthesis.
+              </p>
+              {featuredStory.data.audioUrl && (
+                <button
+                  onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${featuredStory.data.audioUrl}', title: '${featuredStory.data.title.replace(/'/g, "\\'")}' } }))`}
+                  class="btn-secondary w-full text-xs justify-center gap-2 text-[var(--glow)] border-[var(--glow)]"
+                >
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Listen ({featuredStory.data.audioDuration || 'Listen'})
+                </button>
+              )}
+            </div>
+
+            <a href={`/story/${featuredStory.id}`} class="btn-primary w-full text-xs justify-center">
+              Read Full Dossier →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Category Grid -->
+  <section class="mb-20">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
+        // TAXONOMY ARCHIVE
+      </h2>
+      <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">8 CATEGORIES</span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {categoryCounts.map(cat => (
+        <a href={`/category/${cat.name}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--color-border-hover)]">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">{cat.icon}</span>
+              <span class="font-mono-meta text-xs px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-text-dim)] group-hover:border-[var(--glow)] group-hover:text-[var(--glow)] transition-colors">
+                {cat.count} {cat.count === 1 ? 'Case' : 'Cases'}
+              </span>
+            </div>
+            <h3 class="font-semibold text-base text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-1.5">
+              {cat.name}
+            </h3>
+            <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
+              {cat.desc}
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Latest Stories -->
+  <section class="mb-20">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
+        // RECENT CASE FILES
+      </h2>
+      <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">SHOWING {recentStories.length} STORIES</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {recentStories.map(story => (
+        <StoryCard
+          title={story.data.title}
+          dek={story.data.dek}
+          slug={story.id}
+          category={story.data.category}
+          status={story.data.status}
+          location={story.data.location}
+          eventDate={story.data.eventDate}
+          pubDate={story.data.pubDate}
+          audioDuration={story.data.audioDuration}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Reader Submission Banner -->
+  <section class="nl-card p-8 sm:p-12 text-center relative overflow-hidden">
+    <div class="max-w-2xl mx-auto relative z-10">
+      <span class="font-mono-meta text-xs uppercase text-[var(--glow)] tracking-widest block mb-3">
+        CONFIDENTIAL SUBMISSIONS
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-bold text-[var(--color-text)] mb-4 tracking-tight">
+        Have You Witnessed an Unexplained Anomaly?
+      </h2>
+      <p class="text-sm sm:text-base text-[var(--color-text-muted)] mb-8 leading-relaxed">
+        We review first-person paranormal encounters, eyewitness affidavits, and localized urban legends. All entries undergo editorial review before publishing.
+      </p>
+      <a href="/submit" class="btn-primary">
+        Submit Your Encounter For Review
+      </a>
+    </div>
+  </section>
 </Layout>

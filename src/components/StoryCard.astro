@@ -1,0 +1,71 @@
+---
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+  title: string;
+  dek: string;
+  slug: string;
+  category: string;
+  status: 'unresolved' | 'witnessed' | 'disputed' | 'debunked' | 'ongoing';
+  location: string;
+  eventDate: string;
+  pubDate: Date | string;
+  audioDuration?: string;
+}
+
+const { title, dek, slug, category, status, location, eventDate, pubDate, audioDuration } = Astro.props;
+
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric'
+});
+---
+
+<article class="nl-card p-6 flex flex-col justify-between group cursor-pointer relative">
+  <div>
+    <!-- Top Metadata Row -->
+    <div class="flex items-center justify-between gap-3 mb-3 flex-wrap">
+      <StatusBadge status={status} />
+      <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+        {category}
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-xl font-semibold tracking-[ -0.02em ] text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-2.5 line-clamp-2">
+      <a href={`/story/${slug}`} class="focus:outline-none focus:underline">
+        <span class="absolute inset-0 z-10"></span>
+        {title}
+      </a>
+    </h3>
+
+    <!-- Dek Summary -->
+    <p class="text-sm text-[var(--color-text-muted)] line-clamp-3 leading-relaxed mb-4">
+      {dek}
+    </p>
+  </div>
+
+  <!-- Bottom Metadata Footer -->
+  <div class="pt-4 border-t border-[var(--color-border)] flex items-center justify-between text-xs font-mono-meta text-[var(--color-text-dim)] flex-wrap gap-2 z-20">
+    <div class="flex items-center gap-1.5 truncate max-w-[60%]">
+      <svg class="w-3.5 h-3.5 flex-shrink-0 text-[var(--color-text-dim)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+      </svg>
+      <span class="truncate">{location}</span>
+    </div>
+
+    <div class="flex items-center gap-3 flex-shrink-0">
+      {audioDuration && (
+        <span class="flex items-center gap-1 text-[var(--glow)]">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          {audioDuration}
+        </span>
+      )}
+      <span>{formattedDate}</span>
+    </div>
+  </div>
+</article>

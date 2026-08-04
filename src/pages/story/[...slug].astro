@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('stories', ({ data }) => !data.draft);
+  return stories.map(story => ({
+    params: { slug: story.id },
+    props: { story }
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+
+const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<Layout
+  title={`${story.data.title} — Night Lore Archive`}
+  description={story.data.dek}
+  articleMeta={{
+    publishedTime: story.data.pubDate.toISOString(),
+    category: story.data.category,
+    tags: story.data.tags
+  }}
+>
+  <article class="max-w-4xl mx-auto">
+    <!-- Navigation Breadcrumbs -->
+    <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-6 flex-wrap">
+      <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+      <span>/</span>
+      <a href={`/category/${story.data.category}`} class="hover:text-[var(--glow)]">
+        {story.data.category.toUpperCase()}
+      </a>
+      <span>/</span>
+      <span class="text-[var(--color-text-muted)] truncate max-w-[200px]">{story.id}</span>
+    </div>
+
+    <!-- Article Header -->
+    <header class="mb-10 pb-8 border-b border-[var(--color-border)]">
+      <div class="flex items-center gap-3 mb-4 flex-wrap">
+        <StatusBadge status={story.data.status} />
+        <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+          DOSSIER ID: NL-{story.id.toUpperCase()}
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4 leading-tight">
+        {story.data.title}
+      </h1>
+
+      <p class="text-lg sm:text-xl text-[var(--color-text-muted)] leading-relaxed mb-6 font-normal">
+        {story.data.dek}
+      </p>
+
+      <!-- Metadata Box -->
+      <div class="nl-card p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4 font-mono-meta text-xs text-[var(--color-text-dim)]">
+        <div class="flex items-center gap-6 flex-wrap">
+          <div class="flex items-center gap-1.5">
+            <span class="text-[var(--glow)]">📍</span>
+            <span>{story.data.location}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span>📅</span>
+            <span>Event: {story.data.eventDate}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span>Published: {formattedPubDate}</span>
+          </div>
+        </div>
+
+        {story.data.audioUrl && (
+          <button
+            onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${story.data.audioUrl}', title: '${story.data.title.replace(/'/g, "\\'")}' } }))`}
+            class="btn-primary text-xs py-1.5 px-3 gap-1.5"
+          >
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Narration ({story.data.audioDuration || 'Audio'})
+          </button>
+        )}
+      </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <div class="prose-dark max-w-none leading-relaxed mb-12">
+      <Content />
+    </div>
+
+    <!-- Sources & Bibliography Section (Crucial for AdSense & E-E-A-T) -->
+    {story.data.sources && story.data.sources.length > 0 && (
+      <section class="nl-card p-6 sm:p-8 mb-12 border-l-2 border-l-[var(--glow)]">
+        <h3 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">
+          // ARCHIVAL SOURCES & BIBLIOGRAPHY
+        </h3>
+        <ul class="space-y-3 font-mono-meta text-xs">
+          {story.data.sources.map(source => (
+            <li class="flex items-start gap-2">
+              <span class="text-[var(--glow)]">🔗</span>
+              <a
+                href={source.url}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                class="text-[var(--color-text-muted)] hover:text-[var(--glow)] transition-colors underline underline-offset-4"
+              >
+                {source.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p class="text-xs text-[var(--color-text-dim)] mt-4">
+          Note: Outbound links direct to public domain historical archives, legal filings, and official government FOIA documents.
+        </p>
+      </section>
+    )}
+
+    <!-- Tags -->
+    {story.data.tags && (
+      <div class="flex items-center gap-2 flex-wrap mb-12 font-mono-meta text-xs">
+        <span class="text-[var(--color-text-dim)]">TAGS:</span>
+        {story.data.tags.map(tag => (
+          <span class="px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-text-muted)]">
+            #{tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Similar Encounter Prompt -->
+    <div class="nl-card p-8 text-center bg-[var(--color-surface-2)] border-[var(--color-border)]">
+      <h3 class="text-xl font-bold text-[var(--color-text)] mb-2">
+        Have Information or a Similar Experience?
+      </h3>
+      <p class="text-sm text-[var(--color-text-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
+        Our research team reviews first-person accounts, localized folklore, and secondary evidence related to {story.data.location}.
+      </p>
+      <a href="/submit" class="btn-primary text-xs">
+        Submit Your Encounter For Review
+      </a>
+    </div>
+  </article>
+</Layout>

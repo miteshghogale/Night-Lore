@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const categories = [
+  'Real Paranormal Cases',
+  'Country Stories',
+  'Haunted Places',
+  'Unsolved Mysteries',
+  'Urban Legends',
+  'First-Person Accounts',
+  'Movie Inspiration',
+  'Psychology of Fear'
+];
+---
+
+<Layout
+  title="Submit an Encounter — Night Lore Archive"
+  description="Submit a real paranormal encounter, localized haunting, or unexplained anomaly for editorial moderation and archival publishing."
+>
+  <div class="max-w-3xl mx-auto">
+    <!-- Header -->
+    <div class="mb-10 border-b border-[var(--color-border)] pb-8">
+      <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-3">
+        <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+        <span>/</span>
+        <span class="text-[var(--glow)]">SUBMIT CASE</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--color-text)] mb-3">
+        Submit a Paranormal Encounter
+      </h1>
+
+      <p class="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
+        Night Lore archives non-fictional eyewitness accounts and researched anomalies. Submitted entries are held in moderation status (<code class="text-[var(--status-unresolved)] font-mono-meta text-xs">pending</code>) until verified by our editorial board.
+      </p>
+    </div>
+
+    <!-- Feedback Toast Alert -->
+    <div id="submit-toast" class="hidden mb-8 p-4 rounded-md border text-sm font-mono-meta"></div>
+
+    <!-- Form Container -->
+    <form id="submission-form" class="nl-card p-6 sm:p-8 space-y-6">
+      <!-- Hidden Honeypot Field -->
+      <div class="hidden" aria-hidden="true">
+        <label for="website_url">Do not fill this out</label>
+        <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <!-- Case Title -->
+      <div>
+        <label for="title" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+          Case / Encounter Title <span class="text-[var(--glow)]">*</span>
+        </label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          required
+          placeholder="e.g. Unexplained Nocturnal Manifestations at Blackwood Manor"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+        />
+      </div>
+
+      <!-- Grid Row: Category & Location -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label for="category" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+            Category Taxonomy <span class="text-[var(--glow)]">*</span>
+          </label>
+          <select
+            id="category"
+            name="category"
+            required
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          >
+            <option value="" disabled selected>Select a category</option>
+            {categories.map(cat => (
+              <option value={cat}>{cat}</option>
+            ))}
+          </select>
+        </div>
+
+        <div>
+          <label for="location" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+            Incident Location <span class="text-[var(--glow)]">*</span>
+          </label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            required
+            placeholder="City, State / Region, Country"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          />
+        </div>
+      </div>
+
+      <!-- Event Date -->
+      <div>
+        <label for="event_date" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+          Approximate Event Date / Era
+        </label>
+        <input
+          type="text"
+          id="event_date"
+          name="event_date"
+          placeholder="e.g. October 2023 or Summer 2018"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+        />
+      </div>
+
+      <!-- Story Text & Character Counter -->
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <label for="story_text" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)]">
+            Detailed Encounter Narrative <span class="text-[var(--glow)]">*</span>
+          </label>
+          <span id="char-counter" class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+            0 / 150 min characters
+          </span>
+        </div>
+        <textarea
+          id="story_text"
+          name="story_text"
+          rows="8"
+          required
+          minlength="150"
+          placeholder="Describe the sequence of events chronologically. Include sensory details, weather conditions, additional witnesses, and physical manifestations..."
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors leading-relaxed"
+        ></textarea>
+      </div>
+
+      <!-- Author Name & Anonymous Toggle -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[var(--color-border)]">
+        <div>
+          <label for="author_name" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+            Contributor Name / Handle
+          </label>
+          <input
+            type="text"
+            id="author_name"
+            name="author_name"
+            placeholder="e.g. J. Miller or Anonymous Witness"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          />
+        </div>
+
+        <div class="flex items-center pt-6">
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              id="is_anonymous"
+              name="is_anonymous"
+              class="w-4 h-4 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] cursor-pointer"
+            />
+            <span class="text-xs font-mono-meta text-[var(--color-text-muted)]">
+              Publish as ANONYMOUS contributor
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Email Input (Confidential) -->
+      <div>
+        <label for="email" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+          Contact Email Address <span class="text-[var(--glow)]">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="your.name@example.com"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+        />
+        <p class="text-xs font-mono-meta text-[var(--color-text-dim)] mt-1.5">
+          🔒 Private & Confidential. Used strictly by editorial staff for witness verification. Never shared or published.
+        </p>
+      </div>
+
+      <!-- Editorial Consent Checkbox -->
+      <div class="pt-4">
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            required
+            class="w-4 h-4 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] mt-0.5 cursor-pointer"
+          />
+          <span class="text-xs text-[var(--color-text-muted)] leading-relaxed">
+            I confirm that this account represents a genuine experience to the best of my knowledge, and I consent to Night Lore editing for clarity and publishing under our <a href="/about" class="text-[var(--glow)] underline">editorial guidelines</a>.
+          </span>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-4 border-t border-[var(--color-border)] flex justify-end">
+        <button
+          type="submit"
+          id="submit-btn"
+          class="btn-primary w-full sm:w-auto px-8"
+        >
+          <span id="btn-text">Submit Encounters For Moderation</span>
+          <svg id="btn-spinner" class="w-4 h-4 animate-spin text-black hidden" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('submission-form') as HTMLFormElement;
+    const storyInput = document.getElementById('story_text') as HTMLTextAreaElement;
+    const counterEl = document.getElementById('char-counter');
+    const toast = document.getElementById('submit-toast');
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+
+    // Real-time character count
+    storyInput?.addEventListener('input', () => {
+      const len = storyInput.value.length;
+      if (counterEl) {
+        counterEl.textContent = `${len} / 150 min characters`;
+        if (len >= 150) {
+          counterEl.classList.remove('text-[var(--color-text-dim)]');
+          counterEl.classList.add('text-[var(--status-witnessed)]');
+        } else {
+          counterEl.classList.remove('text-[var(--status-witnessed)]');
+          counterEl.classList.add('text-[var(--color-text-dim)]');
+        }
+      }
+    });
+
+    // Form Submission Handler
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Submitting...';
+      if (btnSpinner) btnSpinner.classList.remove('hidden');
+      if (toast) toast.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch('/api/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (toast) {
+          toast.classList.remove('hidden');
+          if (data.success) {
+            toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-witnessed)] bg-[var(--color-surface)] text-[var(--status-witnessed)] font-mono-meta text-sm';
+            toast.textContent = `✓ SUCCESS: ${data.message} (Reference ID: ${data.id || 'SUBMITTED'})`;
+            form.reset();
+            if (counterEl) counterEl.textContent = '0 / 150 min characters';
+          } else {
+            toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-debunked)] bg-[var(--color-surface)] text-[var(--status-debunked)] font-mono-meta text-sm';
+            toast.textContent = `✕ ERROR: ${data.error || 'Submission failed.'}`;
+          }
+        }
+      } catch (err) {
+        if (toast) {
+          toast.classList.remove('hidden');
+          toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-debunked)] bg-[var(--color-surface)] text-[var(--status-debunked)] font-mono-meta text-sm';
+          toast.textContent = '✕ NETWORK ERROR: Unable to reach submission endpoint.';
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Submit Encounters For Moderation';
+        if (btnSpinner) btnSpinner.classList.add('hidden');
+      }
+    });
+  });
+</script>

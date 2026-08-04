@@ -1,0 +1,23 @@
+---
+interface Props {
+  status: 'unresolved' | 'witnessed' | 'disputed' | 'debunked' | 'ongoing';
+  class?: string;
+}
+
+const { status, class: className = '' } = Astro.props;
+
+const statusMap = {
+  unresolved: { label: 'UNRESOLVED', class: 'status-stamp-unresolved' },
+  witnessed: { label: 'WITNESSED', class: 'status-stamp-witnessed' },
+  disputed: { label: 'DISPUTED', class: 'status-stamp-disputed' },
+  debunked: { label: 'DEBUNKED', class: 'status-stamp-debunked' },
+  ongoing: { label: 'ONGOING', class: 'status-stamp-ongoing' }
+};
+
+const current = statusMap[status] || statusMap.unresolved;
+---
+
+<span class={`status-stamp ${current.class} ${className}`}>
+  <span class="w-1.5 h-1.5 rounded-full bg-current opacity-80 inline-block"></span>
+  {current.label}
+</span>

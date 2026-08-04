@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import StoryCard from '../../components/StoryCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const categories = [
+    'Real Paranormal Cases',
+    'Country Stories',
+    'Haunted Places',
+    'Unsolved Mysteries',
+    'Urban Legends',
+    'First-Person Accounts',
+    'Movie Inspiration',
+    'Psychology of Fear'
+  ];
+
+  return categories.map(category => ({
+    params: { category }
+  }));
+}
+
+const { category } = Astro.params;
+const allStories = await getCollection('stories', ({ data }) => !data.draft);
+const categoryStories = allStories
+  .filter(s => s.data.category === category)
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const categoryDescriptions: Record<string, string> = {
+  'Real Paranormal Cases': 'Rigorously researched hauntings supported by legal filings, forensic records, and police affidavits.',
+  'Country Stories': 'Regional folklore, rural apparitions, and localized oral histories passed down through generations.',
+  'Haunted Places': 'Geographical locations, historic structures, and persistent physical architectural anomalies.',
+  'Unsolved Mysteries': 'High strangeness, unexplained aerial phenomena, and anomalous bio-physical telemetry.',
+  'Urban Legends': 'Modern folklore, community rumors, and documented eyewitness statements.',
+  'First-Person Accounts': 'Direct eyewitness testimonies submitted by readers and verified for consistency.',
+  'Movie Inspiration': 'Comparative analysis separating historical archival facts from Hollywood cinematic exaggeration.',
+  'Psychology of Fear': 'Scientific, neurological, and physiological explanations for perceived paranormal phenomena.'
+};
+---
+
+<Layout
+  title={`${category} Archives — Night Lore`}
+  description={categoryDescriptions[category] || `Browse all ${category} case files at Night Lore.`}
+>
+  <div class="mb-12 border-b border-[var(--color-border)] pb-8">
+    <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-3">
+      <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+      <span>/</span>
+      <span class="text-[var(--glow)]">CATEGORY</span>
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      {category}
+    </h1>
+
+    <p class="text-base text-[var(--color-text-muted)] max-w-2xl leading-relaxed mb-6">
+      {categoryDescriptions[category]}
+    </p>
+
+    <div class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+      FILE COUNT: {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'} LOCATED
+    </div>
+  </div>
+
+  {categoryStories.length > 0 ? (
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {categoryStories.map(story => (
+        <StoryCard
+          title={story.data.title}
+          dek={story.data.dek}
+          slug={story.id}
+          category={story.data.category}
+          status={story.data.status}
+          location={story.data.location}
+          eventDate={story.data.eventDate}
+          pubDate={story.data.pubDate}
+          audioDuration={story.data.audioDuration}
+        />
+      ))}
+    </div>
+  ) : (
+    <div class="nl-card p-12 text-center my-12">
+      <p class="text-base text-[var(--color-text-muted)] mb-4">
+        No case files are currently published under this category.
+      </p>
+      <a href="/" class="btn-primary text-xs">
+        Return to Archive
+      </a>
+    </div>
+  )}
+</Layout>
