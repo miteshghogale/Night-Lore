@@ -3,6 +3,13 @@
   "name": "night-lore",
   "compatibility_date": "2026-08-04",
   "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "night_lore_db",
+      "database_id": "f74a4950-5d6e-498a-9fca-1c414d8f4093"
+    }
+  ],
   "observability": {
     "enabled": true
   }
