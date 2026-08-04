@@ -6,8 +6,6 @@ status: "disputed"
 location: "Cottage City, Maryland & St. Louis, Missouri"
 eventDate: "1949"
 pubDate: "2026-08-01"
-audioUrl: "https://cdn.mynightlore.com/audio/roland-doe-narration.mp3"
-audioDuration: "09:03"
 sources:
   - label: "St. Louis University Jesuit Exorcism Diary (1949)"
     url: "https://www.slu.edu/library"

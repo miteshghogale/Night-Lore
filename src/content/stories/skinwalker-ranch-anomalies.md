@@ -6,8 +6,6 @@ status: "unresolved"
 location: "Uintah County, Utah"
 eventDate: "1996 - Present"
 pubDate: "2026-07-20"
-audioUrl: "https://cdn.mynightlore.com/audio/skinwalker-narration.mp3"
-audioDuration: "05:51"
 sources:
   - label: "AAWSAP / DIA Contract Documentation (FOIA)"
     url: "https://www.dia.mil"

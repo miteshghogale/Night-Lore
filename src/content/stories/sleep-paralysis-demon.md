@@ -6,8 +6,6 @@ status: "witnessed"
 location: "Global / Cross-Cultural"
 eventDate: "Ancient - Present"
 pubDate: "2026-07-30"
-audioUrl: "https://cdn.mynightlore.com/audio/sleep-paralysis-narration.mp3"
-audioDuration: "06:05"
 sources:
   - label: "Journal of Sleep Research: REM Atonia & Hallucinations"
     url: "https://onlinelibrary.wiley.com/journal/13652869"

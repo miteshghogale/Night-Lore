@@ -6,8 +6,6 @@ status: "witnessed"
 location: "Point Pleasant, West Virginia"
 eventDate: "1966 - 1967"
 pubDate: "2026-07-22"
-audioUrl: "https://cdn.mynightlore.com/audio/mothman-narration.mp3"
-audioDuration: "07:28"
 sources:
   - label: "National Transportation Safety Board (NTSB) Bridge Report"
     url: "https://www.ntsb.gov"

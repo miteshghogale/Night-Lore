@@ -6,8 +6,6 @@ status: "unresolved"
 location: "Abilene, Texas"
 eventDate: "1996"
 pubDate: "2026-08-03"
-audioUrl: "https://cdn.mynightlore.com/audio/bek-narration.mp3"
-audioDuration: "06:07"
 sources:
   - label: "Brian Bethel Original Statement Archive (1996)"
     url: "https://www.abilene-rc.com"

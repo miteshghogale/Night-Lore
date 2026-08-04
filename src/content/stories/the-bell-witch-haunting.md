@@ -6,8 +6,6 @@ status: "unresolved"
 location: "Adams, Robertson County, Tennessee"
 eventDate: "1817 - 1821"
 pubDate: "2026-07-25"
-audioUrl: "https://cdn.mynightlore.com/audio/bell-witch-narration.mp3"
-audioDuration: "08:17"
 sources:
   - label: "An Authenticated History of the Bell Witch by Martin V. Ingram (1894)"
     url: "https://www.tn.gov/state-library-archives"
