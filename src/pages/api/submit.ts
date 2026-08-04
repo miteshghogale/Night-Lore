@@ -54,8 +54,7 @@ export const POST: APIRoute = async ({ request }) => {
     const createdAt = new Date().toISOString();
 
     // Cloudflare D1 Execution
-    // Retrieve D1 DB binding directly from cloudflare:workers env per Astro v6+ adapter docs
-    const db = (env as any)?.DB;
+    const db = env.DB;
 
     if (db) {
       await db.prepare(`
