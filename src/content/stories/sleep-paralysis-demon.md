@@ -21,13 +21,13 @@ draft: false
 
 You awaken in the dark, unable to move a single muscle. Your mind is fully conscious, but your lungs feel crushed under an immense weight, as though someone is kneeling on your chest. Out of the corner of your eye, a dark, shadowy figure glides silently toward your bed.
 
-For thousands of years, human societies across isolated continents have recorded this exact nocturnal terror. In Canadian folklore, it is called the Old Hag. In Japan, Kanashibari. In Egypt, Kanmous. In Scandinavian tradition, the intruder was known as the Mara—the ancient entity whose name gave birth to our modern word *nightmare*.
+For thousands of years, human societies across isolated continents have recorded this exact nocturnal terror. In Canadian folklore, it is called the Old Hag. In Japan, Kanashibari. In Egypt, Kanmous. In Scandinavian tradition, the intruder was known as the Mara, the ancient entity whose name gave birth to our modern word *nightmare*.
 
 Despite the supernatural lore, modern sleep medicine has unlocked the exact biological sequence behind the illusion. The condition is known clinically as Isolated Recurrent Sleep Paralysis.
 
 During normal rapid eye movement sleep, your brainstem releases neurotransmitters like glycine and GABA. These chemicals temporarily paralyze your skeletal muscles, a protective physiological mechanism known as REM atonia that keeps you from physically acting out your dreams.
 
-Sleep paralysis occurs when your brain undergoes a micro-awakening while REM atonia remains engaged. You regain conscious awareness, but your motor system remains locked. Trapped in your body, your brain's fear center—the amygdala—instantly triggers a panic response. In this hyper-aroused state, dream imagery spills over into waking reality, causing your brain to project a menacing shadow figure into the room to justify the overwhelming sense of dread.
+Sleep paralysis occurs when your brain undergoes a micro-awakening while REM atonia remains engaged. You regain conscious awareness, but your motor system remains locked. Trapped in your body, your brain's fear center, the amygdala, instantly triggers a panic response. In this hyper-aroused state, dream imagery spills over into waking reality, causing your brain to project a menacing shadow figure into the room to justify the overwhelming sense of dread.
 
 ## What Actually Happened Here
 

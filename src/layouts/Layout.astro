@@ -14,7 +14,7 @@ interface Props {
 }
 
 const {
-  title = 'Night Lore — Researched Paranormal Archive & Unsolved Case Files',
+  title = 'Night Lore: Researched Paranormal Archive & Unsolved Case Files',
   description = 'Night Lore documents real hauntings, unsolved mysteries, urban legends, and reader-submitted paranormal experiences. Researched, sourced, and factual.',
   image = 'https://mynightlore.com/og-image.jpg',
   articleMeta
@@ -112,15 +112,35 @@ const categories = [
           <a href="/about" class="hover:text-[var(--color-text)] transition-colors">Editorial Policy</a>
         </nav>
 
-        <!-- Right Action -->
+        <!-- Right Action & Mobile Menu Button -->
         <div class="flex items-center gap-3">
           <a href="/submit" class="btn-primary text-xs py-2 px-3.5">
             <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
             </svg>
-            Submit Encounter
+            <span class="hidden sm:inline">Submit Encounter</span>
+            <span class="sm:hidden">Submit</span>
           </a>
+
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] focus:outline-none"
+            aria-label="Toggle navigation menu"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
+      </div>
+
+      <!-- Mobile Dropdown Nav Menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-4 space-y-3 font-mono-meta text-xs">
+        <a href="/" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">ARCHIVE HOME</a>
+        <a href="/category/Real Paranormal Cases" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">REAL PARANORMAL CASES</a>
+        <a href="/category/Unsolved Mysteries" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">UNSOLVED MYSTERIES</a>
+        <a href="/category/Haunted Places" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">HAUNTED PLACES</a>
+        <a href="/about" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">EDITORIAL POLICY</a>
       </div>
     </header>
 
@@ -181,5 +201,16 @@ const categories = [
 
     <!-- Global Audio Player -->
     <AudioPlayer />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        menuBtn?.addEventListener('click', () => {
+          menu?.classList.toggle('hidden');
+        });
+      });
+    </script>
   </body>
 </html>

@@ -19,7 +19,7 @@ tags: ["skinwalker-ranch", "aawsap", "utah", "cattle-mutilation", "uap"]
 draft: false
 ---
 
-It began with a fence line under the Utah desert sun. In the fall of 1994, Terry and Gwen Sherman bought a remote five-hundred-acre cattle ranch in the Uintah Basin, expecting to raise prize cattle in peace. Local Ute tribal tradition had long warned outsiders away from the ridge, identifying the land as the domain of the Skinwalker—a sinister shapeshifting entity of Native folklore.
+It began with a fence line under the Utah desert sun. In the fall of 1994, Terry and Gwen Sherman bought a remote five-hundred-acre cattle ranch in the Uintah Basin, expecting to raise prize cattle in peace. Local Ute tribal tradition had long warned outsiders away from the ridge, identifying the land as the domain of the Skinwalker, a sinister shapeshifting entity of Native folklore.
 
 Within weeks, the Shermans realized they were not alone on the property. They reported massive, bullet-proof wolves that approached their livestock without fear, vanishing into thin air when shot at close range. Mysterious metallic craft hovered silenty above their pastures, while heavy farm machinery moved across fields without human operators.
 

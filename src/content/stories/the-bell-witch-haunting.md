@@ -17,13 +17,13 @@ tags: ["bell-witch", "tennessee", "poltergeist", "historical", "andrew-jackson"]
 draft: false
 ---
 
-It began in the middle of a quiet cornfield along the Red River in the summer of 1817. Farmer John Bell was walking through his land when he encountered a strange creature sitting between the rows—an animal with the body of a hound and the head of a rabbit. Startled, Bell fired his musket at the creature, but it vanished instantly into the dry stalks.
+It began in the middle of a quiet cornfield along the Red River in the summer of 1817. Farmer John Bell was walking through his land when he encountered a strange creature sitting between the rows: an animal with the body of a hound and the head of a rabbit. Startled, Bell fired his musket at the creature, but it vanished instantly into the dry stalks.
 
 Within days, the Bell family homestead in Robertson County, Tennessee, became the focal point of America's most famous poltergeist disturbance. Heavy gnawing noises rattled the bedposts every night. Unseen chains dragged across wooden floorboards, and stone missiles rained down on the roof.
 
 As months passed, the invisible entity developed a distinct voice. It spoke fluently in multiple accents, quoted Scripture from memory, and openly expressed hatred for John Bell and his youngest daughter, Betsy.
 
-Word of the haunting spread across the region, drawing visitors from hundreds of miles away. In 1819, General Andrew Jackson—who would later become the seventh President of the United States—brought a party of men from Nashville to investigate. As Jackson's wagon reached the boundary of the Bell farm, the wagon wheels locked completely on smooth terrain. Despite six heavy horses straining against the harness, the vehicle could not be moved until a disembodied voice declared that they could proceed.
+Word of the haunting spread across the region, drawing visitors from hundreds of miles away. In 1819, General Andrew Jackson, who would later become the seventh President of the United States, brought a party of men from Nashville to investigate. As Jackson's wagon reached the boundary of the Bell farm, the wagon wheels locked completely on smooth terrain. Despite six heavy horses straining against the harness, the vehicle could not be moved until a disembodied voice declared that they could proceed.
 
 During their night on the property, Jackson's personal companion was physically struck by an unseen entity and driven from the house. Jackson famously remarked that he would rather face the entire British army than spend another night against the Bell Witch.
 

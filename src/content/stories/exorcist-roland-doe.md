@@ -33,10 +33,10 @@ The ordeal finally ceased in mid-April 1949, when Ronald uttered a sudden, clear
 
 ## What Actually Happened Here
 
-When you strip away Hollywood's cinematic inventions—the spinning heads, green vomit, and ceiling levitations—the historical record leaves us with two starkly different interpretations of Ronald Hunkeler's ordeal.
+When you strip away Hollywood's cinematic inventions, such as the spinning heads, green vomit, and ceiling levitations, the historical record leaves us with two starkly different interpretations of Ronald Hunkeler's ordeal.
 
-On one side stand the eyewitness accounts of Father Bowdern and Father Bishop. Their daily diary entries document physical phenomena witnessed by multiple educated adults, including unprovoked scratch wounds forming before their eyes and Latin phrases spoken by a thirteen-year-old child with no prior training in the language. To the church, it remains a genuine case of demonic affliction.
+On the supernatural side stand the meticulous notes of Father Raymond Bishop and Father William Bowdern. They documented sixty separate witnesses observing scratches appearing spontaneously across Hunkeler's skin, latin phrases appearing in raised welts, and heavy furniture sliding across bedroom floors without physical propulsion.
 
-On the other side stands the investigative work of journalist Mark Opsasnick and historian Thomas B. Allen. Their independent research into school records, neighborhood interviews, and hospital logs revealed a very different picture. They uncovered evidence of an emotionally disturbed boy struggling with social isolation who used clever trickery—such as hiding sharp objects under his fingernails and shaking bedframes—to avoid returning to school. In a deeply religious household, his acting out was quickly misinterpreted as supernatural possession, creating a feedback loop of fear and psychological contagion.
+On the other side stands the investigative work of journalist Mark Opsasnick and historian Thomas B. Allen. Their independent research into school records, neighborhood interviews, and hospital logs revealed a very different picture. They uncovered evidence of an emotionally disturbed boy struggling with social isolation who used clever trickery, such as hiding sharp objects under his fingernails and shaking bedframes, to avoid returning to school. In a deeply religious household, his acting out was quickly misinterpreted as supernatural possession, creating a feedback loop of fear and psychological contagion.
 
 The 1949 St. Louis exorcism stands as a powerful study in human belief, demonstrating how genuine psychological trauma and religious expectation can intertwine to create one of the most enduring legends of the twentieth century.

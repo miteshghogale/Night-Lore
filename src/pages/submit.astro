@@ -14,7 +14,7 @@ const categories = [
 ---
 
 <Layout
-  title="Submit an Encounter — Night Lore Archive"
+  title="Submit an Encounter | Night Lore Archive"
   description="Submit a real paranormal encounter, localized haunting, or unexplained anomaly for editorial moderation and archival publishing."
 >
   <div class="max-w-3xl mx-auto">
@@ -173,8 +173,9 @@ const categories = [
           placeholder="your.name@example.com"
           class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
         />
-        <p class="text-xs font-mono-meta text-[var(--color-text-dim)] mt-1.5">
-          🔒 Private & Confidential. Used strictly by editorial staff for witness verification. Never shared or published.
+        <p class="text-xs font-mono-meta text-[var(--color-text-dim)] mt-1.5 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>Private & Confidential. Used strictly by editorial staff for witness verification. Never shared or published.</span>
         </p>
       </div>
 
@@ -259,19 +260,19 @@ const categories = [
           toast.classList.remove('hidden');
           if (data.success) {
             toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-witnessed)] bg-[var(--color-surface)] text-[var(--status-witnessed)] font-mono-meta text-sm';
-            toast.textContent = `✓ SUCCESS: ${data.message} (Reference ID: ${data.id || 'SUBMITTED'})`;
+            toast.textContent = `SUCCESS: ${data.message} (Reference ID: ${data.id || 'SUBMITTED'})`;
             form.reset();
             if (counterEl) counterEl.textContent = '0 / 150 min characters';
           } else {
             toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-debunked)] bg-[var(--color-surface)] text-[var(--status-debunked)] font-mono-meta text-sm';
-            toast.textContent = `✕ ERROR: ${data.error || 'Submission failed.'}`;
+            toast.textContent = `ERROR: ${data.error || 'Submission failed.'}`;
           }
         }
       } catch (err) {
         if (toast) {
           toast.classList.remove('hidden');
           toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-debunked)] bg-[var(--color-surface)] text-[var(--status-debunked)] font-mono-meta text-sm';
-          toast.textContent = '✕ NETWORK ERROR: Unable to reach submission endpoint.';
+          toast.textContent = 'NETWORK ERROR: Unable to reach submission endpoint.';
         }
       } finally {
         if (submitBtn) submitBtn.disabled = false;

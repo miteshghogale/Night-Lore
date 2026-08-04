@@ -21,7 +21,7 @@ It began under the fluorescent glow of a movie theater marquee on a spring eveni
 
 Looking up, Bethel saw two young boys standing outside in the empty parking lot, aged roughly ten to fourteen. They wore dark hoodies pulled low over their foreheads. The older boy spoke in a flat, hypnotic monotone, explaining that they wanted to see a movie but had left their money at home. He asked Bethel to open the locked car door and give them a ride to their house.
 
-As the conversation continued, Bethel felt a sudden, inexplicable wave of instinctual dread wash over him. His body locked into a primitive fight-or-flight response. When the streetlamp illuminated the boys' faces, Bethel realized the horrific cause of his panic: their eyes were completely obsidian black. There were no white sclera, no colored irises, and no pupils—only liquid black spheres from eyelid to eyelid.
+As the conversation continued, Bethel felt a sudden, inexplicable wave of instinctual dread wash over him. His body locked into a primitive fight-or-flight response. When the streetlamp illuminated the boys' faces, Bethel realized the horrific cause of his panic: their eyes were completely obsidian black. There were no white sclera, no colored irises, and no pupils. Only liquid black spheres from eyelid to eyelid.
 
 When Bethel hesitated, the boys grew aggressive, demanding entry and pulling at the door handles. Terrified, Bethel shifted his car into reverse and slammed on the gas. Looking back in his rearview mirror as he sped out of the parking lot, he saw that the open asphalt was completely empty. The children had vanished into thin air within seconds.
 

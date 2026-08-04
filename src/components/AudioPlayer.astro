@@ -7,8 +7,8 @@
   class="fixed bottom-0 left-0 right-0 z-50 transform translate-y-full transition-transform duration-300 ease-in-out border-t border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl backdrop-blur-md"
   aria-label="Audio narration player"
 >
-  <div class="max-w-[1200px] mx-auto px-4 py-3 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
-    <!-- Story Info -->
+  <div class="max-w-[1200px] mx-auto px-4 py-2.5 sm:py-3 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-6">
+    <!-- Story Info & Play Button -->
     <div class="flex items-center gap-3 w-full sm:w-auto min-w-0">
       <button
         id="player-play-btn"
@@ -25,19 +25,29 @@
 
       <div class="min-w-0 flex-1">
         <div class="flex items-center gap-2">
-          <span class="font-mono-meta text-[10px] tracking-wider uppercase text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-1.5 py-0.5 rounded">
+          <span class="font-mono-meta text-[9px] sm:text-[10px] tracking-wider uppercase text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-1.5 py-0.5 rounded">
             AUDIO NARRATION
           </span>
         </div>
-        <p id="player-title" class="text-sm font-medium text-[var(--color-text)] truncate mt-0.5">
+        <p id="player-title" class="text-xs sm:text-sm font-medium text-[var(--color-text)] truncate mt-0.5">
           Select a story to play narration
         </p>
       </div>
+
+      <button
+        id="player-close-btn-mobile"
+        class="sm:hidden text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2 rounded-md transition-colors focus:outline-none flex-shrink-0"
+        aria-label="Close audio player"
+      >
+        <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Progress & Controls -->
-    <div class="flex items-center gap-3 w-full sm:w-1/2 max-w-xl">
-      <span id="player-time" class="font-mono-meta text-xs text-[var(--color-text-dim)] w-12 text-right">0:00</span>
+    <div class="flex items-center gap-2 sm:gap-3 w-full sm:w-1/2 max-w-xl">
+      <span id="player-time" class="font-mono-meta text-[11px] text-[var(--color-text-dim)] w-10 text-right flex-shrink-0">0:00</span>
       
       <div class="relative flex-1 flex items-center">
         <input
@@ -51,11 +61,11 @@
         />
       </div>
 
-      <span id="player-duration" class="font-mono-meta text-xs text-[var(--color-text-dim)] w-12">0:00</span>
+      <span id="player-duration" class="font-mono-meta text-[11px] text-[var(--color-text-dim)] w-10 flex-shrink-0">0:00</span>
     </div>
 
-    <!-- Actions & Close -->
-    <div class="flex items-center gap-2 self-end sm:self-center">
+    <!-- Desktop Close -->
+    <div class="hidden sm:flex items-center gap-2 flex-shrink-0">
       <button
         id="player-close-btn"
         class="text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2 rounded-md transition-colors focus:outline-none"
@@ -84,6 +94,7 @@
     durationEl: HTMLElement | null;
     seekInput: HTMLInputElement | null;
     closeBtn: HTMLElement | null;
+    closeBtnMobile: HTMLElement | null;
     currentUrl: string | null = null;
 
     constructor() {
@@ -97,6 +108,7 @@
       this.durationEl = document.getElementById('player-duration');
       this.seekInput = document.getElementById('player-seek') as HTMLInputElement;
       this.closeBtn = document.getElementById('player-close-btn');
+      this.closeBtnMobile = document.getElementById('player-close-btn-mobile');
 
       this.init();
     }
@@ -115,8 +127,9 @@
       // Play/Pause button
       this.playBtn?.addEventListener('click', () => this.togglePlay());
 
-      // Close button
+      // Close buttons
       this.closeBtn?.addEventListener('click', () => this.stopAndClose());
+      this.closeBtnMobile?.addEventListener('click', () => this.stopAndClose());
 
       // Time updates
       this.audio.addEventListener('timeupdate', () => this.onTimeUpdate());

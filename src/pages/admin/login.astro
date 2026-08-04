@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export const prerender = false;
+---
+
+<Layout title="Admin Login | Night Lore Archive">
+  <div class="max-w-md mx-auto my-16 sm:my-24 px-4">
+    <div class="nl-card p-6 sm:p-8">
+      <div class="flex items-center gap-2 mb-6 justify-center">
+        <span class="w-2.5 h-2.5 rounded-full bg-[var(--glow)] shadow-[0_0_8px_var(--glow)]"></span>
+        <h1 class="font-bold text-xl tracking-tight text-[var(--color-text)]">NIGHT LORE ADMIN</h1>
+      </div>
+
+      <p class="text-xs font-mono-meta text-center text-[var(--color-text-muted)] mb-8">
+        RESTRICTED ACCESS // EDITORIAL MODERATION PORTAL
+      </p>
+
+      <div id="login-toast" class="hidden mb-6 p-3 rounded text-xs font-mono-meta border text-center"></div>
+
+      <form id="admin-login-form" class="space-y-6">
+        <div>
+          <label for="password" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)] mb-2">
+            Admin Master Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="••••••••••••"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors font-mono-meta"
+          />
+        </div>
+
+        <button type="submit" id="login-btn" class="btn-primary w-full justify-center py-3 min-h-[44px]">
+          Authenticate & Access Queue →
+        </button>
+      </form>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('admin-login-form') as HTMLFormElement;
+    const toast = document.getElementById('login-toast');
+    const loginBtn = document.getElementById('login-btn') as HTMLButtonElement;
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (loginBtn) loginBtn.disabled = true;
+      if (toast) toast.classList.add('hidden');
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch('/api/admin-login', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          window.location.href = '/admin';
+        } else {
+          if (toast) {
+            toast.classList.remove('hidden');
+            toast.className = 'mb-6 p-3 rounded text-xs font-mono-meta border text-center border-[var(--status-debunked)] text-[var(--status-debunked)] bg-[var(--color-surface)]';
+            toast.textContent = `ACCESS DENIED: ${data.error || 'Invalid credentials.'}`;
+          }
+        }
+      } catch (err) {
+        if (toast) {
+          toast.classList.remove('hidden');
+          toast.className = 'mb-6 p-3 rounded text-xs font-mono-meta border text-center border-[var(--status-debunked)] text-[var(--status-debunked)] bg-[var(--color-surface)]';
+          toast.textContent = 'NETWORK ERROR: Unable to process authentication.';
+        }
+      } finally {
+        if (loginBtn) loginBtn.disabled = false;
+      }
+    });
+  });
+</script>
