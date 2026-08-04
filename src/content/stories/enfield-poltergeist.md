@@ -19,32 +19,20 @@ tags: ["enfield", "london", "poltergeist", "spr", "maurice-grosse"]
 draft: false
 ---
 
-## The Green Street Council House
+It began with a scraping sound across the bedroom carpet on a damp August night in 1977. Single mother Peggy Hodgson walked upstairs to check on her children inside their rented council house at 284 Green Street in Enfield, North London. She found her eleven-year-old daughter Janet and nine-year-old son Johnny pointing at a heavy chest of drawers that was sliding across the floorboards toward the door.
 
-In August 1977, single mother Peggy Hodgson called Metropolitan Police to her residence at 284 Green Street in Enfield. Constables WPC Carolyn Heeps and PC Richard Chislett observed a heavy armchair slide 4 feet across the floor without human contact. WPC Heeps signed a formal police affidavit confirming the motion was unpowered.
+When Peggy tried to push the furniture back against the wall, an unseen force pushed back with equal strength. Panicked, she ran to her neighbors, who called the Metropolitan Police.
 
-Over the next year, Society for Psychical Research (SPR) investigators Maurice Grosse and Guy Lyon Playfair logged over 2,000 distinct physical incidents inside the residence.
+Constables Carolyn Heeps and Richard Chislett arrived at the residence shortly before midnight. Inside the living room, Constable Heeps witnessed an armchair slide four feet across the room without human contact. She inspected the floorboards, walls, and chairs for hidden wires or mechanical levers, finding nothing, and signed an official police affidavit recording the unpowered movement.
 
-```
-METROPOLITAN POLICE LOG ENTRY // AUGUST 31, 1977
-LOCATION: 284 Green Street, Enfield, EN3
-OFFICER WITNESS: WPC C. Heeps (Badge #563)
-OBSERVATION: Chair movement across parquet flooring (No wires or mechanical levers found)
-```
+Over the following eighteen months, investigators Maurice Grosse and Guy Lyon Playfair from the Society for Psychical Research logged over two thousand distinct physical incidents inside the residence. Objects levitated through the air, small fires ignited spontaneously, and pillows were pulled from beneath sleeping children.
 
-## Vocalizations & Levitations
+The case took a darker turn when eleven-year-old Janet began speaking in a deep, gravelly vocal tone. The entity identified itself as Bill Wilkins, a former resident who had died of a brain hemorrhage in an armchair on the ground floor years earlier. Laryngologists who examined Janet noted that speaking using false vocal folds for hours at a time should have destroyed her vocal cords, yet medical exams showed no physical damage.
 
-Eleven-year-old Janet Hodgson became the focal center of the occurrences. She began speaking in a deep, raspy, demonic vocal tone that claimed to be the spirit of Bill Wilkins—a man who had died of a cerebral hemorrhage in the house years prior.
+## What Actually Happened Here
 
-Medical laryngologists confirmed that speaking in false vocal folds for hours at a time should have damaged Janet's vocal cords, yet her voice box remained undamaged. Flash photography captured Janet levitating horizontally several feet above her bed.
+The Enfield case stands as one of the most thoroughly documented poltergeist investigations in history, caught on tape and camera by national news organizations.
 
-## Paranormal vs. Skeptical Hypothesis
+Believers emphasize the sworn statements of disinterested third parties. Metropolitan police officers, BBC journalists, and structural engineers all witnessed physical movements and levitations that occurred in well-lit rooms. Furthermore, eleven-year-old Janet possessed detailed personal knowledge regarding the circumstances of Bill Wilkins' death before any public record search had been conducted.
 
-| Hypothesis | Arguments & Evidence |
-| :--- | :--- |
-| **Poltergeist Manifestation** | Audio telemetry, independent police corroboration, and accurate historical knowledge of deceased former occupant Bill Wilkins. |
-| **Child Hoax / Fraud** | Skeptics Anita Gregory and Ray Hyman caught the children bending spoons by hand and admitted to faking 2% of the phenomena to test investigators. |
-
-## Verdict
-
-The presence of verified police affidavits alongside admitted child trickery lands the Enfield Poltergeist in the **disputed** category.
+Skeptical investigators from the Committee for Skeptical Inquiry present a case for juvenile trickery and misinterpretation. Skeptics Anita Gregory and Ray Hyman noted that the children were caught bending spoons by hand and admitted to faking a small percentage of the phenomena to test the investigators. Critics argue that Janet's raspy voice was produced using normal vocal techniques, and that the famous photographs of Janet floating above her bed depict her jumping from the mattress rather than genuine levitation.
