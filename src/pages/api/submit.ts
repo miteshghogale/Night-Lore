@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
+import { env } from 'cloudflare:workers';
 
 export const prerender = false; // Server-rendered Cloudflare Pages Function API route
 
-export const POST: APIRoute = async ({ request, locals }) => {
+export const POST: APIRoute = async ({ request }) => {
   try {
     const formData = await request.formData();
 
@@ -53,9 +54,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
     const createdAt = new Date().toISOString();
 
     // Cloudflare D1 Execution
-    // Access D1 DB binding if available in runtime context
-    const runtime = (locals as any)?.runtime;
-    const db = runtime?.env?.DB;
+    // Retrieve D1 DB binding directly from cloudflare:workers env per Astro v6+ adapter docs
+    const db = (env as any)?.DB;
 
     if (db) {
       await db.prepare(`
@@ -74,8 +74,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
         createdAt
       ).run();
     } else {
-      // Local dev / fallback mock logging
-      console.log('[D1 LOCAL FALLBACK] New Reader Submission Received:', {
+      // Fallback mock logging when running in environments without D1 binding
+      console.log('[D1 FALLBACK MOCK] Submission received:', {
         id: submissionId,
         title,
         category,
@@ -100,8 +100,9 @@ export const POST: APIRoute = async ({ request, locals }) => {
     });
 
   } catch (err: any) {
+    const errorDetails = err?.message || err?.toString() || 'Unknown server error during submission processing.';
     console.error('Submission API Error:', err);
-    return new Response(JSON.stringify({ success: false, error: 'Server error processing submission.' }), {
+    return new Response(JSON.stringify({ success: false, error: errorDetails }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
     });
