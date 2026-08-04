@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Cloudflare Workers local dev state
+.wrangler/
+
+# scratch audio generation output
+temp_audio/
+scripts/test*.raw
+scripts/test*.mp3
+scripts/watch_file.cjs

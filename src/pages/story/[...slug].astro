@@ -31,6 +31,15 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
   }}
 >
   <article class="max-w-4xl mx-auto">
+    <!-- Back Navigation -->
+    <a
+      href={`/category/${story.data.category}`}
+      onclick={`if (document.referrer && window.history.length > 1) { try { if (new URL(document.referrer).origin === window.location.origin) { event.preventDefault(); window.history.back(); } } catch (e) {} }`}
+      class="inline-flex items-center gap-1.5 text-xs font-mono-meta text-[var(--color-text-dim)] hover:text-[var(--glow)] transition-colors mb-4"
+    >
+      ← Back
+    </a>
+
     <!-- Navigation Breadcrumbs -->
     <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-6 flex-wrap">
       <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
@@ -116,7 +125,7 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
           ))}
         </ul>
         <p class="text-xs text-[var(--color-text-dim)] mt-4">
-          Note: Outbound links direct to public domain historical archives, legal filings, and official government FOIA documents.
+          Note: Outbound links direct to public domain historical archives, legal filings, and official government FOIA documents. Story audio narration synthesized via Google Gemini 3.1 Flash TTS.
         </p>
       </section>
     )}
