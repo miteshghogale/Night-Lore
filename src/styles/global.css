@@ -172,9 +172,12 @@
   background-color: var(--color-surface-2);
 }
 
-/* Cover image dark treatment (used by StoryCard and StoryCover) */
+/* Cover image dark treatment (used by StoryCard, StoryCover, and the homepage
+   spotlight card). Near-grayscale duotone base, unified via an ember-tinted
+   gradient, so archival, saturated, and bright source photos all read as one
+   consistent moody palette instead of clashing next to each other. */
 .cover-image {
-  filter: saturate(0.85);
+  filter: grayscale(0.8) contrast(1.15) brightness(0.88);
   transition: transform 300ms ease-out;
 }
 
@@ -183,10 +186,28 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(20, 10, 6, 0.15) 0%,
+    rgba(15, 7, 5, 0.55) 50%,
+    rgba(20, 8, 4, 0.92) 100%
   );
+  pointer-events: none;
+}
+
+/* Full-bleed hero variant: fades on all four edges so the image dissolves
+   into the page's pure-black background with no visible rectangular seam.
+   Ends on true #000 (not the ember tint) so the bottom edge matches the
+   page background exactly. */
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 10, 6, 0.15) 0%,
+    rgba(15, 7, 5, 0.45) 45%,
+    rgba(10, 4, 2, 0.85) 80%,
+    #000000 100%
+  );
+  box-shadow: inset 0 0 12vw 2vw rgba(10, 4, 2, 0.65);
   pointer-events: none;
 }
 

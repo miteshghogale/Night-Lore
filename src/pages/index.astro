@@ -65,59 +65,83 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
         <span class="font-mono-meta text-xs text-[var(--glow)]">SPOTLIGHT</span>
       </div>
 
-      <div class="nl-card p-6 sm:p-8 relative overflow-hidden group">
+      <div class="nl-card relative overflow-hidden group">
         {featuredStory.data.coverImage && (
-          <div class="mb-6 relative rounded-xl overflow-hidden aspect-[21/9] sm:aspect-[2.4/1] bg-[var(--color-surface-2)] border border-[var(--color-border)]">
+          <div class="relative w-full aspect-[21/9] sm:aspect-[2.4/1] overflow-hidden">
             <img
               src={featuredStory.data.coverImage}
               alt={featuredStory.data.coverAlt || featuredStory.data.title}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              class="cover-image w-full h-full object-cover group-hover:scale-105"
               loading="eager"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-transparent to-transparent opacity-60"></div>
+            <div class="cover-gradient-overlay"></div>
+
+            <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-8">
+              <div class="flex items-center gap-3 mb-3 flex-wrap">
+                <StatusBadge status={featuredStory.data.status} class="backdrop-blur-sm bg-black/30" />
+                <span class="font-mono-meta text-xs text-[var(--color-text-dim)] bg-black/30 backdrop-blur-sm px-1.5 py-0.5 rounded">
+                  {featuredStory.data.category}
+                </span>
+              </div>
+
+              <h3 class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[var(--glow)] transition-colors mb-3">
+                <a href={`/story/${featuredStory.id}`}>
+                  <span class="absolute inset-0 z-10"></span>
+                  {featuredStory.data.title}
+                </a>
+              </h3>
+
+              <p class="text-base text-zinc-300 leading-relaxed mb-5 max-w-3xl">
+                {featuredStory.data.dek}
+              </p>
+
+              <div class="flex items-center gap-4 flex-wrap text-xs font-mono-meta text-zinc-300">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  {featuredStory.data.location}
+                </span>
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  Event Date: {featuredStory.data.eventDate}
+                </span>
+              </div>
+            </div>
+
+            {featuredStory.data.coverCredit && (
+              <div class="absolute bottom-3 right-4 font-mono-meta text-[11px] text-zinc-300 bg-black/40 backdrop-blur-sm rounded px-2 py-1 flex items-center justify-end gap-1 flex-wrap max-w-[90%] z-10">
+                <span>Photo: </span>
+                {featuredStory.data.coverCreditUrl ? (
+                  <a
+                    href={featuredStory.data.coverCreditUrl}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    class="underline underline-offset-2 hover:text-[var(--glow)] transition-colors relative z-20"
+                  >
+                    {featuredStory.data.coverCredit}
+                  </a>
+                ) : (
+                  <span>{featuredStory.data.coverCredit}</span>
+                )}
+                <span>, {featuredStory.data.coverLicense || 'Wikimedia Commons'} via Wikimedia Commons</span>
+              </div>
+            )}
           </div>
         )}
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          <div class="lg:col-span-2">
-            <div class="flex items-center gap-3 mb-4 flex-wrap">
-              <StatusBadge status={featuredStory.data.status} />
-              <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">
-                {featuredStory.data.category}
-              </span>
-            </div>
 
-            <h3 class="text-2xl sm:text-3xl font-bold text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-3">
-              <a href={`/story/${featuredStory.id}`}>
-                {featuredStory.data.title}
-              </a>
-            </h3>
-
-            <p class="text-base text-[var(--color-text-muted)] leading-relaxed mb-6">
-              {featuredStory.data.dek}
-            </p>
-
-            <div class="flex items-center gap-4 flex-wrap text-xs font-mono-meta text-[var(--color-text-dim)]">
-              <span class="inline-flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                {featuredStory.data.location}
-              </span>
-              <span class="inline-flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-[var(--color-text-dim)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                Event Date: {featuredStory.data.eventDate}
-              </span>
-            </div>
-          </div>
-
-          <div class="flex flex-col justify-between h-full bg-[var(--color-surface-2)] p-6 rounded-md border border-[var(--color-border)] gap-6">
-            <div>
-              <h4 class="font-mono-meta text-xs uppercase text-[var(--color-text-dim)] mb-2">Audio Narration</h4>
-              <p class="text-xs text-[var(--color-text-muted)] mb-4 leading-relaxed">
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-[var(--color-surface-2)] p-5 rounded-md border border-[var(--color-border)]">
+            <div class="flex-1">
+              <h4 class="font-mono-meta text-xs uppercase text-[var(--color-text-dim)] mb-1.5">Audio Narration</h4>
+              <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Listen to the full audio reconstruction narrated by AI synthesis.
               </p>
+            </div>
+
+            <div class="flex items-center gap-3 flex-shrink-0">
               {featuredStory.data.audioUrl && (
                 <button
                   onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${featuredStory.data.audioUrl}', title: '${featuredStory.data.title.replace(/'/g, "\\'")}' } }))`}
-                  class="btn-secondary w-full text-xs justify-center gap-2 text-[var(--glow)] border-[var(--glow)]"
+                  class="btn-secondary text-xs justify-center gap-2 text-[var(--glow)] border-[var(--glow)] relative z-20"
                 >
                   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
@@ -125,11 +149,11 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
                   Listen ({featuredStory.data.audioDuration || 'Listen'})
                 </button>
               )}
-            </div>
 
-            <a href={`/story/${featuredStory.id}`} class="btn-primary w-full text-xs justify-center">
-              Read Full Dossier →
-            </a>
+              <a href={`/story/${featuredStory.id}`} class="btn-primary text-xs justify-center relative z-20">
+                Read Full Dossier →
+              </a>
+            </div>
           </div>
         </div>
       </div>
