@@ -50,6 +50,7 @@
   );
 }
 
+/* Homepage & Story Hero Ambient Pulse Animation */
 .ambient-glow {
   position: absolute;
   top: 0;
@@ -57,16 +58,105 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 900px;
-  height: 450px;
+  height: 100%;
   background: radial-gradient(
-    ellipse 50% 40% at 50% 45%,
+    ellipse 65% 55% at 50% 45%,
     rgba(255, 107, 74, 0.16) 0%,
-    rgba(255, 107, 74, 0.05) 50%,
-    transparent 100%
+    rgba(255, 107, 74, 0.04) 45%,
+    transparent 75%
   );
   pointer-events: none;
   z-index: 0;
+  animation: storyGlowPulse 7s ease-in-out infinite alternate;
+  will-change: opacity, transform;
 }
+
+/* Story Detail Page Background Motion (Drifting Embers + Slow Ambient Pulse) */
+.story-hero-bg-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.story-ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  background: radial-gradient(
+    ellipse 65% 55% at 50% 45%,
+    rgba(255, 107, 74, 0.18) 0%,
+    rgba(255, 107, 74, 0.04) 45%,
+    transparent 75%
+  );
+  animation: storyGlowPulse 7s ease-in-out infinite alternate;
+  will-change: opacity, transform;
+}
+
+@keyframes storyGlowPulse {
+  0% {
+    opacity: 0.75;
+    transform: translateX(-50%) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.03);
+  }
+}
+
+.ember-particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--glow);
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: floatEmber var(--duration, 45s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  left: var(--x-pos, 50%);
+  bottom: -20px;
+  width: var(--size, 3px);
+  height: var(--size, 3px);
+  opacity: var(--base-opacity, 0.15);
+  box-shadow: 0 0 6px rgba(255, 107, 74, 0.4);
+}
+
+@keyframes floatEmber {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: var(--base-opacity, 0.18);
+  }
+  85% {
+    opacity: var(--base-opacity, 0.15);
+  }
+  100% {
+    transform: translate3d(var(--drift-x, 20px), -480px, 0);
+    opacity: 0;
+  }
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow,
+  .story-ambient-glow {
+    animation: none !important;
+    opacity: 0.85 !important;
+    transform: translateX(-50%) !important;
+  }
+  .ember-particle {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
+
 
 /* Vercel-style minimal card */
 .nl-card {
