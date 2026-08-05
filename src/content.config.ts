@@ -20,6 +20,7 @@ const stories = defineCollection({
     location: z.string(),
     eventDate: z.string(),
     pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     audioUrl: z.string().optional(),
     audioDuration: z.string().optional(),
     sources: z.array(

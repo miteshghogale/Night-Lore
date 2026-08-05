@@ -6,6 +6,7 @@ status: "disputed"
 location: "Enfield, North London, United Kingdom"
 eventDate: "1977 - 1978"
 pubDate: "2026-07-28"
+updatedDate: "2026-08-05"
 sources:
   - label: "Society for Psychical Research (SPR) Case File #77-ENF"
     url: "https://www.spr.ac.uk"

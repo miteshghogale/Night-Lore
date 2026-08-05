@@ -6,6 +6,7 @@ status: "unresolved"
 location: "Abilene, Texas"
 eventDate: "1996"
 pubDate: "2026-08-03"
+updatedDate: "2026-08-05"
 sources:
   - label: "Brian Bethel Original Statement Archive (1996)"
     url: "https://www.abilene-rc.com"

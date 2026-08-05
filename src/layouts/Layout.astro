@@ -1,6 +1,12 @@
 ---
 import '../styles/global.css';
 import AudioPlayer from '../components/AudioPlayer.astro';
+import { CATEGORIES } from '../utils/categories';
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
 
 interface Props {
   title?: string;
@@ -8,30 +14,99 @@ interface Props {
   image?: string;
   articleMeta?: {
     publishedTime: string;
+    updatedTime?: string;
     category: string;
     tags: string[];
   };
+  breadcrumbs?: BreadcrumbItem[];
+  isHome?: boolean;
 }
 
+const siteUrl = (import.meta.env.SITE_URL || Astro.site?.href || 'https://night-lore.lifterplate.workers.dev').replace(/\/$/, '');
+
 const {
-  title = 'Night Lore: Researched Paranormal Archive & Unsolved Case Files',
+  title = 'Night Lore — Real Ghost Stories & Documented Hauntings',
   description = 'Night Lore documents real hauntings, unsolved mysteries, urban legends, and reader-submitted paranormal experiences. Researched, sourced, and factual.',
-  image = 'https://mynightlore.com/og-image.jpg',
-  articleMeta
+  image = `${siteUrl}/og-image.jpg`,
+  articleMeta,
+  breadcrumbs,
+  isHome = false
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://mynightlore.com');
+const canonicalURL = `${siteUrl}${Astro.url.pathname}`;
+const categoryList = Object.values(CATEGORIES);
 
-const categories = [
-  'Real Paranormal Cases',
-  'Country Stories',
-  'Haunted Places',
-  'Unsolved Mysteries',
-  'Urban Legends',
-  'First-Person Accounts',
-  'Movie Inspiration',
-  'Psychology of Fear'
-];
+// Build Homepage Schema (WebSite + Organization)
+const websiteSchema = isHome ? {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "Night Lore",
+      "description": description,
+      "publisher": {
+        "@id": `${siteUrl}/#organization`
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Night Lore",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/apple-touch-icon.png`
+      },
+      "description": "An independent, non-fictional research archive documenting real hauntings, unsolved anomalies, urban folklore, and eyewitness accounts."
+    }
+  ]
+} : null;
+
+// Build Article Schema for story pages (Article, NOT NewsArticle)
+const articleSchema = articleMeta ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalURL
+  },
+  "headline": title,
+  "description": description,
+  "url": canonicalURL,
+  "image": [image],
+  "datePublished": articleMeta.publishedTime,
+  "dateModified": articleMeta.updatedTime || articleMeta.publishedTime,
+  "author": {
+    "@type": "Organization",
+    "name": "Night Lore",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Night Lore",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/apple-touch-icon.png`
+    }
+  },
+  "articleSection": articleMeta.category,
+  "keywords": articleMeta.tags.join(', ')
+} : null;
+
+// Build BreadcrumbList Schema
+const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`
+  }))
+} : null;
 ---
 
 <!DOCTYPE html>
@@ -71,25 +146,16 @@ const categories = [
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={image} />
 
-    <!-- Structured Data (JSON-LD) for SEO -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": articleMeta ? "NewsArticle" : "WebSite",
-      "headline": title,
-      "description": description,
-      "url": canonicalURL,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Night Lore",
-        "url": "https://mynightlore.com",
-        "logo": "https://mynightlore.com/favicon.svg"
-      },
-      ...(articleMeta ? {
-        "datePublished": articleMeta.publishedTime,
-        "articleSection": articleMeta.category,
-        "keywords": articleMeta.tags.join(', ')
-      } : {})
-    })} />
+    <!-- JSON-LD Structured Data Blocks -->
+    {websiteSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    )}
+    {articleSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    )}
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
   </head>
   <body class="bg-grain text-[var(--color-text)] flex flex-col min-h-screen">
     <!-- Header Nav -->
@@ -112,8 +178,8 @@ const categories = [
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[var(--color-text-muted)]">
           <a href="/" class="hover:text-[var(--color-text)] transition-colors">Archive</a>
-          <a href="/category/Real Paranormal Cases" class="hover:text-[var(--color-text)] transition-colors">Cases</a>
-          <a href="/category/Unsolved Mysteries" class="hover:text-[var(--color-text)] transition-colors">Mysteries</a>
+          <a href="/category/real-paranormal-cases" class="hover:text-[var(--color-text)] transition-colors">Cases</a>
+          <a href="/category/unsolved-mysteries" class="hover:text-[var(--color-text)] transition-colors">Mysteries</a>
           <a href="/about" class="hover:text-[var(--color-text)] transition-colors">Editorial Policy</a>
         </nav>
 
@@ -142,9 +208,9 @@ const categories = [
       <!-- Mobile Dropdown Nav Menu -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-4 space-y-3 font-mono-meta text-xs">
         <a href="/" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">ARCHIVE HOME</a>
-        <a href="/category/Real Paranormal Cases" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">REAL PARANORMAL CASES</a>
-        <a href="/category/Unsolved Mysteries" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">UNSOLVED MYSTERIES</a>
-        <a href="/category/Haunted Places" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">HAUNTED PLACES</a>
+        <a href="/category/real-paranormal-cases" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">REAL PARANORMAL CASES</a>
+        <a href="/category/unsolved-mysteries" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">UNSOLVED MYSTERIES</a>
+        <a href="/category/haunted-places" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">HAUNTED PLACES</a>
         <a href="/about" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">EDITORIAL POLICY</a>
       </div>
     </header>
@@ -171,10 +237,10 @@ const categories = [
               <span class="font-bold text-base tracking-tight text-[var(--color-text)]">NIGHT LORE</span>
             </div>
             <p class="text-sm text-[var(--color-text-muted)] leading-relaxed max-w-md mb-4">
-              An independent, researched archive documenting real hauntings, unsolved anomalies, urban folklore, and eyewitness accounts. Every case presents both paranormal claims and critical skeptical analysis.
+              An independent, researched archive documenting real ghost stories, hauntings, unsolved anomalies, urban folklore, and eyewitness accounts. Every case presents both paranormal claims and critical skeptical analysis.
             </p>
             <p class="font-mono-meta text-xs text-[var(--color-text-dim)]">
-              DOMAIN: mynightlore.com // DEPLOY TARGET: Cloudflare Workers
+              DEPLOY TARGET: Cloudflare Workers
             </p>
           </div>
 
@@ -182,10 +248,10 @@ const categories = [
           <div>
             <h4 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">Taxonomy</h4>
             <ul class="space-y-2 text-sm text-[var(--color-text-muted)]">
-              {categories.slice(0, 4).map(cat => (
+              {categoryList.slice(0, 4).map(cat => (
                 <li>
-                  <a href={`/category/${cat}`} class="hover:text-[var(--glow)] transition-colors">
-                    {cat}
+                  <a href={`/category/${cat.slug}`} class="hover:text-[var(--glow)] transition-colors">
+                    {cat.name}
                   </a>
                 </li>
               ))}

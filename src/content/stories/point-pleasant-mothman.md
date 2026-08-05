@@ -6,6 +6,7 @@ status: "witnessed"
 location: "Point Pleasant, West Virginia"
 eventDate: "1966 - 1967"
 pubDate: "2026-07-22"
+updatedDate: "2026-08-05"
 sources:
   - label: "National Transportation Safety Board (NTSB) Bridge Report"
     url: "https://www.ntsb.gov"

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import StoryCard from '../components/StoryCard.astro';
 import StatusBadge from '../components/StatusBadge.astro';
 import { getCollection } from 'astro:content';
+import { CATEGORIES, categoryToSlug } from '../utils/categories';
 
 const allStories = await getCollection('stories', ({ data }) => !data.draft);
 const sortedStories = allStories.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
@@ -10,56 +11,17 @@ const sortedStories = allStories.sort((a, b) => new Date(b.data.pubDate).getTime
 const featuredStory = sortedStories.find(s => s.data.category === 'Real Paranormal Cases') || sortedStories[0];
 const recentStories = sortedStories.filter(s => s.id !== featuredStory.id);
 
-const categoriesList = [
-  { 
-    name: 'Real Paranormal Cases', 
-    desc: 'Researched police logs, court transcripts, and ballistics data.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>` 
-  },
-  { 
-    name: 'Country Stories', 
-    desc: 'Regional folklore, rural apparitions, and local oral histories.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>` 
-  },
-  { 
-    name: 'Haunted Places', 
-    desc: 'Historical locations, architecture, and ongoing structural phenomena.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>` 
-  },
-  { 
-    name: 'Unsolved Mysteries', 
-    desc: 'High strangeness, unexplained occurrences, and physical anomalies.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>` 
-  },
-  { 
-    name: 'Urban Legends', 
-    desc: 'Modern myths, regional dread, and documented witness affidavits.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>` 
-  },
-  { 
-    name: 'First-Person Accounts', 
-    desc: 'Direct eyewitness statements submitted for editorial review.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>` 
-  },
-  { 
-    name: 'Movie Inspiration', 
-    desc: 'Separating true archival events from cinematic exaggeration.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>` 
-  },
-  { 
-    name: 'Psychology of Fear', 
-    desc: 'Neurological, physiological, and sleep-cycle explanations.', 
-    iconSvg: `<svg class="w-6 h-6 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>` 
-  },
-];
-
-const categoryCounts = categoriesList.map(cat => ({
+const categoryCounts = Object.values(CATEGORIES).map(cat => ({
   ...cat,
   count: allStories.filter(s => s.data.category === cat.name).length
 }));
 ---
 
-<Layout title="Night Lore: Researched Paranormal Archive, Unsolved Case Files">
+<Layout
+  title="Night Lore — Real Ghost Stories, Documented Hauntings & Unsolved Cases"
+  description="Explore real ghost stories, documented hauntings, and unsolved paranormal case files. Researched and sourced archives of real supernatural encounters and haunted places."
+  isHome={true}
+>
   <!-- Signature Hero Section -->
   <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 text-center border-b border-[var(--color-border)]">
     <!-- Ambient Ember Glow Background with smooth top fade out -->
@@ -68,23 +30,23 @@ const categoryCounts = categoriesList.map(cat => ({
     <div class="relative z-10 max-w-4xl mx-auto px-4">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--glow)] text-xs font-mono-meta mb-6 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-[var(--glow)] animate-pulse"></span>
-        NON-FICTION ANOMALY ARCHIVE
+        RESEARCHED PARANORMAL CASE FILES & ARCHIVE
       </div>
 
       <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-6 leading-[1.15]">
-        DOCUMENTING THE <br class="hidden sm:inline" />
+        REAL GHOST STORIES & <br class="hidden sm:inline" />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[var(--color-text-muted)] to-[var(--glow)]">
-          UNEXPLAINED & OBSERVED
+          DOCUMENTED HAUNTINGS
         </span>
       </h1>
 
       <p class="text-base sm:text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8 leading-relaxed">
-        Night Lore is a non-fictional paranormal repository documenting real-world anomalies, ballistics transcripts, and eyewitness testimonies, presenting both extraordinary claims and rigorous scientific skepticism.
+        Night Lore documents true paranormal stories, real haunted places, and unsolved mysteries. Every dossier presents primary ballistics transcripts, official police logs, and critical scientific counter-analysis of real supernatural encounters.
       </p>
 
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a href="#featured" class="btn-primary">
-          Explore Featured Case
+          Explore Featured Dossier
         </a>
         <a href="/submit" class="btn-secondary">
           Submit An Encounter
@@ -98,7 +60,7 @@ const categoryCounts = categoriesList.map(cat => ({
     <section id="featured" class="my-16 sm:my-20">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
-          // FEATURED CASE DOSSIER
+          // FEATURED PARANORMAL CASE
         </h2>
         <span class="font-mono-meta text-xs text-[var(--glow)]">SPOTLIGHT</span>
       </div>
@@ -174,7 +136,7 @@ const categoryCounts = categoriesList.map(cat => ({
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {categoryCounts.map(cat => (
-        <a href={`/category/${cat.name}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--color-border-hover)]">
+        <a href={`/category/${cat.slug}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--color-border-hover)]">
           <div>
             <div class="flex items-center justify-between mb-3">
               <Fragment set:html={cat.iconSvg} />
@@ -186,7 +148,7 @@ const categoryCounts = categoriesList.map(cat => ({
               {cat.name}
             </h3>
             <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
-              {cat.desc}
+              {cat.description}
             </p>
           </div>
         </a>
@@ -198,7 +160,7 @@ const categoryCounts = categoriesList.map(cat => ({
   <section class="mb-20">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
-        // RECENT CASE FILES
+        // LATEST REAL GHOST STORIES & CASE FILES
       </h2>
       <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">SHOWING {recentStories.length} STORIES</span>
     </div>
@@ -227,10 +189,10 @@ const categoryCounts = categoriesList.map(cat => ({
         CONFIDENTIAL SUBMISSIONS
       </span>
       <h2 class="text-2xl sm:text-4xl font-bold text-[var(--color-text)] mb-4 tracking-tight">
-        Have You Witnessed an Unexplained Anomaly?
+        Have You Experienced a Real Supernatural Encounter?
       </h2>
       <p class="text-sm sm:text-base text-[var(--color-text-muted)] mb-8 leading-relaxed">
-        We review first-person paranormal encounters, eyewitness affidavits, and localized urban legends. All entries undergo editorial review before publishing.
+        We review first-person real paranormal cases, eyewitness affidavits, and true urban legend origins. All entries undergo editorial verification before publishing.
       </p>
       <a href="/submit" class="btn-primary">
         Submit Your Encounter For Review

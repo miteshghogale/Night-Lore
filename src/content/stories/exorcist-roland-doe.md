@@ -6,6 +6,7 @@ status: "disputed"
 location: "Cottage City, Maryland & St. Louis, Missouri"
 eventDate: "1949"
 pubDate: "2026-08-01"
+updatedDate: "2026-08-05"
 sources:
   - label: "St. Louis University Jesuit Exorcism Diary (1949)"
     url: "https://www.slu.edu/library"

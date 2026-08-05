@@ -6,6 +6,7 @@ status: "disputed"
 location: "Amityville, Long Island, New York"
 eventDate: "1974 - 1976"
 pubDate: "2026-07-15"
+updatedDate: "2026-08-05"
 audioUrl: "/audio/amityville-horror-case.mp3"
 audioDuration: "10:53"
 sources:

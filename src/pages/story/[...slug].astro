@@ -1,7 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
+import StoryCard from '../../components/StoryCard.astro';
 import { getCollection, render } from 'astro:content';
+import { categoryToSlug } from '../../utils/categories';
 
 export async function getStaticPaths() {
   const stories = await getCollection('stories', ({ data }) => !data.draft);
@@ -19,32 +21,60 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
   month: 'long',
   day: 'numeric'
 });
+
+const categorySlug = categoryToSlug(story.data.category);
+
+// Compute Related Cases (same category prioritized, then tag overlap, up to 3)
+const allStories = await getCollection('stories', ({ data }) => !data.draft);
+const relatedStories = allStories
+  .filter(s => s.id !== story.id)
+  .sort((a, b) => {
+    const aSameCat = a.data.category === story.data.category ? 3 : 0;
+    const bSameCat = b.data.category === story.data.category ? 3 : 0;
+
+    const aSharedTags = a.data.tags ? a.data.tags.filter(t => story.data.tags?.includes(t)).length : 0;
+    const bSharedTags = b.data.tags ? b.data.tags.filter(t => story.data.tags?.includes(t)).length : 0;
+
+    return (bSameCat + bSharedTags) - (aSameCat + aSharedTags);
+  })
+  .slice(0, 3);
+
+const breadcrumbs = [
+  { name: 'Archive', url: '/' },
+  { name: story.data.category, url: `/category/${categorySlug}` },
+  { name: story.data.title, url: `/story/${story.id}` }
+];
+
+// Shortened clean title tag pattern for SEO (<60-75 chars)
+const pageTitle = `${story.data.title} | Night Lore`;
 ---
 
 <Layout
-  title={`${story.data.title} | Night Lore Archive`}
+  title={pageTitle}
   description={story.data.dek}
   articleMeta={{
     publishedTime: story.data.pubDate.toISOString(),
+    updatedTime: story.data.updatedDate ? story.data.updatedDate.toISOString() : story.data.pubDate.toISOString(),
     category: story.data.category,
-    tags: story.data.tags
+    tags: story.data.tags || []
   }}
+  breadcrumbs={breadcrumbs}
 >
   <article class="max-w-4xl mx-auto">
     <!-- Back Navigation -->
     <a
-      href={`/category/${story.data.category}`}
+      href={`/category/${categorySlug}`}
       onclick={`if (document.referrer && window.history.length > 1) { try { if (new URL(document.referrer).origin === window.location.origin) { event.preventDefault(); window.history.back(); } } catch (e) {} }`}
       class="inline-flex items-center gap-1.5 text-xs font-mono-meta text-[var(--color-text-dim)] hover:text-[var(--glow)] transition-colors mb-4"
     >
-      ← Back
+      ← Back to {story.data.category}
     </a>
 
     <!-- Navigation Breadcrumbs -->
     <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-6 flex-wrap">
       <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
       <span>/</span>
-      <a href={`/category/${story.data.category}`} class="hover:text-[var(--glow)]">
+      <a href={`/category/${categorySlug}`} class="hover:text-[var(--glow)]">
         {story.data.category.toUpperCase()}
       </a>
       <span>/</span>
@@ -112,7 +142,7 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
         <ul class="space-y-3 font-mono-meta text-xs">
           {story.data.sources.map(source => (
             <li class="flex items-start gap-2">
-              <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 005.656-5.656l-1.1 1.1"/></svg>
               <a
                 href={source.url}
                 target="_blank"
@@ -140,6 +170,35 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
           </span>
         ))}
       </div>
+    )}
+
+    <!-- Related Cases Internal Linking Section -->
+    {relatedStories.length > 0 && (
+      <section class="mb-12 pt-8 border-t border-[var(--color-border)]">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
+            // RELATED CASE DOSSIERS
+          </h2>
+          <a href={`/category/${categorySlug}`} class="text-xs font-mono-meta text-[var(--glow)] hover:underline">
+            View All in {story.data.category} →
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {relatedStories.map(relStory => (
+            <StoryCard
+              title={relStory.data.title}
+              dek={relStory.data.dek}
+              slug={relStory.id}
+              category={relStory.data.category}
+              status={relStory.data.status}
+              location={relStory.data.location}
+              eventDate={relStory.data.eventDate}
+              pubDate={relStory.data.pubDate}
+              audioDuration={relStory.data.audioDuration}
+            />
+          ))}
+        </div>
+      </section>
     )}
 
     <!-- Similar Encounter Prompt -->
