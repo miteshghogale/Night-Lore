@@ -23,6 +23,7 @@ const stories = defineCollection({
     updatedDate: z.coerce.date().optional(),
     audioUrl: z.string().optional(),
     audioDuration: z.string().optional(),
+    ambientTrack: z.string().optional(),
     sources: z.array(
       z.object({
         label: z.string(),
