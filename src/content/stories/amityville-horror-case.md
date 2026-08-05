@@ -19,6 +19,11 @@ sources:
     url: "https://apnews.com"
 tags: ["amityville", "demonic", "homicide", "new-york", "ed-and-lorraine-warren"]
 draft: false
+coverImage: "/images/covers/amityville-horror-case.jpg"
+coverAlt: "Exterior photograph of 112 Ocean Avenue in Amityville, New York under snow"
+coverCredit: "Doug Kerr"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:112_Ocean_Ave_house_February_2010.jpg"
+coverLicense: "CC BY-SA 2.0"
 ---
 
 At six-thirty on the rain-slicked evening of November 13, 1974, a panicked twenty-three-year-old man named Ronald DeFeo Jr. burst through the doors of Henry's Bar in Amityville, Long Island. He collapsed onto the counter, shouting to the patrons that his parents had been shot inside their home. A small group of men followed DeFeo back to the quiet waterfront property at 112 Ocean Avenue, a large three-story Dutch Colonial featuring distinctive gambrel roofs and eye-like quarter-moon windows overlooking the canal.

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import StoryCard from '../../components/StoryCard.astro';
+import StoryCover from '../../components/StoryCover.astro';
 import { getCollection, render } from 'astro:content';
 import { categoryToSlug } from '../../utils/categories';
 
@@ -156,6 +157,17 @@ const emberConfigs = [
       </div>
     </header>
 
+    <!-- Hero Cover Image & Visible Attribution -->
+    {story.data.coverImage && (
+      <StoryCover
+        src={story.data.coverImage}
+        alt={story.data.coverAlt || story.data.title}
+        credit={story.data.coverCredit}
+        creditUrl={story.data.coverCreditUrl}
+        license={story.data.coverLicense}
+      />
+    )}
+
     <!-- Main Article Body -->
     <div class="prose-dark max-w-none leading-relaxed mb-12">
       <Content />
@@ -223,6 +235,8 @@ const emberConfigs = [
               eventDate={relStory.data.eventDate}
               pubDate={relStory.data.pubDate}
               audioDuration={relStory.data.audioDuration}
+              coverImage={relStory.data.coverImage}
+              coverAlt={relStory.data.coverAlt}
             />
           ))}
         </div>

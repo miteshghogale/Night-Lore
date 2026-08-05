@@ -15,6 +15,11 @@ sources:
     url: "https://www.himejicastle.jp"
 tags: ["okiku", "bancho-sarayashiki", "japan", "himeji-castle", "kaidan", "onryo"]
 draft: false
+coverImage: "/images/covers/okiku-nine-plates.jpg"
+coverAlt: "Historic stone well (Okiku-no-ido) inside the grounds of Himeji Castle, Japan"
+coverCredit: "そらみみ (Soramimi)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Okiku_Well_in_Himeji_Castle.JPG"
+coverLicense: "CC BY-SA 3.0"
 ---
 
 Deep in the quiet hours of a dark Edo night, a faint, weeping voice rises from the stone mouth of a deserted manor well. Slow, trembling, and echoing with unendurable despair, the ghost of a young servant maiden begins counting her master's heirloom porcelain plates. She counts them one by one in a hollow whisper: one, two, three, four, five, six, seven, eight, nine. Upon reaching nine, the counting abruptly stops. A heavy, suffocating silence hangs over the courtyard tatami before a piercing shriek of agony shatters the midnight air, followed by bitter sobbing as the spirit realizes the tenth plate remains missing.

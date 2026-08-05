@@ -19,6 +19,11 @@ sources:
     url: "https://vault.fbi.gov"
 tags: ["mothman", "point-pleasant", "silver-bridge", "cryptozoology", "west-virginia"]
 draft: false
+coverImage: "/images/covers/point-pleasant-mothman.jpg"
+coverAlt: "Metallic Mothman statue with red reflective eyes in Point Pleasant, West Virginia"
+coverCredit: "Csassen13"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Mothman_Statue.jpg"
+coverLicense: "CC0 1.0 Public Domain"
 ---
 
 Late on the cold, moonless night of November 15, 1966, two young married couples, Roger and Linda Scarberry alongside Steve and Mary Mallette, were taking a late drive seven miles north of Point Pleasant, West Virginia. They were traveling inside the McClintic Wildlife Management Area, a sprawling twenty-five-hundred-acre property known locally as the TNT area. During World War II, the site had operated as a major coal-to-oil and munitions manufacturing plant, leaving behind dozens of abandoned concrete storage bunkers, rusted generator buildings, and overgrown dirt roads winding through thick forest.

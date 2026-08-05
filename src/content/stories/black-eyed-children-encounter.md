@@ -17,6 +17,11 @@ sources:
     url: "https://www.texasfolkloresociety.org"
 tags: ["black-eyed-children", "bek", "texas", "brian-bethel", "urban-legend"]
 draft: false
+coverImage: "/images/covers/black-eyed-children-encounter.jpg"
+coverAlt: "Eerie foggy suburban street illuminated by a lone yellow streetlamp at night"
+coverCredit: "Robert Natkay (Heal25)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Foggy_night.JPG"
+coverLicense: "CC BY-SA 4.0"
 ---
 
 It was a cool spring evening in April 1996, around nine-thirty at night. I was sitting inside my parked car in a shopping plaza parking lot near North 1st Street in Abilene, Texas, right across from the marquee lights of a local movie theater. I had the interior yellow dome light turned on and was sitting in the driver's seat writing out a check for my utility bill, enjoying a quiet moment before driving home after a long day at the newspaper.

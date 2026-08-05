@@ -19,6 +19,11 @@ sources:
     url: "https://www.alexianbrothers.org"
 tags: ["exorcism", "the-exorcist", "roland-doe", "maryland", "st-louis", "jesuit-diary"]
 draft: false
+coverImage: "/images/covers/exorcist-roland-doe.jpg"
+coverAlt: "Historic photograph of Alexian Brothers Hospital in St. Louis, Missouri where the 1949 exorcism of Roland Doe took place"
+coverCredit: "Missouri History Museum"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Alexian_Brothers_Hospital,_3933_South_Broadway.jpg"
+coverLicense: "Public Domain"
 ---
 
 In the quiet, working-class suburb of Cottage City, Maryland, during the freezing winter of January 1949, thirteen-year-old Ronald Edwin Hunkeler began hearing faint, unsettling scratching sounds inside the walls of his family home. At first, his parents assumed rats or squirrels had nested behind the plaster woodwork. Exterminators were called out to inspect the property, floorboards were pried up in the attic, and sections of wall were cut open in the hallway, but workers found no animal droppings, no nests, and no structural damage. Within days, the strange noises shifted, moving out of the walls and directly into the wooden furniture surrounding the boy's bedroom bed.

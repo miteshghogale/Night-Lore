@@ -19,6 +19,11 @@ sources:
     url: "https://www.bbc.co.uk/archives"
 tags: ["enfield", "london", "poltergeist", "spr", "maurice-grosse"]
 draft: false
+coverImage: "/images/covers/enfield-poltergeist.jpg"
+coverAlt: "Exterior photograph of 284 Green Street in Enfield, London, the location of the famous 1970s poltergeist case"
+coverCredit: "Mx. Granger"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:284_Green_Street,_Enfield.jpg"
+coverLicense: "CC0 1.0 Public Domain"
 ---
 
 On a damp, humid evening on August 31, 1977, single mother Peggy Hodgson went upstairs to check on her four children inside their rented council house at 284 Green Street in Enfield, North London. Peggy shared the modest, semi-detached home with her daughters Margaret, aged thirteen, and Janet, aged eleven, alongside her sons Johnny, aged ten, and Billy, aged seven. Walking into the children's second-floor bedroom to tell them to stop bouncing on their mattresses, Peggy found Janet and Johnny sitting up in bed, pointing in terror toward the wall.

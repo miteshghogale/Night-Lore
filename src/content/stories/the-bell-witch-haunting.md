@@ -17,6 +17,11 @@ sources:
     url: "https://www.robertsoncountytn.gov"
 tags: ["bell-witch", "tennessee", "poltergeist", "historical", "andrew-jackson"]
 draft: false
+coverImage: "/images/covers/the-bell-witch-haunting.jpg"
+coverAlt: "Natural stone mouth of the historic Bell Witch Cave in Adams, Robertson County, Tennessee"
+coverCredit: "Www78"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Bell_Witch_Cave.JPG"
+coverLicense: "CC BY-SA 3.0"
 ---
 
 In the humid summer of 1817, along the fertile bottomlands of the Red River in Robertson County, Tennessee, a prosperous fifty-year-old farmer named John Bell Sr. was walking through his vast cornfield. Bell had settled on the three-hundred-and-twenty-acre property in 1804, building a comfortable two-story log homestead for his wife Lucy and their children. As Bell walked between the tall rows of green corn, he stepped into a clearing and found a strange animal sitting quietly on the ground. The creature possessed the body of a large hound and the head of a wild rabbit. Startled by the unnatural appearance of the animal, Bell raised his musket and fired. The creature vanished into the dry cornstalks instantly without making a sound, leaving no blood and no tracks in the soil.

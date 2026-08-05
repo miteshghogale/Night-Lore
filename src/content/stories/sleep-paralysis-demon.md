@@ -17,6 +17,11 @@ sources:
     url: "https://sleep.med.harvard.edu"
 tags: ["sleep-paralysis", "rem-atonia", "psychology", "neurology", "shadow-people"]
 draft: false
+coverImage: "/images/covers/sleep-paralysis-demon.jpg"
+coverAlt: "Henry Fuseli's famous 1781 oil painting The Nightmare depicting an incubus demon perched upon a sleeping woman"
+coverCredit: "Henry Fuseli (1781)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_-_WGA08332.jpg"
+coverLicense: "Public Domain"
 ---
 
 Picture waking up in the middle of a pitch-black room at three in the morning. Your mind wakes up instantly, fully alert, but when you attempt to sit up or turn your head toward the door, nothing happens. Your arms, legs, and torso are locked solid, completely severed from your conscious willpower. As panic surges through your body, you feel a crushing weight settle onto your chest, as if an invisible intruder were kneeling directly on your ribcage, forcing you into shallow, agonizing breaths. A loud, electric roaring sound fills your ears, and out of the corner of your peripheral vision, a tall, dark silhouette glides silently out of the hallway shadow and stops right at the foot of your bed.

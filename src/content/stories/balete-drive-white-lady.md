@@ -15,6 +15,11 @@ sources:
     url: "https://quezoncity.gov.ph"
 tags: ["balete-drive", "white-lady", "philippines", "quezon-city", "urban-legend"]
 draft: false
+coverImage: "/images/covers/balete-drive-white-lady.jpg"
+coverAlt: "Ancient sprawling Balete tree with twisting aerial roots and eerie foliage in the Philippines"
+coverCredit: "Lawrence Ruiz"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Enchanted_Balete_Tree_in_Lazi.JPG"
+coverLicense: "CC BY-SA 4.0"
 ---
 
 Shortly after midnight on a damp, rain-slicked evening in November 1953, a solitary taxi driver guided his pre-war Chevrolet sedan down Balete Drive in the New Manila district of Quezon City. The avenue was dark, narrow, and exceptionally quiet, framed on both sides by the high stone perimeter walls of sprawling Spanish-Colonial estates. Above the asphalt, massive ancient balete trees extended their twisted, winding branches like a dense, natural vault, completely blocking out the faint moonlight. As the driver negotiated a secluded curve near an overgrown, unlit lot, his dim yellow headlights caught the figure of a woman standing motionless beside the road. She wore a long, pristine white nightgown, her face completely veiled by cascading black hair. Raising a slender arm into the drizzling dark, she signaled for a ride.

@@ -31,7 +31,12 @@ const stories = defineCollection({
       })
     ),
     tags: z.array(z.string()),
-    draft: z.boolean().default(false)
+    draft: z.boolean().default(false),
+    coverImage: z.string().optional(),
+    coverAlt: z.string().optional(),
+    coverCredit: z.string().optional(),
+    coverCreditUrl: z.string().optional(),
+    coverLicense: z.string().optional()
   })
 });
 

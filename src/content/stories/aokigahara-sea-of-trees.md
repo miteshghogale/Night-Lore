@@ -15,6 +15,11 @@ sources:
     url: "https://www.bunshun.co.jp"
 tags: ["aokigahara", "sea-of-trees", "japan", "mount-fuji", "haunted-places", "yamanashi"]
 draft: false
+coverImage: "/images/covers/aokigahara-sea-of-trees.jpg"
+coverAlt: "Dense mossy trees and volcanic terrain inside the Aokigahara Forest at Mount Fuji, Japan"
+coverCredit: "Guilhem Vellut"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Aokigahara_Forest_(10863169686).jpg"
+coverLicense: "CC BY 2.0"
 ---
 
 A few steps off the marked trail near Narusawa, the sounds of the modern world vanish with unnatural speed. Highway traffic humming along Route 139 fades to nothing, swallowed by a wall of dense pine needles and ancient cypress branches. Beneath your boots, there is no give of soft woodland soil. Your feet strike contorted, moss-covered ropes of tree roots that writhe across jagged slabs of black volcanic stone. Looking over your shoulder to locate the path you left two minutes ago, a sudden chill takes hold. The uniform grid of towering trees looks identical in every direction, and your own footsteps produce no echo. The silence here is not merely quiet. It is a heavy, physical presence that seems to press against your ears.

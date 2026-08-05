@@ -15,6 +15,11 @@ sources:
     url: "https://www.yamaguchi-opentravel.jp"
 tags: ["hoichi", "kwaidan", "dan-no-ura", "japan", "movie-inspiration", "heike-clan", "masaki-kobayashi"]
 draft: false
+coverImage: "/images/covers/hoichi-the-earless.jpg"
+coverAlt: "The Suiten-mon gate of Akama-jingu (formerly Amida-ji temple) in Shimonoseki, Japan, home to the legend of Hoichi the Earless"
+coverCredit: "Suicasmo"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Akama-jingu_20170223.jpg"
+coverLicense: "CC BY-SA 4.0"
 ---
 
 In the pitch-black night inside Amidaji Temple near the Shimonoseki Straits, a blind young minstrel named Hoichi sits cross-legged on the tatami mats, plucking the four heavy gut strings of his biwa with a horn plectrum. His voice swells with breathtaking emotion, chanting the tragic saga of the Heike clan. In the darkness around him, unseen listeners weep quietly, the sound of iron armor clanking softly in the shadows whenever he recounts a fatal sword strike or the crashing of warships. Hoichi cannot see the stern samurai standing beside him, nor the noble lady in ancient court robes seated before him. He believes he is performing inside the magnificent hall of a wealthy nobleman's palace. In reality, he is sitting alone in the middle of a deserted cemetery, surrounded by glowing spectral lanterns, mossy tombstones, and the restless dead.

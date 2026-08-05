@@ -19,6 +19,11 @@ sources:
     url: "https://www.utetribe.com"
 tags: ["skinwalker-ranch", "aawsap", "utah", "cattle-mutilation", "uap"]
 draft: false
+coverImage: "/images/covers/skinwalker-ranch-anomalies.jpg"
+coverAlt: "Rugged desert sandstone rock formations and mesa ridges in Uintah County, Utah"
+coverCredit: "James St. John"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Weber_Sandstone_%26_Moenkopi_Formation_(Dinosaur_National_Monument,_Utah,_USA)_2_(48863309691).jpg"
+coverLicense: "CC BY 2.0"
 ---
 
 Out in the arid desert basin of northeastern Utah, bordered by the Uintah Mountains to the north and steep sandstone cliffs to the south, lies a remote five-hundred-acre property known across the region as Skinwalker Ranch. For fifteen generations, members of the local Ute Indian Tribe have avoided the basin, warning outsiders that the ridge overlooking the pastures is cursed territory. In Ute tradition, the land is identified as the path of the Skinwalker, a sinister shape-shifting sorcerer in Native lore capable of taking the form of large animals to terrorize those who trespass upon its domain.

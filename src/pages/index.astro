@@ -66,6 +66,17 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
       </div>
 
       <div class="nl-card p-6 sm:p-8 relative overflow-hidden group">
+        {featuredStory.data.coverImage && (
+          <div class="mb-6 relative rounded-xl overflow-hidden aspect-[21/9] sm:aspect-[2.4/1] bg-[var(--color-surface-2)] border border-[var(--color-border)]">
+            <img
+              src={featuredStory.data.coverImage}
+              alt={featuredStory.data.coverAlt || featuredStory.data.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-surface)] via-transparent to-transparent opacity-60"></div>
+          </div>
+        )}
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div class="lg:col-span-2">
             <div class="flex items-center gap-3 mb-4 flex-wrap">
@@ -177,6 +188,8 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
           eventDate={story.data.eventDate}
           pubDate={story.data.pubDate}
           audioDuration={story.data.audioDuration}
+          coverImage={story.data.coverImage}
+          coverAlt={story.data.coverAlt}
         />
       ))}
     </div>
