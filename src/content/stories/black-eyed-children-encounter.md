@@ -8,7 +8,7 @@ eventDate: "1996"
 pubDate: "2026-08-03"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/black-eyed-children-encounter.mp3"
-audioDuration: "06:40"
+audioDuration: "06:43"
 ambientTrack: "suspense-ambient.mp3"
 sources:
   - label: "Brian Bethel Original Statement Archive (1996)"

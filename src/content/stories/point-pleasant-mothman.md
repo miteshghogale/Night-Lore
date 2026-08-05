@@ -8,7 +8,7 @@ eventDate: "1966 - 1967"
 pubDate: "2026-07-22"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/point-pleasant-mothman.mp3"
-audioDuration: "08:58"
+audioDuration: "09:12"
 ambientTrack: "investigative-ambient.mp3"
 sources:
   - label: "National Transportation Safety Board (NTSB) Bridge Report"

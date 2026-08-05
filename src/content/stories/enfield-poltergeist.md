@@ -8,7 +8,7 @@ eventDate: "1977 - 1978"
 pubDate: "2026-07-28"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/enfield-poltergeist.mp3"
-audioDuration: "08:04"
+audioDuration: "08:07"
 ambientTrack: "investigative-ambient.mp3"
 sources:
   - label: "Society for Psychical Research (SPR) Case File #77-ENF"

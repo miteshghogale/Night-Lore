@@ -8,7 +8,7 @@ eventDate: "1996 - Present"
 pubDate: "2026-07-20"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/skinwalker-ranch-anomalies.mp3"
-audioDuration: "07:19"
+audioDuration: "07:14"
 ambientTrack: "unresolved-ambient.mp3"
 sources:
   - label: "AAWSAP / DIA Contract Documentation (FOIA)"

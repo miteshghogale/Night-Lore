@@ -8,7 +8,7 @@ eventDate: "1974 - 1976"
 pubDate: "2026-07-15"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/amityville-horror-case.mp3"
-audioDuration: "11:27"
+audioDuration: "11:35"
 ambientTrack: "investigative-ambient.mp3"
 sources:
   - label: "Suffolk County Homicide Records (1974)"

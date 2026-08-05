@@ -8,7 +8,7 @@ eventDate: "1817 - 1821"
 pubDate: "2026-07-25"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/the-bell-witch-haunting.mp3"
-audioDuration: "09:23"
+audioDuration: "09:29"
 ambientTrack: "folklore-ambient.mp3"
 sources:
   - label: "An Authenticated History of the Bell Witch by Martin V. Ingram (1894)"

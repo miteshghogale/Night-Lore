@@ -8,7 +8,7 @@ eventDate: "1949"
 pubDate: "2026-08-01"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/exorcist-roland-doe.mp3"
-audioDuration: "10:49"
+audioDuration: "11:01"
 ambientTrack: "folklore-ambient.mp3"
 sources:
   - label: "St. Louis University Jesuit Exorcism Diary (1949)"

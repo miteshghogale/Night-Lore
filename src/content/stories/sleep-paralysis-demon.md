@@ -8,7 +8,7 @@ eventDate: "Ancient - Present"
 pubDate: "2026-07-30"
 updatedDate: "2026-08-05"
 audioUrl: "/audio/sleep-paralysis-demon.mp3"
-audioDuration: "07:18"
+audioDuration: "07:15"
 ambientTrack: "unresolved-ambient.mp3"
 sources:
   - label: "Journal of Sleep Research: REM Atonia & Hallucinations"
