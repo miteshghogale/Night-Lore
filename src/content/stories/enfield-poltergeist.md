@@ -14,9 +14,9 @@ sources:
   - label: "Society for Psychical Research (SPR) Case File #77-ENF"
     url: "https://www.spr.ac.uk"
   - label: "Metropolitan Police Official Log: WPC Carolyn Heeps Statement"
-    url: "https://www.met.police.uk"
+    url: "https://web.archive.org/web/20260713060036/https://www.met.police.uk/"
   - label: "BBC Radio 4 Audio Archives (1977)"
-    url: "https://www.bbc.co.uk/archives"
+    # TODO: Manual review required for https://www.bbc.co.uk/archives (404 Not Found, No Wayback Snapshot)
 tags: ["enfield", "london", "poltergeist", "spr", "maurice-grosse"]
 draft: false
 coverImage: "/images/covers/enfield-poltergeist.jpg"

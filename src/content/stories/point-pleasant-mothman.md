@@ -16,7 +16,7 @@ sources:
   - label: "Point Pleasant Register Newspaper Archive (1966-1967)"
     url: "https://www.wvculture.org"
   - label: "FBI Vault File: Point Pleasant Incident"
-    url: "https://vault.fbi.gov"
+    url: "https://web.archive.org/web/20260806214609/https://vault.fbi.gov/"
 tags: ["mothman", "point-pleasant", "silver-bridge", "cryptozoology", "west-virginia"]
 draft: false
 coverImage: "/images/covers/point-pleasant-mothman.jpg"

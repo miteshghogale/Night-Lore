@@ -6,13 +6,16 @@ status: "disputed"
 location: "Shimonoseki, Yamaguchi Prefecture, Japan"
 eventDate: "1185 - 1964"
 pubDate: "2026-08-05"
+audioUrl: "/audio/hoichi-the-earless.mp3"
+audioDuration: "07:38"
+ambientTrack: "folklore-ambient.mp3"
 sources:
   - label: "Lafcadio Hearn Archive: Kwaidan (1904)"
     url: "https://www.gutenberg.org"
   - label: "Masaki Kobayashi Film Archive: Kwaidan (1964)"
-    url: "https://www.criterion.com"
+    url: "https://web.archive.org/web/20260731165150/https://www.criterion.com/"
   - label: "Akama Shrine Historical Records (Shimonoseki)"
-    url: "https://www.yamaguchi-opentravel.jp"
+    # TODO: Manual review required for https://www.yamaguchi-opentravel.jp (Connection Failure, No Wayback Snapshot)
 tags: ["hoichi", "kwaidan", "dan-no-ura", "japan", "movie-inspiration", "heike-clan", "masaki-kobayashi"]
 draft: false
 coverImage: "/images/covers/hoichi-the-earless.jpg"

@@ -16,7 +16,7 @@ sources:
   - label: "National Institute for Discovery Science (NIDS) Research Logs"
     url: "https://www.scientificexploration.org"
   - label: "Uintah Basin Ute Tribal Historical Records"
-    url: "https://www.utetribe.com"
+    url: "https://web.archive.org/web/20260725112914/https://utetribe.com/"
 tags: ["skinwalker-ranch", "aawsap", "utah", "cattle-mutilation", "uap"]
 draft: false
 coverImage: "/images/covers/skinwalker-ranch-anomalies.jpg"

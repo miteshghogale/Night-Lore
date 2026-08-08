@@ -12,9 +12,9 @@ audioDuration: "09:29"
 ambientTrack: "folklore-ambient.mp3"
 sources:
   - label: "An Authenticated History of the Bell Witch by Martin V. Ingram (1894)"
-    url: "https://www.tn.gov/state-library-archives"
+    # TODO: Manual review required for https://www.tn.gov/state-library-archives (Connection Failure, No Wayback Snapshot)
   - label: "Robertson County Historical Society Archives"
-    url: "https://www.robertsoncountytn.gov"
+    url: "https://web.archive.org/web/20260718201833/https://robertsoncountytn.gov/"
 tags: ["bell-witch", "tennessee", "poltergeist", "historical", "andrew-jackson"]
 draft: false
 coverImage: "/images/covers/the-bell-witch-haunting.jpg"

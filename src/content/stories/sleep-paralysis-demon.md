@@ -12,9 +12,9 @@ audioDuration: "07:15"
 ambientTrack: "unresolved-ambient.mp3"
 sources:
   - label: "Journal of Sleep Research: REM Atonia & Hallucinations"
-    url: "https://onlinelibrary.wiley.com/journal/13652869"
+    url: "https://web.archive.org/web/20250726031532/https://onlinelibrary.wiley.com/journal/13652869"
   - label: "Harvard Medical School Sleep Medicine Archive"
-    url: "https://sleep.med.harvard.edu"
+    url: "https://web.archive.org/web/20200603172227/https://sleep.med.harvard.edu/"
 tags: ["sleep-paralysis", "rem-atonia", "psychology", "neurology", "shadow-people"]
 draft: false
 coverImage: "/images/covers/sleep-paralysis-demon.jpg"

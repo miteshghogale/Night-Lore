@@ -12,9 +12,9 @@ audioDuration: "11:35"
 ambientTrack: "investigative-ambient.mp3"
 sources:
   - label: "Suffolk County Homicide Records (1974)"
-    url: "https://www.suffolkcountyny.gov/police"
-  - label: "Official Trial Transcripts: People v. DeFeo"
-    url: "https://ww2.nycourts.gov"
+    url: "https://web.archive.org/web/20250710040302/http://www.suffolkcountyny.gov/police/"
+  - label: "Official Trial Transcripts: People v. DeFeo (403 Bot-Blocked)"
+    # TODO: Manual verification needed for https://ww2.nycourts.gov (Returns 403 Bot-Blocked, No Wayback Snapshot)
   - label: "Associated Press Archive: Ocean Ave Investigation"
     url: "https://apnews.com"
 tags: ["amityville", "demonic", "homicide", "new-york", "ed-and-lorraine-warren"]

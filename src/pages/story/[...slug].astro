@@ -190,14 +190,20 @@ const emberConfigs = [
               {story.data.sources.map(source => (
                 <li class="flex items-start gap-2.5">
                   <svg class="w-4 h-4 text-[var(--glow)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 005.656-5.656l-1.1 1.1"/></svg>
-                  <a
-                    href={source.url}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    class="text-[var(--color-text-muted)] hover:text-[var(--glow)] transition-colors underline underline-offset-4 break-all sm:break-normal"
-                  >
-                    {source.label}
-                  </a>
+                  {source.url ? (
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      class="text-[var(--color-text-muted)] hover:text-[var(--glow)] transition-colors underline underline-offset-4 break-all sm:break-normal"
+                    >
+                      {source.label}
+                    </a>
+                  ) : (
+                    <span class="text-[var(--color-text-muted)] italic">
+                      {source.label} <span class="text-[var(--color-text-dim)] not-italic text-[10px] ml-1">(Citation Only - Unarchived Source)</span>
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

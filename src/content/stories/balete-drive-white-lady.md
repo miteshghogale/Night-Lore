@@ -6,11 +6,14 @@ status: "disputed"
 location: "Quezon City, Metro Manila, Philippines"
 eventDate: "1950s - Present"
 pubDate: "2026-08-05"
+audioUrl: "/audio/balete-drive-white-lady.mp3"
+audioDuration: "07:56"
+ambientTrack: "suspense-ambient.mp3"
 sources:
   - label: "Philippine Daily Inquirer: Balete Drive Retrospective by Neal H. Cruz"
     url: "https://inquirer.net"
   - label: "Manila Chronicle Archive (1953-1956)"
-    url: "https://www.manilachronicle.net"
+    # TODO: Manual review required for https://www.manilachronicle.net (DNS/Connection failure, No Wayback Snapshot)
   - label: "Quezon City Police Department Historical Archives"
     url: "https://quezoncity.gov.ph"
 tags: ["balete-drive", "white-lady", "philippines", "quezon-city", "urban-legend"]

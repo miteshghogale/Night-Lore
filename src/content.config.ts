@@ -27,7 +27,7 @@ const stories = defineCollection({
     sources: z.array(
       z.object({
         label: z.string(),
-        url: z.string()
+        url: z.string().optional()
       })
     ),
     tags: z.array(z.string()),
