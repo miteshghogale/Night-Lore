@@ -18,7 +18,7 @@ sources:
     url: "https://quezoncity.gov.ph"
 tags: ["balete-drive", "white-lady", "philippines", "quezon-city", "urban-legend"]
 draft: false
-coverImage: "/images/covers/balete-drive-white-lady.jpg"
+coverImage: "/images/covers/balete-drive-white-lady.webp"
 coverAlt: "Ancient sprawling Balete tree with twisting aerial roots and eerie foliage in the Philippines"
 coverCredit: "Lawrence Ruiz"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Enchanted_Balete_Tree_in_Lazi.JPG"

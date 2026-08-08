@@ -18,11 +18,11 @@ sources:
     url: "https://epp.genproc.gov.ru/"
 tags: ["dyatlov-pass", "ural-mountains", "soviet-union", "unsolved-mystery", "hypothermia", "avalanche", "igor-dyatlov"]
 draft: false
-coverImage: "/images/covers/dyatlov-pass-incident.jpg"
+coverImage: "/images/covers/dyatlov-pass-incident.webp"
 coverAlt: "Historical photograph of the Dyatlov group's tent pitched on the snowy slope of Kholat Syakhl in February 1959"
-coverCredit: "Public Domain / Sverdlovsk Regional State Archive (via Wikimedia Commons)"
-coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Dyatlov_pass_tent.jpg"
-coverLicense: "Public Domain"
+coverCredit: "Anonymous / Soviet investigators (via Wikimedia Commons)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Dyatlov_Pass_incident_02.jpg"
+coverLicense: "Public Domain (Disputed status)"
 ---
 
 ## The Ural Expedition: Nine into the Wilderness

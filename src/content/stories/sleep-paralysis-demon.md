@@ -17,7 +17,7 @@ sources:
     url: "https://web.archive.org/web/20200603172227/https://sleep.med.harvard.edu/"
 tags: ["sleep-paralysis", "rem-atonia", "psychology", "neurology", "shadow-people"]
 draft: false
-coverImage: "/images/covers/sleep-paralysis-demon.jpg"
+coverImage: "/images/covers/sleep-paralysis-demon.webp"
 coverAlt: "Henry Fuseli's famous 1781 oil painting The Nightmare depicting an incubus demon perched upon a sleeping woman"
 coverCredit: "Henry Fuseli (1781)"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_-_WGA08332.jpg"

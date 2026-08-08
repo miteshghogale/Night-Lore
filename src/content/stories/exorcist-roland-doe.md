@@ -19,7 +19,7 @@ sources:
     url: "https://www.alexianbrothers.org"
 tags: ["exorcism", "the-exorcist", "roland-doe", "maryland", "st-louis", "jesuit-diary"]
 draft: false
-coverImage: "/images/covers/exorcist-roland-doe.jpg"
+coverImage: "/images/covers/exorcist-roland-doe.webp"
 coverAlt: "Historic photograph of Alexian Brothers Hospital in St. Louis, Missouri where the 1949 exorcism of Roland Doe took place"
 coverCredit: "Missouri History Museum"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Alexian_Brothers_Hospital,_3933_South_Broadway.jpg"

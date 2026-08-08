@@ -18,7 +18,7 @@ sources:
     url: "https://www.himejicastle.jp"
 tags: ["okiku", "bancho-sarayashiki", "japan", "himeji-castle", "kaidan", "onryo"]
 draft: false
-coverImage: "/images/covers/okiku-nine-plates.jpg"
+coverImage: "/images/covers/okiku-nine-plates.webp"
 coverAlt: "Historic stone well (Okiku-no-ido) inside the grounds of Himeji Castle, Japan"
 coverCredit: "そらみみ (Soramimi)"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Okiku_Well_in_Himeji_Castle.JPG"

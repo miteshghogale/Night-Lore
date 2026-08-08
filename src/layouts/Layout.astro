@@ -17,12 +17,14 @@ interface Props {
     updatedTime?: string;
     category: string;
     tags: string[];
+    audioUrl?: string;
+    audioDuration?: string;
   };
   breadcrumbs?: BreadcrumbItem[];
   isHome?: boolean;
 }
 
-const siteUrl = (import.meta.env.SITE_URL || Astro.site?.href || 'https://night-lore.lifterplate.workers.dev').replace(/\/$/, '');
+const siteUrl = (import.meta.env.SITE_URL || Astro.site?.href || 'https://mynightlore.com').replace(/\/$/, '');
 
 const {
   title = 'Night Lore — Real Ghost Stories & Documented Hauntings',
@@ -35,6 +37,19 @@ const {
 
 const canonicalURL = `${siteUrl}${Astro.url.pathname}`;
 const categoryList = Object.values(CATEGORIES);
+
+// Helper for ISO 8601 duration format (e.g. "11:35" -> "PT11M35S")
+function formatIsoDuration(durationStr?: string): string | undefined {
+  if (!durationStr) return undefined;
+  if (durationStr.startsWith('P')) return durationStr;
+  const parts = durationStr.split(':').map(Number);
+  if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+    return `PT${parts[0]}M${parts[1]}S`;
+  } else if (parts.length === 3 && !isNaN(parts[0]) && !isNaN(parts[1]) && !isNaN(parts[2])) {
+    return `PT${parts[0]}H${parts[1]}M${parts[2]}S`;
+  }
+  return undefined;
+}
 
 // Build Homepage Schema (WebSite + Organization)
 const websiteSchema = isHome ? {
@@ -62,6 +77,28 @@ const websiteSchema = isHome ? {
       "description": "An independent, non-fictional research archive documenting real hauntings, unsolved anomalies, urban folklore, and eyewitness accounts."
     }
   ]
+} : null;
+
+// Build AudioObject Schema for audio narration
+const audioSchema = (articleMeta && articleMeta.audioUrl) ? {
+  "@context": "https://schema.org",
+  "@type": "AudioObject",
+  "name": `${title} (Audio Narration)`,
+  "description": description,
+  "contentUrl": articleMeta.audioUrl.startsWith('http') ? articleMeta.audioUrl : `${siteUrl}${articleMeta.audioUrl}`,
+  "encodingFormat": "audio/mpeg",
+  "duration": formatIsoDuration(articleMeta.audioDuration),
+  "uploadDate": articleMeta.publishedTime,
+  "author": {
+    "@type": "Organization",
+    "name": "Night Lore",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Night Lore",
+    "url": siteUrl
+  }
 } : null;
 
 // Build Article Schema for story pages (Article, NOT NewsArticle)
@@ -93,7 +130,16 @@ const articleSchema = articleMeta ? {
     }
   },
   "articleSection": articleMeta.category,
-  "keywords": articleMeta.tags.join(', ')
+  "keywords": articleMeta.tags.join(', '),
+  ...(audioSchema ? {
+    "audio": {
+      "@type": "AudioObject",
+      "name": audioSchema.name,
+      "contentUrl": audioSchema.contentUrl,
+      "encodingFormat": audioSchema.encodingFormat,
+      "duration": audioSchema.duration
+    }
+  } : {})
 } : null;
 
 // Build BreadcrumbList Schema
@@ -152,6 +198,9 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
     )}
     {articleSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    )}
+    {audioSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(audioSchema)} />
     )}
     {breadcrumbSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

@@ -19,7 +19,7 @@ sources:
     # TODO: Manual review required for https://www.bbc.co.uk/archives (404 Not Found, No Wayback Snapshot)
 tags: ["enfield", "london", "poltergeist", "spr", "maurice-grosse"]
 draft: false
-coverImage: "/images/covers/enfield-poltergeist.jpg"
+coverImage: "/images/covers/enfield-poltergeist.webp"
 coverAlt: "Exterior photograph of 284 Green Street in Enfield, London, the location of the famous 1970s poltergeist case"
 coverCredit: "Mx. Granger"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:284_Green_Street,_Enfield.jpg"

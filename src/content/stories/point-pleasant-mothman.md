@@ -19,7 +19,7 @@ sources:
     url: "https://web.archive.org/web/20260806214609/https://vault.fbi.gov/"
 tags: ["mothman", "point-pleasant", "silver-bridge", "cryptozoology", "west-virginia"]
 draft: false
-coverImage: "/images/covers/point-pleasant-mothman.jpg"
+coverImage: "/images/covers/point-pleasant-mothman.webp"
 coverAlt: "Metallic Mothman statue with red reflective eyes in Point Pleasant, West Virginia"
 coverCredit: "Csassen13"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Mothman_Statue.jpg"

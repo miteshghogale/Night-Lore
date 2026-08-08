@@ -71,7 +71,9 @@ const emberConfigs = [
     publishedTime: story.data.pubDate.toISOString(),
     updatedTime: story.data.updatedDate ? story.data.updatedDate.toISOString() : story.data.pubDate.toISOString(),
     category: story.data.category,
-    tags: story.data.tags || []
+    tags: story.data.tags || [],
+    audioUrl: story.data.audioUrl,
+    audioDuration: story.data.audioDuration
   }}
   breadcrumbs={breadcrumbs}
 >

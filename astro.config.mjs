@@ -4,7 +4,7 @@ import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
-const SITE_URL = process.env.SITE_URL || 'https://night-lore.lifterplate.workers.dev';
+const SITE_URL = process.env.SITE_URL || 'https://mynightlore.com';
 
 // https://astro.build/config
 export default defineConfig({

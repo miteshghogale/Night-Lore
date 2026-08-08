@@ -18,7 +18,7 @@ sources:
     # TODO: Manual review required for https://www.yamaguchi-opentravel.jp (Connection Failure, No Wayback Snapshot)
 tags: ["hoichi", "kwaidan", "dan-no-ura", "japan", "movie-inspiration", "heike-clan", "masaki-kobayashi"]
 draft: false
-coverImage: "/images/covers/hoichi-the-earless.jpg"
+coverImage: "/images/covers/hoichi-the-earless.webp"
 coverAlt: "The Suiten-mon gate of Akama-jingu (formerly Amida-ji temple) in Shimonoseki, Japan, home to the legend of Hoichi the Earless"
 coverCredit: "Suicasmo"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Akama-jingu_20170223.jpg"

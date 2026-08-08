@@ -18,9 +18,9 @@ sources:
     url: "https://www.hinterkaifeck.net/reader-ffb-bericht/"
 tags: ["hinterkaifeck", "bavaria", "unsolved-mystery", "true-crime", "georg-reingruber", "germany"]
 draft: false
-coverImage: "/images/covers/hinterkaifeck-murders.jpg"
+coverImage: "/images/covers/hinterkaifeck-murders.webp"
 coverAlt: "Historical photograph of the isolated Hinterkaifeck farmstead taken in 1922"
-coverCredit: "Public Domain / Staatsarchiv München (via Wikimedia Commons)"
+coverCredit: "Andreas Biegleder (via Wikimedia Commons)"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Hinterkaifeck-Hof.jpg"
 coverLicense: "Public Domain"
 ---

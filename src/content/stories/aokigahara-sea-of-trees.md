@@ -18,7 +18,7 @@ sources:
     url: "https://www.bunshun.co.jp"
 tags: ["aokigahara", "sea-of-trees", "japan", "mount-fuji", "haunted-places", "yamanashi"]
 draft: false
-coverImage: "/images/covers/aokigahara-sea-of-trees.jpg"
+coverImage: "/images/covers/aokigahara-sea-of-trees.webp"
 coverAlt: "Dense mossy trees and volcanic terrain inside the Aokigahara Forest at Mount Fuji, Japan"
 coverCredit: "Guilhem Vellut"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Aokigahara_Forest_(10863169686).jpg"

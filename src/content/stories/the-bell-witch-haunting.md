@@ -17,7 +17,7 @@ sources:
     url: "https://web.archive.org/web/20260718201833/https://robertsoncountytn.gov/"
 tags: ["bell-witch", "tennessee", "poltergeist", "historical", "andrew-jackson"]
 draft: false
-coverImage: "/images/covers/the-bell-witch-haunting.jpg"
+coverImage: "/images/covers/the-bell-witch-haunting.webp"
 coverAlt: "Natural stone mouth of the historic Bell Witch Cave in Adams, Robertson County, Tennessee"
 coverCredit: "Www78"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Bell_Witch_Cave.JPG"

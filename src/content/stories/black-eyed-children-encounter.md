@@ -17,7 +17,7 @@ sources:
     url: "https://www.texasfolkloresociety.org"
 tags: ["black-eyed-children", "bek", "texas", "brian-bethel", "urban-legend"]
 draft: false
-coverImage: "/images/covers/black-eyed-children-encounter.jpg"
+coverImage: "/images/covers/black-eyed-children-encounter.webp"
 coverAlt: "Eerie foggy suburban street illuminated by a lone yellow streetlamp at night"
 coverCredit: "Robert Natkay (Heal25)"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Foggy_night.JPG"

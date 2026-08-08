@@ -19,7 +19,7 @@ sources:
     url: "https://apnews.com"
 tags: ["amityville", "demonic", "homicide", "new-york", "ed-and-lorraine-warren"]
 draft: false
-coverImage: "/images/covers/amityville-horror-case.jpg"
+coverImage: "/images/covers/amityville-horror-case.webp"
 coverAlt: "Exterior photograph of 112 Ocean Avenue in Amityville, New York under snow"
 coverCredit: "Doug Kerr"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:112_Ocean_Ave_house_February_2010.jpg"

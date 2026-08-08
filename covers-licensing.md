@@ -133,3 +133,27 @@ This log records the verified source URLs, creators, license types, and local as
 - **Direct Image URL**: `https://upload.wikimedia.org/wikipedia/commons/4/42/Bell_Witch_Cave.JPG`
 - **Creator / Author**: Www78
 - **Verified License**: **Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)**
+
+---
+
+### 13. The Dyatlov Pass Incident
+- **Local File Path**: `public/images/covers/dyatlov-pass-incident.webp` (WebP compressed; original source saved in `public/images/covers_backup_orig/dyatlov-pass-incident.jpg`)
+- **Story Slug**: `dyatlov-pass-incident`
+- **Subject**: Historical photograph of the Dyatlov group's tent pitched on the slope of Kholat Syakhl (taken February 26, 1959)
+- **Source Page**: [File:Dyatlov Pass incident 02.jpg](https://commons.wikimedia.org/wiki/File:Dyatlov_Pass_incident_02.jpg)
+- **Direct Image URL**: `https://upload.wikimedia.org/wikipedia/commons/7/71/Dyatlov_Pass_incident_02.jpg`
+- **Creator / Author**: Anonymous / Soviet investigators (uploaded to Commons by Dominikmatus)
+- **Verified License / Status**: **Public Domain (Uncertain / Disputed)** — Listed on Wikimedia Commons under Public Domain, but explicitly flagged with maintenance category `Category:PD-RU-exempt (possible wrong license)` noting legal uncertainty regarding Russian copyright exemption status.
+
+---
+
+### 14. The Hinterkaifeck Murders
+- **Local File Path**: `public/images/covers/hinterkaifeck-murders.webp` (WebP compressed; original source saved in `public/images/covers_backup_orig/hinterkaifeck-murders.jpg`)
+- **Story Slug**: `hinterkaifeck-murders`
+- **Subject**: Historical photograph of the isolated Hinterkaifeck farmstead taken in 1922
+- **Source Page**: [File:Hinterkaifeck-Hof.jpg](https://commons.wikimedia.org/wiki/File:Hinterkaifeck-Hof.jpg)
+- **Direct Image URL**: `https://upload.wikimedia.org/wikipedia/commons/d/df/Hinterkaifeck-Hof.jpg`
+- **Creator / Author**: Andreas Biegleder (uploaded to Commons by Alexis Jazz)
+- **Verified License**: **Public Domain (PD-old-70-expired / CC-PD-Mark)** — Expired copyright under 70-year post-mortem rule.
+
+

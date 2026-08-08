@@ -19,7 +19,7 @@ sources:
     url: "https://web.archive.org/web/20260725112914/https://utetribe.com/"
 tags: ["skinwalker-ranch", "aawsap", "utah", "cattle-mutilation", "uap"]
 draft: false
-coverImage: "/images/covers/skinwalker-ranch-anomalies.jpg"
+coverImage: "/images/covers/skinwalker-ranch-anomalies.webp"
 coverAlt: "Rugged desert sandstone rock formations and mesa ridges in Uintah County, Utah"
 coverCredit: "James St. John"
 coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Weber_Sandstone_%26_Moenkopi_Formation_(Dinosaur_National_Monument,_Utah,_USA)_2_(48863309691).jpg"
