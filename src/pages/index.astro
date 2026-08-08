@@ -167,7 +167,7 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {categoryCounts.map(cat => (
-        <a href={`/category/${cat.slug}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--glow)]/60">
+        <a href={`/category/${cat.slug}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--glow)]/35">
           <div>
             <div class="flex items-center justify-between mb-3">
               <Fragment set:html={cat.iconSvg} />
