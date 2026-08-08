@@ -3,82 +3,118 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Editorial Policy & Archival Standards | Night Lore"
-  description="Learn about Night Lore's non-fictional sourcing methodology, dual-perspective analysis, living person privacy protections, and submission moderation process."
+  title="About Night Lore — Mission & Editorial Standards"
+  description="Discover Night Lore's mission: documenting real ghost stories, haunted places, urban legends, and unsolved mysteries through honest fact-checking against verified sources and Dual-Perspective analysis."
 >
   <div class="max-w-3xl mx-auto">
-    <!-- Header -->
-    <div class="mb-12 border-b border-[var(--color-border)] pb-8">
+    <!-- Breadcrumb Header -->
+    <div class="mb-10 border-b border-[var(--color-border)] pb-8">
       <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-3">
-        <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+        <a href="/" class="hover:text-[var(--glow)] transition-colors">ARCHIVE</a>
         <span>/</span>
-        <span class="text-[var(--glow)]">EDITORIAL POLICY</span>
+        <span class="text-[var(--glow)]">EDITORIAL STANDARDS</span>
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">
-        Editorial Standards & Archival Policy
+        About Night Lore
       </h1>
 
       <p class="text-base text-[var(--color-text-muted)] leading-relaxed">
-        Night Lore is built on the principle that real-world anomalies deserve factual, multi-perspective documentation. We do not publish creative fiction, exaggerated creepypastas, or unsubstantiated rumors.
+        Night Lore is an independent digital archive built on the principle that real-world anomalies deserve factual, multi-perspective documentation. We do not publish creative fiction, exaggerated creepypastas, or unsubstantiated rumors.
       </p>
     </div>
 
-    <!-- Section 1: Sourcing Standards -->
+    <!-- Section 1: Mission -->
     <section class="mb-12">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
           SECTION 1.0
         </span>
         <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
-          Sourcing & Primary Evidence
+          Our Editorial Mission
         </h2>
       </div>
 
-      <div class="prose-dark text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] space-y-4">
-        <p>
-          Every case dossier published on Night Lore undergoes rigorous archival verification. We prioritize primary documentation, including:
-        </p>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><strong>Official Law Enforcement Logs:</strong> Signed police affidavits, homicide investigation dockets, and dispatch telemetry.</li>
-          <li><strong>Judicial & Court Transcripts:</strong> Sworn trial testimony, land deed transfers, and estate probate records.</li>
-          <li><strong>Government FOIA Archives:</strong> Defense Intelligence Agency (DIA) contract logs, NTSB accident reports, and FBI vault filings.</li>
-          <li><strong>Peer-Reviewed Literature:</strong> Medical polysomnography studies, psychological journals, and audio spectral analysis.</li>
-          <li><strong>AI Narration Transparency:</strong> Story audio narrations are synthesized using Google Gemini 3.1 Flash TTS models from tagged documentary scripts to provide accessible, atmospheric listening while preserving exact prose fidelity.</li>
-        </ul>
-      </div>
+      <p class="text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] mb-4">
+        Our purpose is to chronicle historical hauntings, regional folklore, eyewitness encounters, and unresolved mysteries with documentary seriousness. Each dossier is written to provide an immersive narrative experience alongside synthesized audio narration while adhering strictly to verified facts.
+      </p>
     </section>
 
-    <!-- Section 2: Dual Perspective Framework -->
+    <!-- Section 2: Honest Sourcing & Fact-Checking -->
     <section class="mb-12">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
           SECTION 2.0
         </span>
         <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
+          Fact-Checking Methodology
+        </h2>
+      </div>
+
+      <div class="prose-dark text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] space-y-4 mb-6">
+        <p>
+          Every article published on Night Lore undergoes systematic verification before inclusion in our archive. Rather than relying on viral internet folklore or unverified blog posts, we cross-check every claim against publicly available primary and secondary sources:
+        </p>
+        <ul class="list-disc pl-5 space-y-2.5">
+          <li><strong>Original & Historical News Coverage:</strong> Timeline details, witness statements, and geographical locations are verified against contemporary newspaper archives and reputable investigative reporting.</li>
+          <li><strong>Academic & Scientific Literature:</strong> Skeptical hypotheses and natural explanations are sourced from peer-reviewed scientific journals, sleep paralysis clinical studies, and environmental physics research (such as avalanche dynamics or infrasound effects).</li>
+          <li><strong>Public Inquests & Documentation:</strong> Case summaries incorporate official public records, documented coroner inquest transcripts, and government agency findings where publicly available.</li>
+          <li><strong>Bibliography Auditing:</strong> Every dossier cites its reference materials in a transparent Archival Sources & Bibliography section so readers can trace claims back to original documents.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3: Dual Perspective Framework -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
+          SECTION 3.0
+        </span>
+        <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
           The Dual-Perspective Requirement
         </h2>
       </div>
 
-      <div class="nl-card p-6 border-l-2 border-l-[var(--glow)] mb-4">
+      <div class="nl-card p-6 border-l-2 border-l-[var(--glow)] mb-4 bg-[var(--color-surface-2)]">
         <h3 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-2">
           MANDATORY EDITORIAL RULE
         </h3>
         <p class="text-sm text-[var(--color-text)] leading-relaxed">
-          No case is published with a single bias. Every story must feature a comparative analysis presenting both the extraordinary/paranormal claim and the leading scientific or skeptical explanation.
+          No case is published with a single bias. Every story must feature a comparative analysis presenting both the extraordinary/paranormal claim and the leading scientific, environmental, or psychological explanation.
         </p>
       </div>
 
       <p class="text-sm sm:text-base text-[var(--color-text-muted)] leading-relaxed">
-        Whether examining low-frequency electromagnetic fields, sleep paralysis atonia, optical refractions, or intentional financial fraud, Night Lore provides readers with all verifiable facts so they can reach an informed conclusion.
+        Whether examining low-frequency electromagnetic fields, sleep paralysis atonia, optical refractions, or intentional financial fraud, Night Lore provides readers with all verifiable facts so they can form an informed conclusion.
       </p>
     </section>
 
-    <!-- Section 3: Privacy & Living Non-Public Persons -->
+    <!-- Section 4: Authentic Editorial Operations -->
+    <section class="mb-12">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
+          SECTION 4.0
+        </span>
+        <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
+          Authentic Editorial Operations
+        </h2>
+      </div>
+
+      <div class="prose-dark text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] space-y-4">
+        <p>
+          Night Lore is an independent digital archive maintained by an editor-curator and research enthusiast dedicated to preserving documented paranormal history. We do not fabricate corporate staff bios or invent fictitious editorial boards.
+        </p>
+        <p>
+          Audio narrations across the archive are synthesized using modern text-to-speech technologies from tagged documentary scripts to provide accessible, atmospheric listening while maintaining strict word-for-word fidelity to our published texts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Living Person Privacy Protection -->
     <section id="privacy" class="mb-12">
       <div class="flex items-center gap-3 mb-4">
         <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
-          SECTION 3.0
+          SECTION 5.0
         </span>
         <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
           Privacy Protection for Living Persons
@@ -86,59 +122,31 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="prose-dark text-sm sm:text-base leading-relaxed text-[var(--color-text-muted)] space-y-4">
-        <p>
-          To maintain legal compliance and ethical journalistic integrity:
-        </p>
+        <p>To maintain legal compliance and ethical standards:</p>
         <ul class="list-disc pl-5 space-y-2">
-          <li><strong>No Non-Public Living Suspects:</strong> We never name, identify, or imply guilt toward living private individuals as suspects or perpetrators in unproven supernatural or criminal allegations.</li>
-          <li><strong>Anonymization:</strong> Eyewitnesses submitting personal experiences may request total anonymization. Email addresses collected during submission are stored securely and never published.</li>
-          <li><strong>Public Figures Exception:</strong> Only individuals named in historical court trials, published academic books, or press releases are cited by name.</li>
+          <li><strong>No Non-Public Living Suspects:</strong> We never name, identify, or imply guilt toward living private individuals in unproven supernatural or criminal allegations.</li>
+          <li><strong>Anonymization Option:</strong> Eyewitnesses submitting personal experiences via our portal may request total anonymization. Email addresses submitted during case submission are stored securely and never published or shared.</li>
+          <li><strong>Public Figures & Historical Records:</strong> Only individuals named in historical court trials, published academic books, or official press releases are cited by name.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Section 4: Reader Submission Moderation -->
-    <section class="mb-12">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="font-mono-meta text-xs text-[var(--glow)] border border-[rgba(255,107,74,0.3)] px-2 py-0.5 rounded">
-          SECTION 4.0
-        </span>
-        <h2 class="text-xl sm:text-2xl font-bold text-[var(--color-text)]">
-          Submission Moderation Workflow
-        </h2>
-      </div>
-
-      <div class="nl-card p-6 font-mono-meta text-xs space-y-3">
-        <div class="flex items-center justify-between border-b border-[var(--color-border)] pb-2">
-          <span class="text-[var(--color-text-muted)]">1. SUBMISSION SUBMITTED</span>
-          <span class="text-[var(--status-unresolved)]">STATUS: PENDING</span>
-        </div>
-        <div class="flex items-center justify-between border-b border-[var(--color-border)] pb-2">
-          <span class="text-[var(--color-text-muted)]">2. ANTI-SPAM & HONEYPOT FILTER</span>
-          <span class="text-[var(--status-witnessed)]">PASSED</span>
-        </div>
-        <div class="flex items-center justify-between border-b border-[var(--color-border)] pb-2">
-          <span class="text-[var(--color-text-muted)]">3. FACT-CHECKING & GEOLOCATION</span>
-          <span class="text-[var(--status-ongoing)]">EDITORIAL REVIEW</span>
-        </div>
-        <div class="flex items-center justify-between">
-          <span class="text-[var(--color-text-muted)]">4. ARCHIVAL PUBLISHING</span>
-          <span class="text-[var(--status-witnessed)]">STATUS: PUBLISHED</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact CTA -->
+    <!-- Contact CTA Card -->
     <div class="nl-card p-8 text-center bg-[var(--color-surface-2)]">
       <h3 class="text-lg font-bold text-[var(--color-text)] mb-2">
         Questions Regarding Our Editorial Standards?
       </h3>
       <p class="text-xs text-[var(--color-text-muted)] mb-4">
-        Reach our editorial board for corrections, citation updates, or privacy inquiries.
+        Contact our editorial Desk for corrections, source citations, or general inquiries.
       </p>
-      <a href="/submit" class="btn-primary text-xs">
-        Contact Editorial Board
-      </a>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a href="/contact" class="btn-primary text-xs">
+          Contact Editorial Desk
+        </a>
+        <a href="/submit" class="inline-flex items-center justify-center px-4 py-2 text-xs font-mono-meta border border-[var(--color-border)] rounded-md text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:border-[var(--glow)] transition-colors">
+          Submit Encounter
+        </a>
+      </div>
     </div>
   </div>
 </Layout>

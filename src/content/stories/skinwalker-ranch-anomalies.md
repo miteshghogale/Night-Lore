@@ -49,3 +49,23 @@ Researchers pointing to exotic or anomalous explanations highlight the synchroni
 Skeptical geologists, physicists, and environmental scientists offer a grounded alternative rooted in earth science and environmental psychology.
 
 Geologists point out that the Uintah Basin sits atop intense geological fault lines rich in quartz-bearing sandstone and uranium deposits. Tectonic strain along these fault lines can generate piezoelectric earth lights, producing bright electrical discharges and luminous plasma balls in the night sky. When these natural atmospheric electrical displays interact with high background radiation levels, they can induce visual hallucinations, disorientation, and localized magnetic interference. Combined with severe psychological stress, sensory fatigue, and confirmation bias among field staff living in high-security isolation, these natural geophysical processes offer a strong scientific explanation for the anomalous sightings and instrument glitches reported at the ranch.
+
+---
+
+## Frequently Asked Questions
+
+### Why is the property called "Skinwalker Ranch"?
+The ranch is named after a figure in Native American folklore. Local Ute tribal tradition holds that the basin is cursed territory along the path of the Skinwalker, a sinister shape-shifting sorcerer capable of taking animal form.
+
+### Did the United States government actually fund research at Skinwalker Ranch?
+Yes, in 2007 the Defense Intelligence Agency (DIA) established the Advanced Aerospace Weapon System Applications Program (AAWSAP) under Dr. James Lacatski, awarding a $22 million contract to Bigelow Aerospace to study physical anomalies, electromagnetic bursts, and UAP at the ranch.
+
+### Who was Robert Bigelow, and what was NIDS's involvement at the ranch?
+Space entrepreneur Robert Bigelow bought the ranch in 1996 for $200,000 and deployed the National Institute for Discovery Science (NIDS), a team of biophysicists and former intelligence officers led by Dr. Colm Kelleher, to conduct multi-spectrum sensor surveillance on the property.
+
+### What initial events forced the Sherman family to sell the ranch in 1996?
+Ranchers Terry and Gwen Sherman experienced two years of severe disturbances after moving in in 1994, including encounters with un-harmable wolves, surgically mutilated cattle, silent aerial craft, and glowing blue orbs that reportedly destroyed three of their ranch dogs.
+
+### What is the leading geological explanation for the glowing orbs and magnetic anomalies?
+Geologists note that the Uintah Basin features quartz-bearing sandstone under tectonic strain, which can produce piezoelectric earth lights—luminous plasma balls in the night sky. Combined with natural background radiation, these electrical discharges can cause localized magnetic glitches and visual disorientation.
+

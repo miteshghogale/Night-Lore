@@ -50,3 +50,23 @@ Hoichi himself represents the biwa hoshi, blind traveling minstrels of medieval 
 This cultural tradition was first captured in print in 1782, when author Isseki Sanjin published the story in his collection Gayu Kidan. Over a century later, Greek-Irish writer Lafcadio Hearn (who adopted the Japanese name Koizumi Yakumo) translated and refined the tale in his landmark 1904 book Kwaidan, introducing Hoichi to an international audience.
 
 That literary legacy reached its artistic peak in 1964, when director Masaki Kobayashi adapted Hearn's story into his iconic anthology film Kwaidan. Starring Katsuo Nakamura as Hoichi and Takashi Shimura as the priest, Kobayashi's film combined hand-painted sets, theatrical lighting, and Toru Takemitsu's avant-garde biwa score. Winning the Special Jury Prize at the 1965 Cannes Film Festival and earning an Academy Award nomination, Kobayashi's film completed Hoichi's journey from a 12th-century naval catastrophe to the heights of world cinema.
+
+---
+
+## Frequently Asked Questions
+
+### Was Hoichi the Earless a real historical person?
+While Hoichi represents the real historical class of *biwa hoshi*—blind traveling minstrels who recited *The Tale of the Heike*—the story itself is a classic *kaidan* (folk ghost story) first printed in 1782 by Isseki Sanjin and later popularized by Lafcadio Hearn.
+
+### What real historical event forms the background of the Hoichi legend?
+The legend is set against the Battle of Dan-no-ura on April 25, 1185, a catastrophic naval battle in the Shimonoseki Straits where the Taira (Heike) clan was destroyed and six-year-old Emperor Antoku drowned in the sea.
+
+### Is the temple where Hoichi reportedly lived still standing today?
+Yes, Amidaji Temple, where Hoichi reportedly lived, still exists in Shimonoseki, Yamaguchi Prefecture, though it was later renamed Akama Shrine (*Akama-jingu*) to honor Emperor Antoku and the fallen Heike clan.
+
+### Why did the priest paint Buddhist sutra characters over Hoichi's body?
+The head priest painted the Heart Sutra in sumi ink across Hoichi's skin to render him spiritually invisible to the vengeful Heike ghosts. However, the priest forgot to paint the characters on Hoichi's ears, allowing the ghostly samurai to see and sever them.
+
+### What are "Heike-gani," and how do they connect to the story?
+*Heike-gani* are small native crabs found in the Shimonoseki Straits whose shell patterns visually resemble scowling samurai faces. Local folklore holds that the crabs contain the reincarnated spirits of the drowned Heike warriors.
+

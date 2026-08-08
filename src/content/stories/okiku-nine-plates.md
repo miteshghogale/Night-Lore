@@ -48,3 +48,23 @@ As the legend spread to Edo (modern-day Tokyo), Kabuki theater adapted it for ci
 Nearly a century later, playwright Okamoto Kido reshaped the tale again in his landmark 1916 Shin-Kabuki drama. Kido moved away from simple horror, renaming the samurai Aoyama Harima and transforming the story into a psychological tragedy. In Kido's version, Okiku breaks the plate herself to test whether Harima's love is genuine or if he values family honor above her. Harima, wounded in his samurai pride, kills her in a moment of fury, spending the rest of his life haunted by regret.
 
 The power of Okiku's story even crossed into natural history. In 1795, an outbreak of bagworm moth pupae affected trees around Himeji Castle. The chrysalises hung suspended by fine silk threads like small bound figures, leading locals to name the insects Okiku-mushi. Centuries later, the visual motif of a pale woman in white rising from a dark well inspired Sadako Yamamura in Koji Suzuki's 1991 novel Ringu and its famous films, proving that Okiku's tale still shapes modern horror.
+
+---
+
+## Frequently Asked Questions
+
+### Is "Okiku's Well" a real location you can visit today?
+Yes, a stone well known as *Okiku-no-ido* (Okiku's Well) is preserved on the historical grounds of Himeji Castle in Hyogo Prefecture, Japan, where regional folklore places the origin of the legend.
+
+### What is the meaning of the 1 to 9 counting in the Okiku legend?
+According to the story, Okiku was entrusted with ten precious imported ceramic plates. After her master hid one to frame her, her ghost emerged from the well every night counting plates one through nine, shrieking in agony when she reached nine and realized the tenth was still missing.
+
+### How did theatre shape the modern story of Okiku?
+The legend was transformed through centuries of Japanese theatre, beginning with a 1741 puppet play (*Banshū Sarayashiki*), followed by an 1824 Kabuki adaptation set in Tokyo's Banchō district, and a 1916 Shin-Kabuki drama by Okamoto Kidō that reshaped the tale into a psychological tragedy.
+
+### What are "Okiku-mushi" in Japanese natural history?
+*Okiku-mushi* ("Okiku bugs") was the local nickname given to an outbreak of bagworm moth pupae near Himeji Castle in 1795, whose silk-wrapped chrysalises hung from trees like small bound figures, reminding locals of the bound maiden in the legend.
+
+### Did Okiku's legend inspire any famous modern horror movies?
+Yes, the visual motif of a pale, disheveled woman in white rising from the dark depths of a stone well directly inspired the character of Sadako Yamamura in Koji Suzuki's 1991 novel *Ringu* and its iconic 1998 horror film adaptation.
+

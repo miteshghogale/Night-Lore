@@ -122,6 +122,25 @@ Today, the physical structure of Hinterkaifeck no longer exists; the farmstead w
 
 ---
 
+## Frequently Asked Questions
+
+### Were the Hinterkaifeck murders ever officially solved?
+No, the murders were never officially solved and no suspect was ever formally charged. Although Munich police interviewed numerous suspects over the decades and a 2007 police academy review identified a likely perpetrator using modern techniques, the report's conclusions remain permanently confidential out of respect for living descendants.
+
+### Is the Hinterkaifeck farmstead still standing today?
+No, the entire Hinterkaifeck farmstead was completely demolished in 1923, one year after the killings. Today, no physical structures remain, and the isolated site near Gröbern is marked by a simple stone memorial.
+
+### Why was robbery ruled out as the primary motive for the crime?
+Robbery was ruled out because large sums of paper currency, gold coins, and personal jewelry were found untouched in unlocked drawers throughout the house. Furthermore, the perpetrator occupied the home for four days following the murders without taking any of the family's accumulated wealth.
+
+### What happened to Lorenz Schlittenbauer, the prime suspect?
+Lorenz Schlittenbauer was heavily investigated due to his past relationship with Viktoria Gabriel, a paternity dispute over toddler Josef, and his surprisingly calm behavior when discovering the bodies. However, he maintained his innocence throughout his life, successfully won civil libel lawsuits against neighbors who publicly accused him, and died in 1941 without any physical evidence linking him to the crime.
+
+### Did the killer really live on the farm with the bodies after the murders?
+Yes, forensic evidence and witness sightings established that the perpetrator occupied the farmstead for four days from March 31 to April 4, 1922. During this time, the killer kindled fires in the stove, cooked meals from the family's provisions, and routinely fed and milked the farm's livestock.
+
+---
+
 ## Fact-Checking & Citation Table
 
 | Claim # | Factual Claim in Narrative | Actual Secondary Source Used | Source Confidence & Attribution Notes |

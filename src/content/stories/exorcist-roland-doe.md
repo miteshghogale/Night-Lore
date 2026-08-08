@@ -59,3 +59,23 @@ However, detailed historical research conducted fifty years later revealed a far
 In 1999, investigative journalist Mark Opsasnick published a landmark multi-part investigation in *Strange Magazine*. Opsasnick located and interviewed Ronald's childhood neighbors in Cottage City, middle school classmates, parish priests, and surviving hospital staff. Opsasnick discovered that Ronald was an emotionally volatile, spoiled boy who struggled socially and strongly disliked attending school.
 
 Opsasnick's research demonstrated that many of the reported physical phenomena were entirely within the capability of an athletic thirteen-year-old boy. Neighbors recalled seeing Ronald deliberately scratch furniture with long fingernails, kick bedsprings against baseboards to make loud thumping sounds, and throw objects when adults turned their backs. In an intensely religious household devastated by the sudden death of Aunt Harriet, the boy's behavioral acting out was quickly interpreted by anxious adults as demonic intrusion. This created a profound feedback loop of psychological contagion, where adult expectations and religious rituals reinforced and escalated the boy's dramatic performance over several months.
+
+---
+
+## Frequently Asked Questions
+
+### What was the real identity of the boy known as "Roland Doe"?
+The real identity of the boy was Ronald Edwin Hunkeler, who was thirteen years old in 1949. After recovering, he completed his education and lived a quiet adult life, working for decades as a respected civilian engineer for the US government before passing away in 2020.
+
+### How did the 1949 Maryland exorcism inspire the movie *The Exorcist*?
+Author William Peter Blatty first read about the 1949 case as an undergraduate at Georgetown University through articles in the *Washington Post*. Decades later, he obtained access to the 26-page Jesuit exorcism diary and adapted the case into his 1971 novel *The Exorcist*, which became the iconic 1973 film.
+
+### What primary document exists to record the actual 1949 exorcism events?
+The primary record is a detailed 26-page handwritten diary kept by Jesuit priest Father Raymond J. Bishop. The log documented thirty nights of sessions conducted at Alexian Brothers Hospital in St. Louis, signed by participating priests, doctors, and nurses.
+
+### What happened during the initial exorcism attempt in Maryland before the family moved to St. Louis?
+During an initial ritual at Georgetown University Hospital, thirteen-year-old Ronald freed his arm from leather restraints, pulled a heavy metal spring from the mattress, and slashed Father E. Albert Hughes across the arm, requiring stitches and causing Catholic authorities to temporarily halt the process.
+
+### What did modern investigations reveal about the 1949 events?
+A 1999 investigation by journalist Mark Opsasnick in *Strange Magazine* revealed that many phenomena were consistent with an emotionally troubled boy acting out after his aunt's death. Opsasnick's interviews showed how behavioral tricks—such as kicking bedsprings and scratching furniture—were amplified into suspected demonic possession by anxious, deeply religious adults.
+

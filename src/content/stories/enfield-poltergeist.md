@@ -57,3 +57,23 @@ Skeptical researchers from psychical research organizations and the Committee fo
 Skeptics Anita Gregory and Ray Hyman set up hidden video cameras in an adjoining room and caught the children on tape bending metal spoons by hand when they believed no one was watching. In a 1980 television interview with ITV, Janet acknowledged that the children had staged isolated disturbances, stating: "Oh yeah, once or twice, just to see if Mr. Grosse and Mr. Playfair would catch us. They always did." Subsequent newspaper reports estimated that trickery accounted for roughly two percent of the overall phenomena.
 
 Critiques of the photographic evidence demonstrate that Graham Morris' famous photographs of Janet floating above her mattress strongly resemble an athletic child jumping up and down on a spring mattress rather than genuine levitation. Furthermore, acoustic analysis performed by speech experts demonstrated that the guttural Bill Wilkins voice could be produced by anyone using false vocal fold vibration, a technique commonly used by throat singers and ventriloquists without causing permanent vocal cord injury.
+
+---
+
+## Frequently Asked Questions
+
+### Did police officers actually witness paranormal events at the Enfield house?
+Yes, Woman Police Constable Carolyn Heeps signed an official police affidavit recording that she personally witnessed a heavy upholstered armchair rise slightly off the floor and slide four feet across the living room without any human contact, hidden wires, or magnets.
+
+### Who was "Bill Wilkins," the voice that spoke through eleven-year-old Janet?
+"Bill Wilkins" was a disembodied voice that claimed to be a former resident who had died in the house. His surviving son, Terry Wilkins, later confirmed that a man named Bill Wilkins had indeed lived at 284 Green Street and died of a brain hemorrhage in a downstairs armchair, exactly as described by the voice.
+
+### Did the children at Enfield ever admit to faking any of the occurrences?
+Yes, in a 1980 television interview with ITV, Janet Hodgson acknowledged that she and her siblings had staged isolated disturbances once or twice to see if investigators Maurice Grosse and Guy Playfair would catch them.
+
+### What is the leading scientific critique of the famous "levitation" photographs?
+Skeptics and photographic experts noted that the famous sequences of photos showing eleven-year-old Janet in mid-air strongly resemble an athletic child jumping up and down on a spring mattress rather than genuine physical levitation.
+
+### Who were the main investigators in the Enfield Poltergeist case?
+The case was primarily investigated by Maurice Grosse and Guy Lyon Playfair from the Society for Psychical Research (SPR), who spent over eighteen months monitoring the house and logging more than two thousand reported physical incidents.
+

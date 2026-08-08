@@ -59,3 +59,23 @@ However, forensic engineering reports and biological investigations present a cl
 The official National Transportation Safety Board investigation report (NTSB HAR-71-01) concluded that the Silver Bridge collapse was caused entirely by a microscopic cleavage fracture in eyebar 330, compounded by heavy traffic loads and inadequate inspection technology in 1967. The bridge failure had zero connection to supernatural intervention or structural sabotage.
 
 Skeptical wildlife biologists from West Virginia University, led by Dr. Robert L. Smith, provided a grounded biological explanation for the sightings themselves. Dr. Smith demonstrated that witnesses were encountering misidentified Sandhill Cranes (*Antigone canadensis*). Sandhill Cranes are giant migratory birds that stand over five feet tall, possess wingspans exceeding seven feet, and feature bright reddish-orange skin patches surrounding their eyes that reflect red in direct light. Off-course during winter migration through the abandoned twenty-five-hundred-acre TNT wildlife reserve, these giant unfamiliar birds, glimpsed in dark gravel pits by startled drivers using high-beam headlights, ignited a classic wave of mass hysteria and social contagion that became forever intertwined with the Silver Bridge collapse.
+
+---
+
+## Frequently Asked Questions
+
+### What was the Silver Bridge collapse, and was it connected to the Mothman?
+On December 15, 1967, the Silver Bridge in Point Pleasant collapsed into the Ohio River during rush hour, killing forty-six people. While local lore connected the disaster to the Mothman sightings, the official NTSB investigation concluded the collapse was caused entirely by a microscopic flaw in a steel eyebar and heavy traffic.
+
+### Who were the first witnesses to report the Mothman in Point Pleasant?
+The first formal report was made on November 15, 1966, by two young couples—Roger and Linda Scarberry along with Steve and Mary Mallette—who encountered a seven-foot winged figure with glowing red eyes in the abandoned TNT area north of Point Pleasant.
+
+### What is the leading biological explanation for the Mothman sightings?
+Wildlife biologist Dr. Robert L. Smith of West Virginia University demonstrated that witnesses likely encountered Sandhill Cranes. These large migratory birds stand over five feet tall, have seven-foot wingspans, and possess reddish-orange eye patches that reflect red under direct headlights in the dark.
+
+### Where did the name "Mothman" come from?
+After local newspaper *The Point Pleasant Register* reported the initial sightings, national wire services picked up the story and coined the name "Mothman," inspired by the popular *Batman* television series airing at the time.
+
+### Do Mothman sightings still occur in Point Pleasant today?
+No, reported sightings in Point Pleasant ceased entirely following the Silver Bridge disaster on December 15, 1967. Today, the town celebrates the lore with a famous metallic Mothman statue and an annual festival.
+

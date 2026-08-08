@@ -63,3 +63,23 @@ Defense attorney William Weber later acknowledged in published interviews with *
 Regarding the famous "boy in the hallway" photograph, it remains subject to debate. Several researchers who have compared the image to photos of the investigation team have pointed to Paul Bartz, an investigator present with the Warren team that night, as a likely match, noting his eyeglasses and clothing, a mundane explanation, though not one that has been formally confirmed.
 
 The strongest evidence against a genuine haunting comes from the subsequent history of the property itself. In 1977, Jim and Barbara Cromarty purchased the home from the bank. Aware of the public frenzy surrounding Jay Anson's bestselling book, the Cromartys changed the address from 112 to 108 Ocean Avenue and replaced the famous eye-like windows. They lived in the house peacefully for over ten years, reporting zero cold spots, zero flying objects, and zero voices. Subsequent owners who have inhabited the waterfront home over the past four decades have consistently reported that the residence is quiet, comfortable, and completely devoid of supernatural activity.
+
+---
+
+## Frequently Asked Questions
+
+### Is the Amityville Horror house still standing, and can you visit it today?
+Yes, the house remains a private residence in Amityville, Long Island. However, the address was officially changed from 112 to 108 Ocean Avenue and the iconic quarter-moon windows were replaced to deter onlookers; it is a private home and is not open for public tours.
+
+### Was the Amityville haunting real or a proven hoax?
+Investigative evidence strongly points to a commercial hoax. Defense attorney William Weber later admitted in published interviews with *People* magazine that he met with George and Kathy Lutz over wine to invent many of the famous supernatural details—such as green slime and 3:15 AM waking times—to generate a lucrative book deal and support a legal appeal for DeFeo.
+
+### Have subsequent owners experienced any hauntings at 108 Ocean Avenue?
+No, subsequent owners have reported zero paranormal activity. Jim and Barbara Cromarty purchased the home in 1977 and lived there peacefully for over ten years, and all later residents have consistently confirmed that the house is quiet and completely normal.
+
+### What happened to Ronald DeFeo Jr. after the murders?
+On November 21, 1975, Ronald DeFeo Jr. was convicted on six counts of second-degree murder for killing his parents and four siblings. He was sentenced to six consecutive terms of twenty-five years to life in prison.
+
+### What is the story behind the famous "ghost boy" photograph taken in the house?
+In March 1976, demonologists Ed and Lorraine Warren’s team captured an automated infrared photograph showing a young boy peeking out from a doorway. While paranormal enthusiasts claimed it showed the spirit of nine-year-old John DeFeo, several researchers have identified the figure as likely being Paul Bartz, an investigator on the Warren team who wore glasses.
+

@@ -22,6 +22,7 @@ interface Props {
   };
   breadcrumbs?: BreadcrumbItem[];
   isHome?: boolean;
+  faqList?: { question: string; answer: string }[];
 }
 
 const siteUrl = (import.meta.env.SITE_URL || Astro.site?.href || 'https://mynightlore.com').replace(/\/$/, '');
@@ -32,7 +33,8 @@ const {
   image = `${siteUrl}/og-image.jpg`,
   articleMeta,
   breadcrumbs,
-  isHome = false
+  isHome = false,
+  faqList
 } = Astro.props;
 
 const canonicalURL = `${siteUrl}${Astro.url.pathname}`;
@@ -153,6 +155,20 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
     "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`
   }))
 } : null;
+
+// Build FAQPage Schema
+const faqSchema = (faqList && faqList.length > 0) ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+} : null;
 ---
 
 <!DOCTYPE html>
@@ -204,6 +220,9 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
     )}
     {breadcrumbSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+    {faqSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     )}
   </head>
   <body class="bg-grain text-[var(--color-text)] flex flex-col min-h-screen">
@@ -265,7 +284,8 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
         <a href="/category/real-paranormal-cases" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">REAL PARANORMAL CASES</a>
         <a href="/category/unsolved-mysteries" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">UNSOLVED MYSTERIES</a>
         <a href="/category/haunted-places" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">HAUNTED PLACES</a>
-        <a href="/about" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">EDITORIAL STANDARDS</a>
+        <a href="/about" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">EDITORIAL STANDARDS</a>
+        <a href="/contact" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">CONTACT US</a>
       </div>
     </header>
 
@@ -315,11 +335,13 @@ const breadcrumbSchema = (breadcrumbs && breadcrumbs.length > 0) ? {
 
           <!-- Column 3: Trust & Legal -->
           <div>
-            <h4 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">// STANDARDS</h4>
+            <h4 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">// STANDARDS & LEGAL</h4>
             <ul class="space-y-2.5 text-xs font-mono-meta text-[var(--color-text-muted)]">
-              <li><a href="/about" class="hover:text-[var(--glow)] transition-colors">Editorial Sourcing Standards</a></li>
-              <li><a href="/about#privacy" class="hover:text-[var(--glow)] transition-colors">Non-Public Person Privacy Policy</a></li>
-              <li><a href="/submit" class="hover:text-[var(--glow)] transition-colors">Reader Case Submission</a></li>
+              <li><a href="/about" class="hover:text-[var(--glow)] transition-colors">About & Editorial Standards</a></li>
+              <li><a href="/privacy-policy" class="hover:text-[var(--glow)] transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" class="hover:text-[var(--glow)] transition-colors">Terms & Conditions</a></li>
+              <li><a href="/contact" class="hover:text-[var(--glow)] transition-colors">Contact Us</a></li>
+              <li><a href="/submit" class="hover:text-[var(--glow)] transition-colors">Submit Encounter</a></li>
             </ul>
           </div>
         </div>

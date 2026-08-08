@@ -54,8 +54,28 @@ Submitters across different states logged remarkably consistent psychological ma
 
 The Black-Eyed Children phenomenon represents a unique case study in modern folklore, standing right on the boundary between personal eyewitness testimony and digital urban legend.
 
-Those who treat the encounters with serious investigative interest point to Brian Bethel's professional reputation. At the time of the event, Bethel was a respected, veteran staff journalist for the *Abilene Reporter-News*. Bethel maintained his sworn testimony under intense public scrutiny and media interviews for over twenty years without altering or retracting a single detail. Furthermore, hundreds of subsequent independent reports submitted by non-acquainted witnesses across different states logged identical psychological markers, creating a vast archive of consistent eyewitness statements.
+Those who treat the encounters with serious investigative interest point to Brian Bethel's professional reputation. At the time of the event, Bethel was a respected, veteran staff journalist for the *Abilene Reporter-News*. Bethel maintained his original account under intense public scrutiny and media interviews for over twenty years without altering or retracting a single detail. Furthermore, hundreds of subsequent independent reports submitted by non-acquainted witnesses across different states logged identical psychological markers, creating a vast archive of consistent eyewitness statements.
 
 Folklorists, sociologists, and skeptics look at the timeline and see the textbook birth of an early internet urban legend.
 
 Skeptics point out that novelty black sclera contact lenses first became commercially available in the mid-1990s for theatrical usage and film productions like *The X-Files*. A pair of local teenagers wearing theatrical contact lenses in a shopping plaza parking lot, combined with late-night visual distortion and an acute panic attack, could easily account for Bethel's initial experience. Once Bethel's account was published on early Usenet forums and mailing lists, it provided a compelling psychological narrative template that spread rapidly across early internet culture, creating a classic phenomenon of digital folklore contagion that continues to evolve today.
+
+---
+
+## Frequently Asked Questions
+
+### Who was the first person to report an encounter with Black-Eyed Children?
+The phenomenon was first reported by Brian Bethel, a staff journalist for the *Abilene Reporter-News*, who experienced an encounter in April 1996 in a shopping plaza parking lot in Abilene, Texas, and posted his statement online in January 1998.
+
+### What is the most famous behavioral pattern attributed to Black-Eyed Children?
+Witnesses consistently report that Black-Eyed Children speak in a flat, monotone voice and repeatedly insist on being explicitly invited inside a vehicle or home, claiming they cannot enter without permission.
+
+### What is the leading rational explanation for the Black-Eyed Children phenomenon?
+Skeptics note that novelty black sclera contact lenses became commercially available in the mid-1990s for film productions like *The X-Files*. A prank by local teenagers wearing theatrical lenses, combined with late-night panic, likely inspired Bethel's experience, which then spread as digital folklore on early internet forums.
+
+### Did Brian Bethel ever change or recant his story?
+No, Brian Bethel maintained his original account under public scrutiny and media interviews for over twenty years without altering or retracting a single detail of his 1996 experience.
+
+### Why are Black-Eyed Children considered a prime example of internet folklore?
+After Bethel posted his account to a Usenet newsgroup in 1998, the story provided a compelling narrative template that spread rapidly across early online communities, inspiring hundreds of similar reports nationwide in a process folklorists term digital folklore contagion.
+

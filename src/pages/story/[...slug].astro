@@ -5,6 +5,7 @@ import StoryCard from '../../components/StoryCard.astro';
 import StoryCover from '../../components/StoryCover.astro';
 import { getCollection, render } from 'astro:content';
 import { categoryToSlug } from '../../utils/categories';
+import { parseFaqsFromMarkdown } from '../../utils/faq';
 
 export async function getStaticPaths() {
   const stories = await getCollection('stories', ({ data }) => !data.draft);
@@ -16,6 +17,7 @@ export async function getStaticPaths() {
 
 const { story } = Astro.props;
 const { Content } = await render(story);
+const faqList = parseFaqsFromMarkdown(story.body);
 
 const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US', {
   year: 'numeric',
@@ -76,6 +78,7 @@ const emberConfigs = [
     audioDuration: story.data.audioDuration
   }}
   breadcrumbs={breadcrumbs}
+  faqList={faqList}
 >
   <article class="max-w-6xl mx-auto">
     <!-- Top Bar Navigation & Breadcrumb Header -->

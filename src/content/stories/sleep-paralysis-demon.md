@@ -52,4 +52,24 @@ Researchers who study anomalous experiences and sleep psychology emphasize the a
 
 Neurologists and sleep medicine specialists explain that this cross-cultural uniformity exists because all human beings share identical brain architecture and evolutionary wiring.
 
-Studies published by the Harvard Medical School Sleep Medicine Archive show that approximately eight percent of the global general population experiences isolated sleep paralysis at least once in their lifetime, with higher rates occurring among university students and psychiatric patients suffering from sleep deprivation or irregular sleep schedules. When consciousness prematurely wakes inside a paralyzed body, human evolutionary threat-detection systems, hardwired over hundreds of thousands of years to detect predators lurking in nocturnal darkness, immediately assume an external predator is holding the body down. The brain synthesizes a visual shadow figure to match that ancient biological fear, demonstrating how a brief neurochemical glitch in sleep architecture created one of humanity's most enduring and terrifying supernatural legends.
+Systematic reviews and meta-analyses, such as the landmark 2011 study by Sharpless & Barber in *Sleep Medicine Reviews*, show that approximately eight percent (7.6%) of the global general population experiences isolated sleep paralysis at least once in their lifetime, with higher rates occurring among university students and psychiatric patients suffering from sleep deprivation or irregular sleep schedules. When consciousness prematurely wakes inside a paralyzed body, human evolutionary threat-detection systems, hardwired over hundreds of thousands of years to detect predators lurking in nocturnal darkness, immediately assume an external predator is holding the body down. The brain synthesizes a visual shadow figure to match that ancient biological fear, demonstrating how a brief neurochemical glitch in sleep architecture created one of humanity's most enduring and terrifying supernatural legends.
+
+---
+
+## Frequently Asked Questions
+
+### What actually causes sleep paralysis from a medical perspective?
+Sleep paralysis occurs when the forebrain consciously wakes up while the brainstem remains locked in REM motor atonia—a normal neurological process where neurotransmitters like GABA temporarily paralyze voluntary muscles during dreaming to prevent physical injury.
+
+### Why do people across different cultures see the same "shadow figure" or demon?
+Because all humans share identical brain architecture. When you wake up paralyzed, your brain's threat center (the amygdala) enters extreme panic; to make sense of this un-explainable terror, the brain's visual cortex projects dream imagery into waking vision, creating a shadow figure at the foot of the bed.
+
+### What are some historical and cultural names for sleep paralysis?
+Cross-cultural terms include the "Old Hag" in Maritime Canada, *Kanashibari* (bound in iron chains) in Japan, *Jinn* in Egypt, and *Ephialtes* in ancient Greece. The Scandinavian spirit *Mara*, who rode sleepers' chests, is the direct root of our modern word "nightmare."
+
+### How common is sleep paralysis among the general population?
+Systematic reviews and meta-analyses, such as the landmark 2011 study by Sharpless & Barber in *Sleep Medicine Reviews*, show that approximately eight percent of the global population experiences isolated sleep paralysis at least once in their lifetime, with higher rates among individuals experiencing sleep deprivation or irregular schedules.
+
+### What are the three recognized categories of sleep paralysis hallucinations?
+Sleep researchers categorize these waking hallucinations into Intruder (feeling or seeing a shadowy presence in the room), Incubus (feeling chest pressure and difficulty breathing), and Vestibular-Motor (sensations of floating, spinning, or leaving one's body).
+

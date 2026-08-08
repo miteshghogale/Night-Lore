@@ -124,6 +124,25 @@ The scientific consensus of 2021 demonstrates how a rare combination of human te
 
 ---
 
+## Frequently Asked Questions
+
+### What is the leading scientific explanation for the Dyatlov Pass incident today?
+The scientific consensus, supported by a 2021 peer-reviewed study in *Nature Communications Earth & Environment*, attributes the disaster to a delayed slab avalanche. Cutting a flat shelf into the slope to pitch their tent, combined with heavy wind-deposited snow, triggered a dense snow slab that collapsed onto the sleeping hikers and crushed their shelter.
+
+### Did anyone survive the Dyatlov Pass expedition?
+Yes, twenty-one-year-old Yuri Yudin was the sole survivor of the expedition. He turned back on January 28, 1959, before the group reached the mountain pass, due to a severe flare-up of chronic radiculitis and joint pain.
+
+### Why were some hikers missing their eyes and tongue when recovered?
+The four hikers recovered in May 1959 lay submerged in a running stream beneath four meters of melting snow for over three months. Forensic examiners determined that the loss of soft facial tissue, eyes, and tongue was the result of natural post-mortem aquatic decomposition and river organism activity over twelve weeks of immersion.
+
+### Why was the hikers' tent slashed open from the inside?
+Investigators found that the canvas tent had been cut open from the inside using knives so the hikers could escape. Trapped beneath packed snow after the slab collapse in total darkness, they slashed their way out to avoid suffocation and extract their injured companions.
+
+### Were the indigenous Mansi people ever suspected of attacking the group?
+Soviet investigators initially questioned local Mansi hunters, but quickly ruled them out as suspects. Forensic analysis confirmed that only nine sets of footprints—belonging solely to the hikers—were present on the slope, and members of the Mansi tribe actively assisted search teams with dog sleds and tracking.
+
+---
+
 ## Fact-Checking & Citation Table
 
 | Claim # | Factual Claim in Narrative | Actual Secondary Source Used | Source Confidence & Attribution Notes |

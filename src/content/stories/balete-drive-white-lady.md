@@ -48,3 +48,23 @@ The narrative began taking shape in the press rooms of post-war Manila. Neal H. 
 That newsroom story took root so easily because Balete Drive offered a perfect physical stage. When developer Doña Magdalena Hemady carved New Manila out of a two-hundred-hectare estate in the 1930s, she created a neighborhood of wide lots hidden behind high stone walls and shaded by ancient balete trees. Long before paved roads arrived, Philippine animist tradition held the balete, a strangler fig tree, in deep, sacred dread. Folk belief warned that these trees harbored kapre, dwende, and lost spirits, prompting travelers to whisper "tabi tabi po" for safe passage. In the 1950s, when drivers steered primitive, dim-headlit cars down unlit Balete Drive at midnight, windblown aerial roots swaying against white stone walls easily conjured terrified visions out of thin air.
 
 There was also a very practical reason the story stayed alive. New Manila was an affluent enclave, and property owners grew tired of midnight drag racers, unauthorized parking, and prowlers along their quiet walls. Promoting the idea that Balete Drive was haunted served as an effective community defense, scaring off intruders and keeping the avenue quiet after dark. What began as a newsroom tale ended up serving the neighborhood as its most reliable night watchman.
+
+---
+
+## Frequently Asked Questions
+
+### Was the White Lady of Balete Drive based on a real person or recorded accident?
+While local rumors claimed she was a university student killed in a hit-and-run or a World War II victim, historical research shows no official police or public record confirming a specific real-life victim. The story originated as a classic vanishing hitchhiker urban legend adapted by Manila journalists in the 1950s.
+
+### How did newspaper reporting help create the Balete Drive legend?
+Manila Chronicle reporter Neal H. Cruz and fellow crime journalists acknowledged that slow news days, especially leading up to Undas (All Saints' Day), encouraged reporters to feature sensational police rumors about a vanishing passenger, turning a local tale into a national phenomenon.
+
+### Why was Balete Drive specifically chosen for this famous ghost story?
+Balete Drive provided a perfect eerie setting due to its unlit road bordered by high stone walls and shaded by ancient balete (strangler fig) trees. In Philippine animist tradition, balete trees were widely believed to harbor spirits like kapre and dwende, making drivers primed for supernatural fears.
+
+### Did local property owners benefit from the haunting rumors?
+Yes, affluent homeowners in New Manila welcomed the haunting reputation because it served as an effective neighborhood defense. The terrifying stories scared away midnight drag racers, unauthorized parkers, and nighttime prowlers from their quiet residential street.
+
+### What is the tradition of "tabi tabi po" mentioned in Philippine folklore?
+"Tabi tabi po" is a traditional Tagalog phrase spoken by travelers to respectfully ask permission and safe passage when passing near sacred natural spaces, such as ancient balete trees, believed in folk tradition to be inhabited by spirits.
+
