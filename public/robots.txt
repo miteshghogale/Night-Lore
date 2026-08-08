@@ -1,6 +1,31 @@
+# Allowed AI Search / Citation Bots
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Disallowed AI Training Scrapers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+# Default Rules for Standard Search Engines & Others
 User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
 
 Sitemap: https://mynightlore.com/sitemap-index.xml
+
