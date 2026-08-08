@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="404 — Case File Missing | Night Lore Archive"
+  description="The case file or coordinates you requested could not be located in the Night Lore archive."
+  noindex={true}
+>
+  <div class="max-w-3xl mx-auto py-8 sm:py-16 text-center">
+    <!-- Status Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface)] border border-[rgba(255,107,74,0.4)] text-[var(--glow)] font-mono-meta text-xs tracking-widest uppercase mb-6 shadow-md">
+      <span class="w-2 h-2 rounded-full bg-[var(--glow)] animate-pulse"></span>
+      STATUS: 404 // SIGNAL LOST
+    </div>
+
+    <!-- Error Code Large Display -->
+    <h1 class="text-7xl sm:text-9xl font-extrabold tracking-tighter text-[var(--color-text)] mb-4 font-mono-meta opacity-90 select-none">
+      404
+    </h1>
+
+    <!-- Headline & Narrative Copy -->
+    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      Case File Missing from Archive
+    </h2>
+
+    <p class="text-sm sm:text-base text-[var(--color-text-muted)] max-w-lg mx-auto leading-relaxed mb-8">
+      The coordinates or file path you requested could not be located in the Night Lore digital archive. The record may have been re-classified, moved, or mistyped.
+    </p>
+
+    <!-- Quick Search Jump Bar -->
+    <div class="max-w-md mx-auto mb-10">
+      <div class="relative">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search dossiers (e.g. Dyatlov, Hinterkaifeck)..."
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-lg px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors pl-10"
+        />
+        <svg class="w-4 h-4 text-[var(--color-text-dim)] absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </div>
+      <p id="search-hint" class="text-[11px] font-mono-meta text-[var(--color-text-dim)] mt-2">
+        Type to search titles or press return to browse catalog
+      </p>
+    </div>
+
+    <!-- Recommended Destinations & Primary Actions -->
+    <div class="nl-card p-6 sm:p-8 bg-[var(--color-surface-2)] text-left mb-8">
+      <h3 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4 border-b border-[var(--color-border)] pb-2">
+        // RECOMMENDED ARCHIVAL DOSSIERS
+      </h3>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-mono-meta">
+        <a
+          href="/story/dyatlov-pass-incident"
+          class="p-3 rounded bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-[var(--glow)] transition-colors group flex flex-col justify-between"
+        >
+          <span class="text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors font-sans font-bold">
+            The Dyatlov Pass Incident
+          </span>
+          <span class="text-[11px] text-[var(--color-text-dim)] mt-1">
+            VERIFIED CASE // 1959 URAL ANOMALY
+          </span>
+        </a>
+
+        <a
+          href="/story/hinterkaifeck-murders"
+          class="p-3 rounded bg-[var(--color-bg)] border border-[var(--color-border)] hover:border-[var(--glow)] transition-colors group flex flex-col justify-between"
+        >
+          <span class="text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors font-sans font-bold">
+            The Hinterkaifeck Murders
+          </span>
+          <span class="text-[11px] text-[var(--color-text-dim)] mt-1">
+            UNSOLVED MYSTERY // 1922 BAVARIA
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex items-center justify-center gap-4 flex-wrap">
+      <a href="/" class="btn-primary text-xs px-6 py-2.5">
+        ← Return to Archive Home
+      </a>
+      <a href="/category/real-paranormal-cases" class="inline-flex items-center justify-center px-4 py-2.5 text-xs font-mono-meta border border-[var(--color-border)] rounded-md text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:border-[var(--glow)] transition-colors">
+        Browse Category Taxonomy
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input') as HTMLInputElement;
+      searchInput?.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && searchInput.value.trim()) {
+          window.location.href = `/?q=${encodeURIComponent(searchInput.value.trim())}`;
+        }
+      });
+    });
+  </script>
+</Layout>

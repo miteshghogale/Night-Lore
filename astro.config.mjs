@@ -19,7 +19,7 @@ export default defineConfig({
   }),
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/api')
+      filter: (page) => !page.includes('/admin') && !page.includes('/api') && !page.includes('/404') && !page.includes('/500')
     })
   ],
   vite: {
