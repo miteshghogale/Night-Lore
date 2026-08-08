@@ -23,155 +23,151 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
   isHome={true}
 >
   <!-- Signature Hero Section -->
-  <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 text-center border-b border-[var(--color-border)] overflow-hidden">
+  <section class="relative pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-[var(--color-border)] overflow-hidden rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] mb-16 shadow-2xl">
     <!-- Ambient Ember Glow Background with smooth top fade out -->
     <div class="ambient-glow"></div>
 
-    <div class="relative z-10 max-w-4xl mx-auto px-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--glow)] text-xs font-mono-meta mb-6 shadow-sm">
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[var(--glow-soft)] bg-black/60 backdrop-blur-md text-[var(--glow)] text-xs font-mono-meta mb-6 shadow-lg">
         <span class="w-2 h-2 rounded-full bg-[var(--glow)] animate-pulse"></span>
-        RESEARCHED PARANORMAL CASE FILES & ARCHIVE
+        <span>RESEARCHED PARANORMAL CASE FILES ARCHIVE</span>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-6 leading-[1.15]">
-        REAL GHOST STORIES & <br class="hidden sm:inline" />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[var(--color-text-muted)] to-[var(--glow)]">
-          DOCUMENTED HAUNTINGS
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-6 leading-[1.12]">
+        DOCUMENTED HAUNTINGS & <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-[var(--glow)]">
+          REAL GHOST STORIES
         </span>
       </h1>
 
-      <p class="text-base sm:text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8 leading-relaxed">
-        Night Lore documents true paranormal stories, real haunted places, and unsolved mysteries. Every dossier presents primary ballistics transcripts, official police logs, and critical scientific counter-analysis of real supernatural encounters.
+      <p class="text-base sm:text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+        Night Lore is an independent research archive documenting real ghost encounters, haunted places, and unsolved anomalies. Every dossier presents official police logs, witness affidavits, and critical counter-analysis.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="#featured" class="btn-primary">
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+        <a href="#featured" class="btn-primary text-xs sm:text-sm py-2.5 px-6">
           Explore Featured Dossier
         </a>
-        <a href="/submit" class="btn-secondary">
+        <a href="/submit" class="btn-secondary text-xs sm:text-sm py-2.5 px-6">
           Submit An Encounter
         </a>
+      </div>
+
+      <!-- Quick Archive Statistics Ribbon -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto pt-6 border-t border-[var(--color-border)]/60 font-mono-meta text-xs">
+        <div class="p-2.5 rounded bg-black/40 border border-white/5">
+          <div class="text-[var(--glow)] font-bold text-base">{allStories.length}</div>
+          <div class="text-[var(--color-text-dim)] text-[11px] uppercase">Active Cases</div>
+        </div>
+        <div class="p-2.5 rounded bg-black/40 border border-white/5">
+          <div class="text-[var(--glow)] font-bold text-base">100%</div>
+          <div class="text-[var(--color-text-dim)] text-[11px] uppercase">Sourced Files</div>
+        </div>
+        <div class="p-2.5 rounded bg-black/40 border border-white/5">
+          <div class="text-[var(--glow)] font-bold text-base">Audio</div>
+          <div class="text-[var(--color-text-dim)] text-[11px] uppercase">TTS Narrations</div>
+        </div>
+        <div class="p-2.5 rounded bg-black/40 border border-white/5">
+          <div class="text-[var(--glow)] font-bold text-base">Public</div>
+          <div class="text-[var(--color-text-dim)] text-[11px] uppercase">Domain Records</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Featured Case Spotlight -->
   {featuredStory && (
-    <section id="featured" class="my-16 sm:my-20">
+    <section id="featured" class="mb-20">
       <div class="flex items-center justify-between mb-6">
-        <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
-          // FEATURED PARANORMAL CASE
-        </h2>
-        <span class="font-mono-meta text-xs text-[var(--glow)]">SPOTLIGHT</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-[var(--glow)] animate-pulse"></span>
+          <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
+            // FEATURED PARANORMAL CASE DOSSIER
+          </h2>
+        </div>
+        <span class="font-mono-meta text-xs text-[var(--glow)] bg-[var(--glow-soft)] px-2.5 py-1 rounded border border-[var(--glow)]/30">SPOTLIGHT FILE</span>
       </div>
 
-      <div class="nl-card relative overflow-hidden group">
-        {featuredStory.data.coverImage && (
-          <div class="relative w-full aspect-[21/9] sm:aspect-[2.4/1] overflow-hidden">
-            <img
-              src={featuredStory.data.coverImage}
-              alt={featuredStory.data.coverAlt || featuredStory.data.title}
-              class="cover-image w-full h-full object-cover group-hover:scale-105"
-              loading="eager"
-            />
-            <div class="cover-gradient-overlay"></div>
+      <div class="nl-card eerie-card-bg relative overflow-hidden group border border-[var(--color-border)] rounded-2xl p-8 sm:p-12 shadow-2xl">
+        <!-- Glowing Accent Line -->
+        <div class="eerie-card-accent-line"></div>
 
-            <div class="absolute inset-0 flex flex-col justify-end p-5 sm:p-8">
-              <div class="flex items-center gap-3 mb-3 flex-wrap">
-                <StatusBadge status={featuredStory.data.status} class="backdrop-blur-sm bg-black/30" />
-                <span class="font-mono-meta text-xs text-[var(--color-text-dim)] bg-black/30 backdrop-blur-sm px-1.5 py-0.5 rounded">
-                  {featuredStory.data.category}
-                </span>
-              </div>
+        <!-- Drifting Eerie Fog Background Animation Layer -->
+        <div class="eerie-fog-layer"></div>
 
-              <h3 class="text-2xl sm:text-3xl font-bold text-white group-hover:text-[var(--glow)] transition-colors mb-3">
-                <a href={`/story/${featuredStory.id}`}>
-                  <span class="absolute inset-0 z-10"></span>
-                  {featuredStory.data.title}
-                </a>
-              </h3>
-
-              <p class="text-base text-zinc-300 leading-relaxed mb-5 max-w-3xl">
-                {featuredStory.data.dek}
-              </p>
-
-              <div class="flex items-center gap-4 flex-wrap text-xs font-mono-meta text-zinc-300">
-                <span class="inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-[var(--glow)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                  {featuredStory.data.location}
-                </span>
-                <span class="inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Event Date: {featuredStory.data.eventDate}
-                </span>
-              </div>
-            </div>
-
-            {featuredStory.data.coverCredit && (
-              <div class="absolute bottom-3 right-4 font-mono-meta text-[11px] text-zinc-300 bg-black/40 backdrop-blur-sm rounded px-2 py-1 flex items-center justify-end gap-1 flex-wrap max-w-[90%] z-10">
-                <span>Photo: </span>
-                {featuredStory.data.coverCreditUrl ? (
-                  <a
-                    href={featuredStory.data.coverCreditUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    class="underline underline-offset-2 hover:text-[var(--glow)] transition-colors relative z-20"
-                  >
-                    {featuredStory.data.coverCredit}
-                  </a>
-                ) : (
-                  <span>{featuredStory.data.coverCredit}</span>
-                )}
-                <span>, {featuredStory.data.coverLicense || 'Wikimedia Commons'} via Wikimedia Commons</span>
-              </div>
-            )}
+        <div class="relative z-10 max-w-4xl">
+          <!-- Top Badge Ribbon -->
+          <div class="flex items-center gap-3 mb-6 flex-wrap">
+            <StatusBadge status={featuredStory.data.status} />
+            <span class="font-mono-meta text-xs text-zinc-300 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded border border-white/10">
+              {featuredStory.data.category}
+            </span>
+            <span class="font-mono-meta text-xs text-[var(--color-text-dim)] tracking-wider">
+              DOSSIER ID: NL-{featuredStory.id.toUpperCase()}
+            </span>
           </div>
-        )}
 
-        <div class="p-6 sm:p-8">
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-[var(--color-surface-2)] p-5 rounded-md border border-[var(--color-border)]">
-            <div class="flex-1">
-              <h4 class="font-mono-meta text-xs uppercase text-[var(--color-text-dim)] mb-1.5">Audio Narration</h4>
-              <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Listen to the full audio reconstruction narrated by AI synthesis.
-              </p>
+          <h3 class="text-2xl sm:text-4xl font-extrabold text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-4 leading-tight">
+            <a href={`/story/${featuredStory.id}`}>
+              {featuredStory.data.title}
+            </a>
+          </h3>
+
+          <p class="text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed mb-8 font-normal">
+            {featuredStory.data.dek}
+          </p>
+
+          <!-- Case Quick Facts Ribbon -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono-meta text-xs text-[var(--color-text-dim)] mb-8 p-4 rounded-xl bg-black/40 border border-white/5 backdrop-blur-md">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span class="text-[var(--color-text-muted)] truncate">{featuredStory.data.location}</span>
             </div>
-
-            <div class="flex items-center gap-3 flex-shrink-0">
-              {featuredStory.data.audioUrl && (
-                <button
-                  onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${featuredStory.data.audioUrl}', title: '${featuredStory.data.title.replace(/'/g, "\\'")}' } }))`}
-                  class="btn-secondary text-xs justify-center gap-2 text-[var(--glow)] border-[var(--glow)] relative z-20"
-                >
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                  Listen ({featuredStory.data.audioDuration || 'Listen'})
-                </button>
-              )}
-
-              <a href={`/story/${featuredStory.id}`} class="btn-primary text-xs justify-center relative z-20">
-                Read Full Dossier →
-              </a>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[var(--color-text-dim)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span class="text-[var(--color-text-muted)]">Timeline: {featuredStory.data.eventDate}</span>
             </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[var(--glow)] font-bold">// RECORD STATUS:</span>
+              <span class="text-[var(--color-text-muted)] uppercase">VERIFIED</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            {featuredStory.data.audioUrl && (
+              <button
+                onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${featuredStory.data.audioUrl}', title: '${featuredStory.data.title.replace(/'/g, "\\'")}' } }))`}
+                class="btn-secondary text-xs py-3 px-6 justify-center gap-2 text-[var(--glow)] border-[var(--glow)]/50 shadow-md"
+              >
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+                Listen Audio Narration ({featuredStory.data.audioDuration || 'Audio'})
+              </button>
+            )}
+
+            <a href={`/story/${featuredStory.id}`} class="btn-primary text-xs py-3 px-6 justify-center">
+              Read Full Case Dossier →
+            </a>
           </div>
         </div>
       </div>
     </section>
   )}
 
+
   <!-- Category Grid -->
   <section class="mb-20">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
-        // TAXONOMY ARCHIVE
+        // TAXONOMY ARCHIVE INDEX
       </h2>
       <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">8 CATEGORIES</span>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {categoryCounts.map(cat => (
-        <a href={`/category/${cat.slug}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--color-border-hover)]">
+        <a href={`/category/${cat.slug}`} class="nl-card p-5 group flex flex-col justify-between hover:border-[var(--glow)]/60">
           <div>
             <div class="flex items-center justify-between mb-3">
               <Fragment set:html={cat.iconSvg} />
@@ -179,10 +175,10 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
                 {cat.count} {cat.count === 1 ? 'Case' : 'Cases'}
               </span>
             </div>
-            <h3 class="font-semibold text-base text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-1.5">
+            <h3 class="font-bold text-base text-[var(--color-text)] group-hover:text-[var(--glow)] transition-colors mb-1.5">
               {cat.name}
             </h3>
-            <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">
+            <p class="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2">
               {cat.description}
             </p>
           </div>
@@ -195,9 +191,9 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
   <section class="mb-20">
     <div class="flex items-center justify-between mb-8">
       <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
-        // LATEST REAL GHOST STORIES & CASE FILES
+        // LATEST RESEARCHED CASE FILES
       </h2>
-      <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">SHOWING {recentStories.length} STORIES</span>
+      <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">SHOWING {recentStories.length} CASES</span>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -220,20 +216,21 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
   </section>
 
   <!-- Reader Submission Banner -->
-  <section class="nl-card p-8 sm:p-12 text-center relative overflow-hidden">
+  <section class="nl-card p-8 sm:p-12 text-center relative overflow-hidden bg-[var(--color-surface-2)] border-[var(--color-border)]">
     <div class="max-w-2xl mx-auto relative z-10">
       <span class="font-mono-meta text-xs uppercase text-[var(--glow)] tracking-widest block mb-3">
-        CONFIDENTIAL SUBMISSIONS
+        // CONFIDENTIAL SUBMISSIONS
       </span>
       <h2 class="text-2xl sm:text-4xl font-bold text-[var(--color-text)] mb-4 tracking-tight">
-        Have You Experienced a Real Supernatural Encounter?
+        Have You Witnessed an Unexplained Encounter?
       </h2>
       <p class="text-sm sm:text-base text-[var(--color-text-muted)] mb-8 leading-relaxed">
-        We review first-person real paranormal cases, eyewitness affidavits, and true urban legend origins. All entries undergo editorial verification before publishing.
+        Our editorial team reviews first-person eyewitness affidavits, localized folklore, and secondary evidence. All submissions undergo thorough archival verification before publication.
       </p>
-      <a href="/submit" class="btn-primary">
-        Submit Your Encounter For Review
+      <a href="/submit" class="btn-primary text-xs py-3 px-6">
+        Submit Your Encounter For Editorial Review
       </a>
     </div>
   </section>
 </Layout>
+

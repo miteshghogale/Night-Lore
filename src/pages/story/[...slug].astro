@@ -75,30 +75,31 @@ const emberConfigs = [
   }}
   breadcrumbs={breadcrumbs}
 >
-  <article class="max-w-4xl mx-auto">
-    <!-- Back Navigation -->
-    <a
-      href={`/category/${categorySlug}`}
-      onclick={`if (document.referrer && window.history.length > 1) { try { if (new URL(document.referrer).origin === window.location.origin) { event.preventDefault(); window.history.back(); } } catch (e) {} }`}
-      class="inline-flex items-center gap-1.5 text-xs font-mono-meta text-[var(--color-text-dim)] hover:text-[var(--glow)] transition-colors mb-4"
-    >
-      ← Back to {story.data.category}
-    </a>
-
-    <!-- Navigation Breadcrumbs -->
-    <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-6 flex-wrap">
-      <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
-      <span>/</span>
-      <a href={`/category/${categorySlug}`} class="hover:text-[var(--glow)]">
-        {story.data.category.toUpperCase()}
+  <article class="max-w-6xl mx-auto">
+    <!-- Top Bar Navigation & Breadcrumb Header -->
+    <div class="flex items-center justify-between gap-4 mb-6 flex-wrap font-mono-meta text-xs">
+      <a
+        href={`/category/${categorySlug}`}
+        onclick={`if (document.referrer && window.history.length > 1) { try { if (new URL(document.referrer).origin === window.location.origin) { event.preventDefault(); window.history.back(); } } catch (e) {} }`}
+        class="inline-flex items-center gap-1.5 text-[var(--color-text-dim)] hover:text-[var(--glow)] transition-colors"
+      >
+        ← Back to {story.data.category}
       </a>
-      <span>/</span>
-      <span class="text-[var(--color-text-muted)] truncate max-w-[180px] sm:max-w-[300px]">{story.id}</span>
+
+      <div class="flex items-center gap-2 text-[var(--color-text-dim)] flex-wrap">
+        <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+        <span>/</span>
+        <a href={`/category/${categorySlug}`} class="hover:text-[var(--glow)]">
+          {story.data.category.toUpperCase()}
+        </a>
+        <span>/</span>
+        <span class="text-[var(--glow)] font-semibold">DOSSIER-{story.id.toUpperCase()}</span>
+      </div>
     </div>
 
-    <!-- Article Header / Hero Section -->
+    <!-- Article Hero Section -->
     <header class="relative mb-10 pb-8 border-b border-[var(--color-border)] overflow-hidden">
-      <!-- Background Ambient Pulse & Drifting Embers (Hero Only) -->
+      <!-- Background Ambient Glow & Particles -->
       <div class="story-hero-bg-container" aria-hidden="true">
         <div class="story-ambient-glow"></div>
         {emberConfigs.map((cfg) => (
@@ -113,51 +114,54 @@ const emberConfigs = [
       <div class="relative z-10">
         <div class="flex items-center gap-3 mb-4 flex-wrap">
           <StatusBadge status={story.data.status} />
-          <span class="font-mono-meta text-xs text-[var(--color-text-dim)]">
+          <span class="font-mono-meta text-xs text-[var(--color-text-dim)] bg-black/50 px-2 py-0.5 rounded border border-white/10">
             DOSSIER ID: NL-{story.id.toUpperCase()}
+          </span>
+          <span class="font-mono-meta text-xs text-[var(--glow)] bg-[var(--glow-soft)] px-2 py-0.5 rounded border border-[var(--glow)]/30">
+            {story.data.category}
           </span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4 leading-tight">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-5 leading-[1.12]">
           {story.data.title}
         </h1>
 
-        <p class="text-lg sm:text-xl text-[var(--color-text-muted)] leading-relaxed mb-6 font-normal">
+        <p class="text-lg sm:text-xl text-[var(--color-text-muted)] leading-relaxed mb-6 font-normal max-w-4xl">
           {story.data.dek}
         </p>
 
-        <!-- Metadata Box -->
-        <div class="nl-card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono-meta text-xs text-[var(--color-text-dim)]">
+        <!-- Hero Metadata Ribbon -->
+        <div class="nl-card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono-meta text-xs text-[var(--color-text-dim)] bg-[#0d0d11]">
           <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <div class="flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <div class="flex items-center gap-2 text-[var(--color-text-muted)]">
+              <svg class="w-4 h-4 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               <span>{story.data.location}</span>
             </div>
-            <div class="flex items-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-[var(--color-text-dim)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-              <span>Event: {story.data.eventDate}</span>
+            <div class="flex items-center gap-2 text-[var(--color-text-muted)]">
+              <svg class="w-4 h-4 text-[var(--color-text-dim)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <span>Incident: {story.data.eventDate}</span>
             </div>
-            <div class="flex items-center gap-1.5">
-              <span>Published: {formattedPubDate}</span>
+            <div class="flex items-center gap-2 text-[var(--color-text-muted)]">
+              <span>Filed: {formattedPubDate}</span>
             </div>
           </div>
 
           {story.data.audioUrl && (
             <button
               onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${story.data.audioUrl}', title: '${story.data.title.replace(/'/g, "\\'")}' } }))`}
-              class="btn-primary text-xs py-2 px-3 gap-1.5 w-full sm:w-auto justify-center flex-shrink-0"
+              class="btn-primary text-xs py-2 px-4 gap-2 w-full sm:w-auto justify-center flex-shrink-0 shadow-md"
             >
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
-              Play Narration ({story.data.audioDuration || 'Audio'})
+              Listen Audio ({story.data.audioDuration || 'Audio'})
             </button>
           )}
         </div>
       </div>
     </header>
 
-    <!-- Hero Cover Image & Visible Attribution -->
+    <!-- Archival Cover Frame Component -->
     {story.data.coverImage && (
       <StoryCover
         src={story.data.coverImage}
@@ -168,54 +172,133 @@ const emberConfigs = [
       />
     )}
 
-    <!-- Main Article Body -->
-    <div class="prose-dark max-w-none leading-relaxed mb-12">
-      <Content />
+    <!-- 2-Column Desktop Layout (Main Reading Column + Sticky Dossier Sidebar) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+      <!-- Main Content Column (Left: 8 cols) -->
+      <div class="lg:col-span-8">
+        <div class="prose-dark max-w-none leading-relaxed mb-12">
+          <Content />
+        </div>
+
+        <!-- Archival Sources & Bibliography Section -->
+        {story.data.sources && story.data.sources.length > 0 && (
+          <section id="sources" class="nl-card p-6 sm:p-8 mb-10 border-l-4 border-l-[var(--glow)]">
+            <h3 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">
+              // ARCHIVAL SOURCES & BIBLIOGRAPHY
+            </h3>
+            <ul class="space-y-3 font-mono-meta text-xs">
+              {story.data.sources.map(source => (
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 text-[var(--glow)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 005.656-5.656l-1.1 1.1"/></svg>
+                  <a
+                    href={source.url}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    class="text-[var(--color-text-muted)] hover:text-[var(--glow)] transition-colors underline underline-offset-4 break-all sm:break-normal"
+                  >
+                    {source.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p class="text-xs text-[var(--color-text-dim)] mt-5 pt-4 border-t border-[var(--color-border)]">
+              Primary source documentation sourced from public records, police filings, and scientific archives.
+            </p>
+          </section>
+        )}
+
+        <!-- Tags Ribbon -->
+        {story.data.tags && (
+          <div class="flex items-center gap-2 flex-wrap mb-10 font-mono-meta text-xs">
+            <span class="text-[var(--color-text-dim)]">// CASE TAGS:</span>
+            {story.data.tags.map(tag => (
+              <span class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-muted)]">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <!-- Sticky Dossier Sidebar (Right: 4 cols) -->
+      <aside class="lg:col-span-4 space-y-6">
+        <div class="sticky-sidebar space-y-6">
+          <!-- Case Summary Facts Card -->
+          <div class="nl-card p-5 border border-[var(--color-border)] bg-[var(--color-surface)]">
+            <div class="flex items-center justify-between border-b border-[var(--color-border)] pb-3 mb-4">
+              <span class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)]">// CASE DOSSIER SUMMARY</span>
+              <span class="w-2 h-2 rounded-full bg-[var(--glow)]"></span>
+            </div>
+
+            <div class="space-y-4 font-mono-meta text-xs">
+              <div>
+                <span class="text-[var(--color-text-dim)] block mb-1">EVIDENCE STATUS:</span>
+                <StatusBadge status={story.data.status} />
+              </div>
+
+              <div>
+                <span class="text-[var(--color-text-dim)] block mb-1">RECORD ID:</span>
+                <span class="text-[var(--color-text)] font-semibold">NL-{story.id.toUpperCase()}</span>
+              </div>
+
+              <div>
+                <span class="text-[var(--color-text-dim)] block mb-1">PRIMARY LOCATION:</span>
+                <span class="text-[var(--color-text-muted)]">{story.data.location}</span>
+              </div>
+
+              <div>
+                <span class="text-[var(--color-text-dim)] block mb-1">INCIDENT TIMELINE:</span>
+                <span class="text-[var(--color-text-muted)]">{story.data.eventDate}</span>
+              </div>
+
+              <div>
+                <span class="text-[var(--color-text-dim)] block mb-1">TAXONOMY CATEGORY:</span>
+                <a href={`/category/${categorySlug}`} class="text-[var(--glow)] hover:underline">
+                  {story.data.category}
+                </a>
+              </div>
+
+              {story.data.sources && (
+                <div>
+                  <span class="text-[var(--color-text-dim)] block mb-1">VERIFIED SOURCES:</span>
+                  <span class="text-[var(--color-text-muted)]">{story.data.sources.length} Documents Sourced</span>
+                </div>
+              )}
+            </div>
+
+            {story.data.audioUrl && (
+              <div class="mt-6 pt-4 border-t border-[var(--color-border)]">
+                <button
+                  onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${story.data.audioUrl}', title: '${story.data.title.replace(/'/g, "\\'")}' } }))`}
+                  class="btn-secondary text-xs w-full justify-center gap-2 text-[var(--glow)] border-[var(--glow)]/50"
+                >
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Play Audio Narration
+                </button>
+              </div>
+            )}
+          </div>
+
+          <!-- Reader Action Box -->
+          <div class="nl-card p-5 bg-[var(--color-surface-2)] border border-[var(--color-border)]">
+            <h4 class="font-bold text-sm text-[var(--color-text)] mb-2">Have Evidence on This Case?</h4>
+            <p class="text-xs text-[var(--color-text-muted)] leading-relaxed mb-4">
+              Submit your eyewitness affidavit, photo records, or archival corrections for editorial verification.
+            </p>
+            <a href="/submit" class="btn-primary text-xs w-full justify-center">
+              Submit Case Information
+            </a>
+          </div>
+        </div>
+      </aside>
     </div>
 
-    <!-- Sources & Bibliography Section -->
-    {story.data.sources && story.data.sources.length > 0 && (
-      <section class="nl-card p-6 sm:p-8 mb-12 border-l-2 border-l-[var(--glow)]">
-        <h3 class="font-mono-meta text-xs uppercase tracking-wider text-[var(--color-text-dim)] mb-4">
-          // ARCHIVAL SOURCES & BIBLIOGRAPHY
-        </h3>
-        <ul class="space-y-3 font-mono-meta text-xs">
-          {story.data.sources.map(source => (
-            <li class="flex items-start gap-2">
-              <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 005.656-5.656l-1.1 1.1"/></svg>
-              <a
-                href={source.url}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                class="text-[var(--color-text-muted)] hover:text-[var(--glow)] transition-colors underline underline-offset-4 break-all sm:break-normal"
-              >
-                {source.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <p class="text-xs text-[var(--color-text-dim)] mt-4">
-          Note: Outbound links direct to public domain historical archives, legal filings, and official government FOIA documents. Story audio narration synthesized via Google Gemini 3.1 Flash TTS.
-        </p>
-      </section>
-    )}
-
-    <!-- Tags -->
-    {story.data.tags && (
-      <div class="flex items-center gap-2 flex-wrap mb-12 font-mono-meta text-xs">
-        <span class="text-[var(--color-text-dim)]">TAGS:</span>
-        {story.data.tags.map(tag => (
-          <span class="px-2 py-0.5 rounded border border-[var(--color-border)] text-[var(--color-text-muted)]">
-            #{tag}
-          </span>
-        ))}
-      </div>
-    )}
-
-    <!-- Related Cases Internal Linking Section -->
+    <!-- Related Case Dossiers Section -->
     {relatedStories.length > 0 && (
-      <section class="mb-12 pt-8 border-t border-[var(--color-border)]">
-        <div class="flex items-center justify-between mb-6">
+      <section class="mb-16 pt-10 border-t border-[var(--color-border)]">
+        <div class="flex items-center justify-between mb-8">
           <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]">
             // RELATED CASE DOSSIERS
           </h2>
@@ -243,17 +326,18 @@ const emberConfigs = [
       </section>
     )}
 
-    <!-- Similar Encounter Prompt -->
-    <div class="nl-card p-6 sm:p-8 text-center bg-[var(--color-surface-2)] border-[var(--color-border)]">
+    <!-- Similar Encounter Banner -->
+    <div class="nl-card p-8 sm:p-10 text-center bg-[var(--color-surface-2)] border-[var(--color-border)]">
       <h3 class="text-xl font-bold text-[var(--color-text)] mb-2">
         Have Information or a Similar Experience?
       </h3>
       <p class="text-sm text-[var(--color-text-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
         Our research team reviews first-person accounts, localized folklore, and secondary evidence related to {story.data.location}.
       </p>
-      <a href="/submit" class="btn-primary text-xs">
+      <a href="/submit" class="btn-primary text-xs py-2.5 px-6">
         Submit Your Encounter For Review
       </a>
     </div>
   </article>
 </Layout>
+

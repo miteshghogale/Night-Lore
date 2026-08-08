@@ -32,24 +32,26 @@ const breadcrumbs = [
   description={categoryData.description}
   breadcrumbs={breadcrumbs}
 >
-  <div class="mb-12 border-b border-[var(--color-border)] pb-8">
-    <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-3">
-      <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
-      <span>/</span>
-      <span class="text-[var(--glow)]">{categoryData.name.toUpperCase()}</span>
+  <div class="mb-12 border-b border-[var(--color-border)] pb-8 pt-4">
+    <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
+      <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
+        <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+        <span>/</span>
+        <span class="text-[var(--glow)] font-semibold">{categoryData.name.toUpperCase()}</span>
+      </div>
+
+      <div class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-dim)]">
+        INDEX REPOSITORY // {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'}
+      </div>
     </div>
 
-    <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--color-text)] mb-4">
       {categoryData.name}
     </h1>
 
-    <p class="text-base text-[var(--color-text-muted)] max-w-2xl leading-relaxed mb-6">
+    <p class="text-base text-[var(--color-text-muted)] max-w-3xl leading-relaxed">
       {categoryData.introCopy}
     </p>
-
-    <div class="font-mono-meta text-xs text-[var(--color-text-dim)]">
-      FILE COUNT: {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'} LOCATED
-    </div>
   </div>
 
   {categoryStories.length > 0 ? (
@@ -71,13 +73,14 @@ const breadcrumbs = [
       ))}
     </div>
   ) : (
-    <div class="nl-card p-12 text-center my-12">
+    <div class="nl-card p-12 text-center my-12 bg-[var(--color-surface)] border-[var(--color-border)]">
       <p class="text-base text-[var(--color-text-muted)] mb-4">
         No case files are currently published under this category.
       </p>
-      <a href="/" class="btn-primary text-xs">
-        Return to Archive
+      <a href="/" class="btn-primary text-xs py-2 px-4">
+        Return to Archive Index
       </a>
     </div>
   )}
 </Layout>
+
