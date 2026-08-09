@@ -218,6 +218,13 @@ const categories = [
 </Layout>
 
 <script>
+  interface SubmitResponse {
+    success: boolean;
+    message?: string;
+    id?: string;
+    error?: string;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('submission-form') as HTMLFormElement;
     const storyInput = document.getElementById('story_text') as HTMLTextAreaElement;
@@ -258,7 +265,7 @@ const categories = [
           body: formData
         });
 
-        const data = await res.json();
+        const data = (await res.json()) as SubmitResponse;
 
         if (toast) {
           toast.classList.remove('hidden');

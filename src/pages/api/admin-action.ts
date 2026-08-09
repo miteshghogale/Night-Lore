@@ -3,6 +3,11 @@ import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
+interface AdminActionBody {
+  id?: string;
+  action?: string;
+}
+
 export const POST: APIRoute = async ({ request, cookies }) => {
   try {
     // Admin Session Verification
@@ -14,7 +19,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
       });
     }
 
-    const body = await request.json();
+    const body = (await request.json()) as AdminActionBody;
     const { id, action } = body;
 
     if (!id || !action || !['approve', 'reject'].includes(action)) {

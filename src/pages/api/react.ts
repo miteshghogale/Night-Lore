@@ -140,6 +140,13 @@ export const GET: APIRoute = async ({ request }) => {
   }
 };
 
+interface ReactionBody {
+  story_slug?: string;
+  slug?: string;
+  reaction_type?: string;
+  type?: string;
+}
+
 export const POST: APIRoute = async ({ request }) => {
   try {
     let story_slug: string = '';
@@ -148,7 +155,7 @@ export const POST: APIRoute = async ({ request }) => {
     const contentType = request.headers.get('content-type') || '';
 
     if (contentType.includes('application/json')) {
-      const body = await request.json();
+      const body = (await request.json()) as ReactionBody;
       story_slug = (body.story_slug || body.slug || '').toString().trim();
       reaction_type = (body.reaction_type || body.type || '').toString().trim();
     } else {

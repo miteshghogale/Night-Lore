@@ -89,6 +89,42 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
+    // Send notification email via Resend
+    try {
+      const resendApiKey = (env as any)?.RESEND_API_KEY;
+      if (resendApiKey) {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Night Lore <onboarding@resend.dev>',
+            to: 'mynightlore@gmail.com',
+            subject: `New submission: ${title}`,
+            html: `
+              <h2>New encounter submitted</h2>
+              <p><strong>Title:</strong> ${title}</p>
+              <p><strong>Category:</strong> ${category}</p>
+              <p><strong>Location:</strong> ${location}</p>
+              <p><strong>Event date:</strong> ${eventDate || 'Unknown'}</p>
+              <p><strong>Author:</strong> ${authorName} ${isAnonymous ? '(anonymous)' : ''}</p>
+              <p><strong>Contact email:</strong> ${email}</p>
+              <p><strong>Submission ID:</strong> ${submissionId}</p>
+              <hr>
+              <p><strong>Story:</strong></p>
+              <p>${storyText.replace(/\n/g, '<br>')}</p>
+            `
+          })
+        });
+      } else {
+        console.log('[RESEND] Skipped — RESEND_API_KEY not set');
+      }
+    } catch (emailErr) {
+      console.error('[RESEND] Failed to send notification email:', emailErr);
+    }
+
     return new Response(JSON.stringify({
       success: true,
       message: 'Your encounter has been submitted for editorial moderation.',

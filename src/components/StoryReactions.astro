@@ -89,6 +89,12 @@ const { storySlug, class: className = '' } = Astro.props;
 </div>
 
 <script>
+  interface ReactionResponse {
+    success: boolean;
+    counts?: Record<string, number>;
+    error?: string;
+  }
+
   function initStoryReactions() {
     const containers = document.querySelectorAll<HTMLElement>('[data-reactions-container]');
 
@@ -145,13 +151,14 @@ const { storySlug, class: className = '' } = Astro.props;
       });
 
       fetch(`/api/react?slug=${encodeURIComponent(slug)}`)
-        .then((res) => res.json())
+        .then((res) => res.json() as Promise<ReactionResponse>)
         .then((data) => {
           if (data && data.success && data.counts) {
+            const counts = data.counts;
             buttons.forEach((btn) => {
               const type = btn.getAttribute('data-reaction-btn');
               if (!type) return;
-              const count = data.counts[type] || 0;
+              const count = counts[type] || 0;
               const reacted = isReacted(type);
               updateButtonUI(btn, type, count, reacted);
             });
@@ -187,7 +194,7 @@ const { storySlug, class: className = '' } = Astro.props;
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ story_slug: slug, reaction_type: type })
           })
-            .then((res) => res.json())
+            .then((res) => res.json() as Promise<ReactionResponse>)
             .then((data) => {
               if (data && data.success && data.counts) {
                 updateButtonUI(btn, type, data.counts[type] || currentCount + 1, true);

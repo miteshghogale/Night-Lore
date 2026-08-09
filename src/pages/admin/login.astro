@@ -46,6 +46,11 @@ export const prerender = false;
 </Layout>
 
 <script>
+  interface LoginResponse {
+    success: boolean;
+    error?: string;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('admin-login-form') as HTMLFormElement;
     const toast = document.getElementById('login-toast');
@@ -63,7 +68,7 @@ export const prerender = false;
           body: formData
         });
 
-        const data = await res.json();
+        const data = (await res.json()) as LoginResponse;
 
         if (data.success) {
           window.location.href = '/admin';
