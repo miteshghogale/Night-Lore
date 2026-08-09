@@ -11,3 +11,12 @@ CREATE TABLE IF NOT EXISTS submissions (
   status TEXT DEFAULT 'pending',
   created_at TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS story_reactions (
+  story_slug TEXT NOT NULL,
+  reaction_type TEXT NOT NULL,
+  count INTEGER DEFAULT 0,
+  PRIMARY KEY (story_slug, reaction_type)
+);
+
+

@@ -1,0 +1,99 @@
+---
+import StoryCard from './StoryCard.astro';
+import { getCollection } from 'astro:content';
+
+const allStories = await getCollection('stories', ({ data }) => !data.draft);
+// Default fallback stories: 3 most recent stories
+const defaultStories = allStories
+  .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+  .slice(0, 3);
+---
+
+<section id="readers-choice" class="mb-20" data-readers-choice-section>
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-[var(--glow)] animate-pulse"></span>
+        <h2 class="text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-dim)]" data-choice-title>
+          // READER'S CHOICE — COMMUNITY DOSSIERS
+        </h2>
+      </div>
+      <p class="text-xs text-[var(--color-text-muted)] font-mono-meta mt-1" data-choice-subtitle>
+        High-impact cases from our public record archive. Evaluate these dossiers to cast your vote.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <span class="font-mono-meta text-xs text-[var(--glow)] bg-[var(--glow-soft)] px-2.5 py-1 rounded border border-[var(--glow)]/30" data-choice-badge>
+        COMMUNITY ARCHIVE
+      </span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-choice-grid>
+    {defaultStories.map(story => (
+      <StoryCard
+        title={story.data.title}
+        dek={story.data.dek}
+        slug={story.id}
+        category={story.data.category}
+        status={story.data.status}
+        location={story.data.location}
+        eventDate={story.data.eventDate}
+        pubDate={story.data.pubDate}
+        audioDuration={story.data.audioDuration}
+        coverImage={story.data.coverImage}
+        coverAlt={story.data.coverAlt}
+      />
+    ))}
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    const section = document.querySelector('[data-readers-choice-section]');
+    if (!section) return;
+
+    fetch('/api/react?top=true')
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (!data || !data.success || !data.topStories) return;
+
+        const totalReactions = data.totalSystemReactions || 0;
+        const choiceTitle = section.querySelector('[data-choice-title]');
+        const choiceSubtitle = section.querySelector('[data-choice-subtitle]');
+        const choiceBadge = section.querySelector('[data-choice-badge]');
+
+        if (totalReactions >= 5) {
+          if (choiceTitle) choiceTitle.textContent = "// READER'S CHOICE — MOST UNSETTLING DOSSIERS";
+          if (choiceSubtitle) choiceSubtitle.textContent = "Ranked by reader evaluation counts across active case records.";
+          if (choiceBadge) choiceBadge.textContent = "TOP READER VOTED (" + totalReactions + " REACTIONS)";
+
+          // If server provided top reacted stories, re-order or highlight cards if available
+          const topMap = {};
+          data.topStories.forEach(function (ts) {
+            topMap[ts.story_slug] = ts;
+          });
+
+          // Inject reaction badges onto story cards if count > 0
+          const cards = section.querySelectorAll('article');
+          cards.forEach(function (card) {
+            const link = card.querySelector('a[href^="/story/"]');
+            if (link) {
+              const href = link.getAttribute('href');
+              const slug = href.replace('/story/', '');
+              if (topMap[slug] && topMap[slug].total_count > 0) {
+                const countBadge = document.createElement('div');
+                countBadge.className = 'mt-3 pt-2 border-t border-[var(--color-border)] flex items-center justify-between text-[11px] font-mono-meta text-[var(--glow)]';
+                countBadge.innerHTML = '<span>🔥 MOST UNSETTLING</span><span>' + topMap[slug].total_count + ' Votes</span>';
+                card.appendChild(countBadge);
+              }
+            }
+          });
+        }
+      })
+      .catch(function (err) {
+        console.warn('Could not fetch top reactions for Reader Choice module:', err);
+      });
+  })();
+</script>

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import StoryCard from '../components/StoryCard.astro';
 import StatusBadge from '../components/StatusBadge.astro';
+import ReadersChoiceModule from '../components/ReadersChoiceModule.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, categoryToSlug } from '../utils/categories';
 
@@ -154,6 +155,9 @@ const categoryCounts = Object.values(CATEGORIES).map(cat => ({
       </div>
     </section>
   )}
+
+  <!-- Reader's Choice / Most Unsettling Stories Module -->
+  <ReadersChoiceModule />
 
 
   <!-- Category Grid -->

@@ -4,6 +4,7 @@ import BackButton from '../../components/BackButton.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import StoryCover from '../../components/StoryCover.astro';
+import StoryReactions from '../../components/StoryReactions.astro';
 import { getCollection, render } from 'astro:content';
 import { CATEGORIES, categoryToSlug } from '../../utils/categories';
 import { parseFaqsFromMarkdown } from '../../utils/faq';
@@ -230,6 +231,9 @@ const emberConfigs = [
             ))}
           </div>
         )}
+
+        <!-- Interactive Reader Reactions Section -->
+        <StoryReactions storySlug={story.id} />
       </div>
 
       <!-- Sticky Dossier Sidebar (Right: 4 cols) -->
