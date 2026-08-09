@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import StoryCard from '../../components/StoryCard.astro';
+import BackButton from '../../components/BackButton.astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES, type CategoryInfo } from '../../utils/categories';
 
@@ -34,14 +35,18 @@ const breadcrumbs = [
 >
   <div class="mb-12 border-b border-[var(--color-border)] pb-8 pt-4">
     <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
-      <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
-        <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
-        <span>/</span>
-        <span class="text-[var(--glow)] font-semibold">{categoryData.name.toUpperCase()}</span>
-      </div>
+      <BackButton fallbackHref="/" label="Back to Archive" />
 
-      <div class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-dim)]">
-        INDEX REPOSITORY // {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'}
+      <div class="flex items-center gap-4 flex-wrap">
+        <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
+          <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
+          <span>/</span>
+          <span class="text-[var(--glow)] font-semibold">{categoryData.name.toUpperCase()}</span>
+        </div>
+
+        <div class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-dim)]">
+          INDEX REPOSITORY // {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'}
+        </div>
       </div>
     </div>
 

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
+import BackButton from '../../components/BackButton.astro';
 import { env } from 'cloudflare:workers';
 
 export const prerender = false;
@@ -55,6 +56,11 @@ const historyList = submissions.filter(s => s.status !== 'pending');
 
 <Layout title="Editorial Moderation Dashboard | Night Lore Admin">
   <div class="max-w-5xl mx-auto px-2 sm:px-4">
+    <!-- Top Back Button -->
+    <div class="mb-4">
+      <BackButton fallbackHref="/" label="Back to Archive" />
+    </div>
+
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-[var(--color-border)] pb-6 mb-8 gap-4">
       <div>

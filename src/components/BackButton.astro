@@ -1,0 +1,68 @@
+---
+export interface Props {
+  fallbackHref?: string;
+  label?: string;
+  class?: string;
+}
+
+const { fallbackHref = '/', label = 'Back', class: className = '' } = Astro.props;
+---
+
+<a
+  href={fallbackHref}
+  data-back-button
+  data-fallback={fallbackHref}
+  class={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-sans font-medium text-[var(--color-text-muted)] bg-[#0d0d11] hover:bg-[#14141a] border border-[var(--color-border)] hover:border-[#ff6b4a]/60 hover:text-[var(--color-text)] shadow-sm hover:shadow-[0_0_12px_rgba(255,107,74,0.2)] transition-all duration-200 group cursor-pointer ${className}`}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-3.5 h-3.5 text-[#ff6b4a] transition-transform duration-200 group-hover:-translate-x-1"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
+  <span>{label}</span>
+</a>
+
+<script>
+  function setupBackButtons() {
+    document.querySelectorAll('[data-back-button]').forEach((btn) => {
+      if (btn.getAttribute('data-back-initialized')) return;
+      btn.setAttribute('data-back-initialized', 'true');
+
+      btn.addEventListener('click', (e) => {
+        // 1. Check if document.referrer exists and its origin matches window.location.origin
+        const referrer = document.referrer;
+        let isSameOrigin = false;
+        if (referrer) {
+          try {
+            isSameOrigin = new URL(referrer).origin === window.location.origin;
+          } catch (_) {
+            isSameOrigin = false;
+          }
+        }
+
+        // 2. Check if there's real in-site history to go back to:
+        const canGoBack = isSameOrigin && window.history.length > 1;
+
+        // 3. On click decision logic:
+        if (canGoBack) {
+          e.preventDefault();
+          window.history.back();
+        } else {
+          // Let the anchor navigate normally to fallbackHref
+        }
+      });
+    });
+  }
+
+  // Run on initial page load & Astro ViewTransitions swap events if active
+  setupBackButtons();
+  document.addEventListener('astro:page-load', setupBackButtons);
+</script>

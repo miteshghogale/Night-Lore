@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BackButton from '../components/BackButton.astro';
 ---
 
 <Layout
@@ -9,10 +10,13 @@ import Layout from '../layouts/Layout.astro';
   <div class="max-w-3xl mx-auto">
     <!-- Header -->
     <div class="mb-10 border-b border-[var(--color-border)] pb-8">
-      <div class="flex items-center gap-2 text-xs font-mono-meta text-[var(--color-text-dim)] mb-3">
-        <a href="/" class="hover:text-[var(--glow)] transition-colors">ARCHIVE</a>
-        <span>/</span>
-        <span class="text-[var(--glow)]">TERMS OF SERVICE</span>
+      <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
+        <BackButton fallbackHref="/" label="Back" />
+        <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
+          <a href="/" class="hover:text-[var(--glow)] transition-colors">ARCHIVE</a>
+          <span>/</span>
+          <span class="text-[var(--glow)]">TERMS OF SERVICE</span>
+        </div>
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">

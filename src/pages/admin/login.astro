@@ -1,11 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BackButton from '../../components/BackButton.astro';
 
 export const prerender = false;
 ---
 
 <Layout title="Admin Login | Night Lore Archive">
-  <div class="max-w-md mx-auto my-16 sm:my-24 px-4">
+  <div class="max-w-md mx-auto my-12 sm:my-16 px-4">
+    <div class="mb-4">
+      <BackButton fallbackHref="/" label="Back" />
+    </div>
     <div class="nl-card p-6 sm:p-8">
       <div class="flex items-center gap-2 mb-6 justify-center">
         <span class="w-2.5 h-2.5 rounded-full bg-[var(--glow)] shadow-[0_0_8px_var(--glow)]"></span>

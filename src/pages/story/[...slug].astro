@@ -1,10 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BackButton from '../../components/BackButton.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import StoryCard from '../../components/StoryCard.astro';
 import StoryCover from '../../components/StoryCover.astro';
 import { getCollection, render } from 'astro:content';
-import { categoryToSlug } from '../../utils/categories';
+import { CATEGORIES, categoryToSlug } from '../../utils/categories';
 import { parseFaqsFromMarkdown } from '../../utils/faq';
 
 export async function getStaticPaths() {
@@ -25,7 +26,9 @@ const formattedPubDate = new Date(story.data.pubDate).toLocaleDateString('en-US'
   day: 'numeric'
 });
 
-const categorySlug = categoryToSlug(story.data.category);
+const categoryData = CATEGORIES[story.data.category];
+const categorySlug = categoryData ? categoryData.slug : null;
+const fallbackHref = categorySlug ? `/category/${categorySlug}` : '/';
 
 // Compute Related Cases (same category prioritized, then tag overlap, up to 3)
 const allStories = await getCollection('stories', ({ data }) => !data.draft);
@@ -83,20 +86,18 @@ const emberConfigs = [
   <article class="max-w-6xl mx-auto">
     <!-- Top Bar Navigation & Breadcrumb Header -->
     <div class="flex items-center justify-between gap-4 mb-6 flex-wrap font-mono-meta text-xs">
-      <a
-        href={`/category/${categorySlug}`}
-        onclick={`if (document.referrer && window.history.length > 1) { try { if (new URL(document.referrer).origin === window.location.origin) { event.preventDefault(); window.history.back(); } } catch (e) {} }`}
-        class="inline-flex items-center gap-1.5 text-[var(--color-text-dim)] hover:text-[var(--glow)] transition-colors"
-      >
-        ← Back to {story.data.category}
-      </a>
+      <BackButton fallbackHref={fallbackHref} label={`Back to ${story.data.category}`} />
 
       <div class="flex items-center gap-2 text-[var(--color-text-dim)] flex-wrap">
         <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
-        <span>/</span>
-        <a href={`/category/${categorySlug}`} class="hover:text-[var(--glow)]">
-          {story.data.category.toUpperCase()}
-        </a>
+        {categorySlug && (
+          <>
+            <span>/</span>
+            <a href={`/category/${categorySlug}`} class="hover:text-[var(--glow)]">
+              {story.data.category.toUpperCase()}
+            </a>
+          </>
+        )}
         <span>/</span>
         <span class="text-[var(--glow)] font-semibold">DOSSIER-{story.id.toUpperCase()}</span>
       </div>

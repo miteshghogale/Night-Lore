@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BackButton from '../components/BackButton.astro';
 ---
 
 <Layout
@@ -7,8 +8,13 @@ import Layout from '../layouts/Layout.astro';
   description="The case file or coordinates you requested could not be located in the Night Lore archive."
   noindex={true}
 >
-  <div class="max-w-3xl mx-auto py-8 sm:py-16 text-center">
-    <!-- Status Badge -->
+  <div class="max-w-3xl mx-auto py-6 sm:py-12">
+    <div class="mb-6 flex items-center justify-start">
+      <BackButton fallbackHref="/" label="Back" />
+    </div>
+
+    <div class="text-center">
+      <!-- Status Badge -->
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface)] border border-[rgba(255,107,74,0.4)] text-[var(--glow)] font-mono-meta text-xs tracking-widest uppercase mb-6 shadow-md">
       <span class="w-2 h-2 rounded-full bg-[var(--glow)] animate-pulse"></span>
       STATUS: 404 // SIGNAL LOST
@@ -88,6 +94,7 @@ import Layout from '../layouts/Layout.astro';
         Browse Category Taxonomy
       </a>
     </div>
+  </div>
   </div>
 
   <script>

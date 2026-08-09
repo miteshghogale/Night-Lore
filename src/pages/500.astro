@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BackButton from '../components/BackButton.astro';
 
 interface Props {
   error: unknown;
@@ -14,8 +15,13 @@ const errorMessage = error instanceof Error ? error.message : (typeof error === 
   description="An unexpected server error occurred while retrieving this case file."
   noindex={true}
 >
-  <div class="max-w-3xl mx-auto py-8 sm:py-16 text-center">
-    <!-- Status Badge -->
+  <div class="max-w-3xl mx-auto py-6 sm:py-12">
+    <div class="mb-6 flex items-center justify-start">
+      <BackButton fallbackHref="/" label="Back" />
+    </div>
+
+    <div class="text-center">
+      <!-- Status Badge -->
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[var(--color-surface)] border border-[rgba(255,107,74,0.4)] text-[var(--glow)] font-mono-meta text-xs tracking-widest uppercase mb-6 shadow-md">
       <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
       STATUS: 500 // SERVER DISRUPTION
@@ -73,4 +79,5 @@ const errorMessage = error instanceof Error ? error.message : (typeof error === 
       </a>
     </div>
   </div>
+</div>
 </Layout>
