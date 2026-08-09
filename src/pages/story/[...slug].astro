@@ -355,5 +355,39 @@ const emberConfigs = [
       </a>
     </div>
   </article>
+
+  <!-- Tailwind v4 Scanner Safeguard for dynamically instantiated table container classes -->
+  <div class="hidden nl-table-container nl-table-scroll is-scrolled-end" aria-hidden="true"></div>
+
+  <script>
+    function wrapMarkdownTables() {
+      const tables = document.querySelectorAll('.prose-dark table');
+      tables.forEach((table) => {
+        if (table.parentElement && !table.parentElement.classList.contains('nl-table-scroll')) {
+          const container = document.createElement('div');
+          container.className = 'nl-table-container';
+
+          const scrollDiv = document.createElement('div');
+          scrollDiv.className = 'nl-table-scroll';
+
+          table.parentNode.insertBefore(container, table);
+          scrollDiv.appendChild(table);
+          container.appendChild(scrollDiv);
+
+          const checkScroll = () => {
+            const isAtEnd = scrollDiv.scrollLeft + scrollDiv.clientWidth >= scrollDiv.scrollWidth - 6;
+            container.classList.toggle('is-scrolled-end', isAtEnd);
+          };
+
+          scrollDiv.addEventListener('scroll', checkScroll, { passive: true });
+          window.addEventListener('resize', checkScroll, { passive: true });
+          checkScroll();
+        }
+      });
+    }
+
+    wrapMarkdownTables();
+    document.addEventListener('astro:page-load', wrapMarkdownTables);
+  </script>
 </Layout>
 

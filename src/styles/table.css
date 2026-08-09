@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Markdown Table Horizontal Scroll & Card Styling Container
+   ========================================================================== */
+.nl-table-container {
+  position: relative;
+  width: 100%;
+  margin: 2.25rem 0;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.6);
+}
+
+/* Fade gradient on right edge to visually indicate scrollable content */
+.nl-table-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 44px;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, rgba(9, 9, 11, 0.95));
+  opacity: 1;
+  transition: opacity 250ms ease;
+  z-index: 10;
+}
+
+.nl-table-container.is-scrolled-end::after {
+  opacity: 0;
+}
+
+.nl-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--glow) var(--color-surface-2);
+}
+
+/* Custom Ember Scrollbar styling */
+.nl-table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nl-table-scroll::-webkit-scrollbar-track {
+  background-color: var(--color-surface-2);
+  border-radius: 4px;
+}
+
+.nl-table-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--glow);
+  border-radius: 4px;
+}
+
+.nl-table-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #ff856b;
+}
+
+/* Table layout inside scroll container */
+.prose-dark table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-dark thead {
+  background-color: #0d0d11;
+}
+
+.prose-dark th {
+  color: var(--color-text-dim);
+  font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.875rem 1.125rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.prose-dark tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 150ms ease;
+}
+
+.prose-dark tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.prose-dark tbody tr:hover {
+  background-color: var(--color-surface-2);
+}
+
+.prose-dark tbody tr:last-child {
+  border-bottom: none;
+}
+
+.prose-dark td {
+  padding: 0.875rem 1.125rem;
+  color: var(--color-text-muted);
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prose-dark tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Column Width Balance */
+.prose-dark th:nth-child(1),
+.prose-dark td:nth-child(1) {
+  width: 8%;
+  min-width: 64px;
+  text-align: center;
+  font-family: 'Geist Mono', monospace;
+  font-weight: 600;
+  color: var(--glow);
+}
+
+.prose-dark th:nth-child(2),
+.prose-dark td:nth-child(2) {
+  width: 44%;
+  color: var(--color-text);
+}
+
+.prose-dark th:nth-child(3),
+.prose-dark td:nth-child(3) {
+  width: 28%;
+  font-size: 0.8125rem;
+}
+
+.prose-dark th:nth-child(4),
+.prose-dark td:nth-child(4) {
+  width: 20%;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+}
