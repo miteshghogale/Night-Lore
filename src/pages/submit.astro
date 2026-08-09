@@ -21,7 +21,7 @@ const categories = [
   <div class="max-w-3xl mx-auto">
     <!-- Header -->
     <div class="mb-10 border-b border-[var(--color-border)] pb-8">
-      <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 font-mono-meta text-xs">
         <BackButton fallbackHref="/" label="Back" />
         <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
           <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
@@ -30,7 +30,7 @@ const categories = [
         </div>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-[var(--color-text)] mb-3">
+      <h1 class="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--color-text)] mb-3 break-words">
         Submit a Paranormal Encounter
       </h1>
 
@@ -43,7 +43,7 @@ const categories = [
     <div id="submit-toast" class="hidden mb-8 p-4 rounded-md border text-sm font-mono-meta"></div>
 
     <!-- Form Container -->
-    <form id="submission-form" class="nl-card p-6 sm:p-8 space-y-6">
+    <form id="submission-form" class="nl-card p-4 sm:p-8 space-y-6">
       <!-- Hidden Honeypot Field -->
       <div class="hidden" aria-hidden="true">
         <label for="website_url">Do not fill this out</label>
@@ -61,7 +61,7 @@ const categories = [
           name="title"
           required
           placeholder="e.g. Unexplained Nocturnal Manifestations at Blackwood Manor"
-          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
         />
       </div>
 
@@ -75,7 +75,7 @@ const categories = [
             id="category"
             name="category"
             required
-            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors cursor-pointer"
           >
             <option value="" disabled selected>Select a category</option>
             {categories.map(cat => (
@@ -94,7 +94,7 @@ const categories = [
             name="location"
             required
             placeholder="City, State / Region, Country"
-            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
           />
         </div>
       </div>
@@ -109,13 +109,13 @@ const categories = [
           id="event_date"
           name="event_date"
           placeholder="e.g. October 2023 or Summer 2018"
-          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
         />
       </div>
 
       <!-- Story Text & Character Counter -->
       <div>
-        <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center justify-between mb-2 flex-wrap gap-1">
           <label for="story_text" class="block text-xs font-mono-meta uppercase tracking-wider text-[var(--color-text-muted)]">
             Detailed Encounter Narrative <span class="text-[var(--glow)]">*</span>
           </label>
@@ -145,17 +145,17 @@ const categories = [
             id="author_name"
             name="author_name"
             placeholder="e.g. J. Miller or Anonymous Witness"
-            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
           />
         </div>
 
-        <div class="flex items-center pt-6">
-          <label class="flex items-center gap-3 cursor-pointer">
+        <div class="flex items-center pt-2 sm:pt-6">
+          <label class="flex items-center gap-3 min-h-[44px] cursor-pointer py-1">
             <input
               type="checkbox"
               id="is_anonymous"
               name="is_anonymous"
-              class="w-4 h-4 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] cursor-pointer"
+              class="w-5 h-5 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] cursor-pointer flex-shrink-0"
             />
             <span class="text-xs font-mono-meta text-[var(--color-text-muted)]">
               Publish as ANONYMOUS contributor
@@ -175,7 +175,7 @@ const categories = [
           name="email"
           required
           placeholder="your.name@example.com"
-          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-2.5 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
+          class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors"
         />
         <p class="text-xs font-mono-meta text-[var(--color-text-dim)] mt-1.5 flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -185,13 +185,13 @@ const categories = [
 
       <!-- Editorial Consent Checkbox -->
       <div class="pt-4">
-        <label class="flex items-start gap-3 cursor-pointer">
+        <label class="flex items-start gap-3 min-h-[44px] cursor-pointer py-1">
           <input
             type="checkbox"
             id="consent"
             name="consent"
             required
-            class="w-4 h-4 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] mt-0.5 cursor-pointer"
+            class="w-5 h-5 rounded border-[var(--color-border)] text-[var(--glow)] focus:ring-0 bg-[var(--color-bg)] mt-0.5 cursor-pointer flex-shrink-0"
           />
           <span class="text-xs text-[var(--color-text-muted)] leading-relaxed">
             I confirm that this account represents a genuine experience to the best of my knowledge, and I consent to Night Lore editing for clarity and publishing under our <a href="/about" class="text-[var(--glow)] underline">editorial guidelines</a>.
@@ -204,7 +204,7 @@ const categories = [
         <button
           type="submit"
           id="submit-btn"
-          class="btn-primary w-full sm:w-auto px-8"
+          class="btn-primary w-full sm:w-auto px-8 min-h-[44px] cursor-pointer"
         >
           <span id="btn-text">Submit Encounters For Moderation</span>
           <svg id="btn-spinner" class="w-4 h-4 animate-spin text-black hidden" fill="none" viewBox="0 0 24 24">

@@ -12,7 +12,7 @@ const { fallbackHref = '/', label = 'Back', class: className = '' } = Astro.prop
   href={fallbackHref}
   data-back-button
   data-fallback={fallbackHref}
-  class={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-sans font-medium text-[var(--color-text-muted)] bg-[#0d0d11] hover:bg-[#14141a] border border-[var(--color-border)] hover:border-[#ff6b4a]/60 hover:text-[var(--color-text)] shadow-sm hover:shadow-[0_0_12px_rgba(255,107,74,0.2)] transition-all duration-200 group cursor-pointer ${className}`}
+  class={`inline-flex items-center gap-1.5 px-3 py-1.5 min-h-[36px] w-fit self-start shrink-0 rounded-md text-xs font-sans font-medium text-[var(--color-text-muted)] bg-[#0d0d11] hover:bg-[#14141a] border border-[var(--color-border)] hover:border-[#ff6b4a]/60 hover:text-[var(--color-text)] shadow-xs hover:shadow-[0_0_10px_rgba(255,107,74,0.15)] transition-all duration-200 group cursor-pointer ${className}`}
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"

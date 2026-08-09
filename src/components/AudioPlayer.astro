@@ -12,7 +12,7 @@
     <div class="flex items-center gap-3 w-full sm:w-auto min-w-0">
       <button
         id="player-play-btn"
-        class="w-10 h-10 rounded-md bg-[var(--glow)] text-black flex items-center justify-center flex-shrink-0 hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[var(--glow)] cursor-pointer"
+        class="w-11 h-11 min-w-[44px] min-h-[44px] rounded-md bg-[var(--glow)] text-black flex items-center justify-center flex-shrink-0 hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[var(--glow)] cursor-pointer"
         aria-label="Play or pause narration"
       >
         <svg id="play-icon" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -36,7 +36,7 @@
 
       <button
         id="player-close-btn-mobile"
-        class="sm:hidden text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2 rounded-md transition-colors focus:outline-none flex-shrink-0"
+        class="sm:hidden text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md transition-colors focus:outline-none flex-shrink-0 cursor-pointer"
         aria-label="Close audio player"
       >
         <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
@@ -49,14 +49,14 @@
     <div class="flex items-center gap-2 sm:gap-3 w-full sm:w-1/2 max-w-xl">
       <span id="player-time" class="font-mono-meta text-[11px] text-[var(--color-text-dim)] w-10 text-right flex-shrink-0">0:00</span>
       
-      <div class="relative flex-1 flex items-center">
+      <div class="relative flex-1 flex items-center min-h-[32px]">
         <input
           type="range"
           id="player-seek"
           min="0"
           max="100"
           value="0"
-          class="w-full h-1.5 bg-[var(--color-surface-2)] rounded-lg appearance-none cursor-pointer accent-[var(--glow)] focus:outline-none"
+          class="w-full h-2 bg-[var(--color-surface-2)] rounded-lg appearance-none cursor-pointer accent-[var(--glow)] focus:outline-none"
           aria-label="Seek audio position"
         />
       </div>
@@ -68,7 +68,7 @@
     <div class="hidden sm:flex items-center gap-2 flex-shrink-0">
       <button
         id="player-close-btn"
-        class="text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2 rounded-md transition-colors focus:outline-none"
+        class="text-[var(--color-text-dim)] hover:text-[var(--color-text)] p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-md transition-colors focus:outline-none cursor-pointer"
         aria-label="Close audio player"
       >
         <svg class="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">

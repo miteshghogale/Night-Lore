@@ -10,7 +10,7 @@ export const prerender = false;
     <div class="mb-4">
       <BackButton fallbackHref="/" label="Back" />
     </div>
-    <div class="nl-card p-6 sm:p-8">
+    <div class="nl-card p-5 sm:p-8">
       <div class="flex items-center gap-2 mb-6 justify-center">
         <span class="w-2.5 h-2.5 rounded-full bg-[var(--glow)] shadow-[0_0_8px_var(--glow)]"></span>
         <h1 class="font-bold text-xl tracking-tight text-[var(--color-text)]">NIGHT LORE ADMIN</h1>
@@ -33,11 +33,11 @@ export const prerender = false;
             name="password"
             required
             placeholder="••••••••••••"
-            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors font-mono-meta"
+            class="w-full bg-[var(--color-bg)] border border-[var(--color-border)] rounded-md px-4 py-3 min-h-[44px] text-sm text-[var(--color-text)] focus:border-[var(--glow)] focus:outline-none transition-colors font-mono-meta"
           />
         </div>
 
-        <button type="submit" id="login-btn" class="btn-primary w-full justify-center py-3 min-h-[44px]">
+        <button type="submit" id="login-btn" class="btn-primary w-full justify-center py-3 min-h-[44px] cursor-pointer">
           Authenticate & Access Queue →
         </button>
       </form>

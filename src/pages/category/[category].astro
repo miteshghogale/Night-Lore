@@ -34,23 +34,23 @@ const breadcrumbs = [
   breadcrumbs={breadcrumbs}
 >
   <div class="mb-12 border-b border-[var(--color-border)] pb-8 pt-4">
-    <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
-      <BackButton fallbackHref="/" label="Back to Archive" />
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 font-mono-meta text-xs">
+      <BackButton fallbackHref="/" label="Back" />
 
-      <div class="flex items-center gap-4 flex-wrap">
+      <div class="flex items-center gap-3 flex-wrap">
         <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
           <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
           <span>/</span>
-          <span class="text-[var(--glow)] font-semibold">{categoryData.name.toUpperCase()}</span>
+          <span class="text-[var(--glow)] font-semibold truncate">{categoryData.name.toUpperCase()}</span>
         </div>
 
-        <div class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-dim)]">
+        <div class="px-2.5 py-1 rounded bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-dim)] flex-shrink-0">
           INDEX REPOSITORY // {categoryStories.length} {categoryStories.length === 1 ? 'RECORD' : 'RECORDS'}
         </div>
       </div>
     </div>
 
-    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--color-text)] mb-4">
+    <h1 class="text-2xl sm:text-5xl font-extrabold tracking-tight text-[var(--color-text)] mb-4 break-words">
       {categoryData.name}
     </h1>
 

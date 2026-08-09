@@ -85,8 +85,8 @@ const emberConfigs = [
 >
   <article class="max-w-6xl mx-auto">
     <!-- Top Bar Navigation & Breadcrumb Header -->
-    <div class="flex items-center justify-between gap-4 mb-6 flex-wrap font-mono-meta text-xs">
-      <BackButton fallbackHref={fallbackHref} label={`Back to ${story.data.category}`} />
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 font-mono-meta text-xs">
+      <BackButton fallbackHref={fallbackHref} label="Back" />
 
       <div class="flex items-center gap-2 text-[var(--color-text-dim)] flex-wrap">
         <a href="/" class="hover:text-[var(--glow)]">ARCHIVE</a>
@@ -99,7 +99,7 @@ const emberConfigs = [
           </>
         )}
         <span>/</span>
-        <span class="text-[var(--glow)] font-semibold">DOSSIER-{story.id.toUpperCase()}</span>
+        <span class="text-[var(--glow)] font-semibold truncate">DOSSIER-{story.id.toUpperCase()}</span>
       </div>
     </div>
 
@@ -120,28 +120,28 @@ const emberConfigs = [
       <div class="relative z-10">
         <div class="flex items-center gap-3 mb-4 flex-wrap">
           <StatusBadge status={story.data.status} />
-          <span class="font-mono-meta text-xs text-[var(--color-text-dim)] bg-black/50 px-2 py-0.5 rounded border border-white/10">
+          <span class="font-mono-meta text-xs text-[var(--color-text-dim)] bg-black/50 px-2 py-0.5 rounded border border-white/10 flex-shrink-0">
             DOSSIER ID: NL-{story.id.toUpperCase()}
           </span>
-          <span class="font-mono-meta text-xs text-[var(--glow)] bg-[var(--glow-soft)] px-2 py-0.5 rounded border border-[var(--glow)]/30">
+          <span class="font-mono-meta text-xs text-[var(--glow)] bg-[var(--glow-soft)] px-2 py-0.5 rounded border border-[var(--glow)]/30 flex-shrink-0">
             {story.data.category}
           </span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-5 leading-[1.12]">
+        <h1 class="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[var(--color-text)] mb-5 leading-[1.12] break-words">
           {story.data.title}
         </h1>
 
-        <p class="text-lg sm:text-xl text-[var(--color-text-muted)] leading-relaxed mb-6 font-normal max-w-4xl">
+        <p class="text-base sm:text-xl text-[var(--color-text-muted)] leading-relaxed mb-6 font-normal max-w-4xl">
           {story.data.dek}
         </p>
 
         <!-- Hero Metadata Ribbon -->
         <div class="nl-card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono-meta text-xs text-[var(--color-text-dim)] bg-[#0d0d11]">
           <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
-            <div class="flex items-center gap-2 text-[var(--color-text-muted)]">
+            <div class="flex items-center gap-2 text-[var(--color-text-muted)] min-w-0">
               <svg class="w-4 h-4 text-[var(--glow)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span>{story.data.location}</span>
+              <span class="truncate">{story.data.location}</span>
             </div>
             <div class="flex items-center gap-2 text-[var(--color-text-muted)]">
               <svg class="w-4 h-4 text-[var(--color-text-dim)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -155,9 +155,9 @@ const emberConfigs = [
           {story.data.audioUrl && (
             <button
               onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${story.data.audioUrl}', title: '${story.data.title.replace(/'/g, "\\'")}' } }))`}
-              class="btn-primary text-xs py-2 px-4 gap-2 w-full sm:w-auto justify-center flex-shrink-0 shadow-md"
+              class="btn-primary text-xs py-2.5 px-4 min-h-[44px] gap-2 w-full sm:w-auto justify-center flex-shrink-0 shadow-md cursor-pointer"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z"/>
               </svg>
               Listen Audio ({story.data.audioDuration || 'Audio'})
@@ -282,9 +282,9 @@ const emberConfigs = [
               <div class="mt-6 pt-4 border-t border-[var(--color-border)]">
                 <button
                   onclick={`window.dispatchEvent(new CustomEvent('nl:play-audio', { detail: { url: '${story.data.audioUrl}', title: '${story.data.title.replace(/'/g, "\\'")}' } }))`}
-                  class="btn-secondary text-xs w-full justify-center gap-2 text-[var(--glow)] border-[var(--glow)]/50"
+                  class="btn-secondary text-xs w-full min-h-[44px] justify-center gap-2 text-[var(--glow)] border-[var(--glow)]/50 cursor-pointer"
                 >
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                   Play Audio Narration
@@ -299,7 +299,7 @@ const emberConfigs = [
             <p class="text-xs text-[var(--color-text-muted)] leading-relaxed mb-4">
               Submit your eyewitness affidavit, photo records, or archival corrections for editorial verification.
             </p>
-            <a href="/submit" class="btn-primary text-xs w-full justify-center">
+            <a href="/submit" class="btn-primary text-xs w-full min-h-[44px] justify-center">
               Submit Case Information
             </a>
           </div>
@@ -339,14 +339,14 @@ const emberConfigs = [
     )}
 
     <!-- Similar Encounter Banner -->
-    <div class="nl-card p-8 sm:p-10 text-center bg-[var(--color-surface-2)] border-[var(--color-border)]">
+    <div class="nl-card p-6 sm:p-10 text-center bg-[var(--color-surface-2)] border-[var(--color-border)]">
       <h3 class="text-xl font-bold text-[var(--color-text)] mb-2">
         Have Information or a Similar Experience?
       </h3>
       <p class="text-sm text-[var(--color-text-muted)] mb-6 max-w-lg mx-auto leading-relaxed">
         Our research team reviews first-person accounts, localized folklore, and secondary evidence related to {story.data.location}.
       </p>
-      <a href="/submit" class="btn-primary text-xs py-2.5 px-6">
+      <a href="/submit" class="btn-primary text-xs py-3 px-6 min-h-[44px] inline-flex items-center justify-center">
         Submit Your Encounter For Review
       </a>
     </div>

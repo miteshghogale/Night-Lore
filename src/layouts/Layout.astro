@@ -263,8 +263,8 @@ const faqSchema = (faqList && faqList.length > 0) ? {
         </nav>
 
         <!-- Right Action & Mobile Menu Button -->
-        <div class="flex items-center gap-3">
-          <a href="/submit" class="btn-primary text-xs py-2 px-4 shadow-sm">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="/submit" class="btn-primary text-xs py-2.5 px-4 min-h-[44px] shadow-sm">
             <svg class="w-3.5 h-3.5 stroke-current" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
             </svg>
@@ -274,8 +274,9 @@ const faqSchema = (faqList && faqList.length > 0) ? {
 
           <button
             id="mobile-menu-btn"
-            class="md:hidden p-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] focus:outline-none"
+            class="md:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-muted)] hover:text-[var(--color-text)] focus:outline-none cursor-pointer"
             aria-label="Toggle navigation menu"
+            aria-expanded="false"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -285,18 +286,18 @@ const faqSchema = (faqList && faqList.length > 0) ? {
       </div>
 
       <!-- Mobile Dropdown Nav Menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--color-border)] bg-[#09090b]/95 backdrop-blur-md px-4 py-4 space-y-3 font-mono-meta text-xs">
-        <a href="/" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">ARCHIVE HOME</a>
-        <a href="/category/real-paranormal-cases" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">REAL PARANORMAL CASES</a>
-        <a href="/category/unsolved-mysteries" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">UNSOLVED MYSTERIES</a>
-        <a href="/category/haunted-places" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">HAUNTED PLACES</a>
-        <a href="/about" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">EDITORIAL STANDARDS</a>
-        <a href="/contact" class="block py-2 text-[var(--color-text-muted)] hover:text-[var(--glow)]">CONTACT US</a>
+      <div id="mobile-menu" class="hidden md:hidden border-t border-[var(--color-border)] bg-[#09090b]/95 backdrop-blur-md px-4 py-3 space-y-1 font-mono-meta text-xs">
+        <a href="/" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">ARCHIVE HOME</a>
+        <a href="/category/real-paranormal-cases" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">REAL PARANORMAL CASES</a>
+        <a href="/category/unsolved-mysteries" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">UNSOLVED MYSTERIES</a>
+        <a href="/category/haunted-places" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">HAUNTED PLACES</a>
+        <a href="/about" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)] border-b border-white/5">EDITORIAL STANDARDS</a>
+        <a href="/contact" class="flex items-center py-3 px-2 min-h-[44px] text-[var(--color-text-muted)] hover:text-[var(--glow)]">CONTACT US</a>
       </div>
     </header>
 
     <!-- Main Body Slot -->
-    <main class="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <main class="flex-1 w-full max-w-[1280px] mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-28 sm:pb-16">
       <slot />
     </main>
 
@@ -368,7 +369,8 @@ const faqSchema = (faqList && faqList.length > 0) ? {
         const menu = document.getElementById('mobile-menu');
 
         menuBtn?.addEventListener('click', () => {
-          menu?.classList.toggle('hidden');
+          const isHidden = menu?.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', isHidden ? 'false' : 'true');
         });
       });
     </script>

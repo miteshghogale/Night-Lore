@@ -10,7 +10,7 @@ import BackButton from '../components/BackButton.astro';
   <div class="max-w-3xl mx-auto">
     <!-- Header -->
     <div class="mb-10 border-b border-[var(--color-border)] pb-8">
-      <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 font-mono-meta text-xs">
         <BackButton fallbackHref="/" label="Back" />
         <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
           <a href="/" class="hover:text-[var(--glow)] transition-colors">ARCHIVE</a>
@@ -19,7 +19,7 @@ import BackButton from '../components/BackButton.astro';
         </div>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      <h1 class="text-2xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4 break-words">
         Terms & Conditions
       </h1>
 
@@ -155,7 +155,7 @@ import BackButton from '../components/BackButton.astro';
         <p class="text-xs text-[var(--color-text-muted)] mb-4">
           For questions regarding these terms, licensing requests, or intellectual property inquiries:
         </p>
-        <a href="/contact" class="btn-primary text-xs">
+        <a href="/contact" class="btn-primary text-xs py-2.5 px-5 min-h-[44px] inline-flex items-center justify-center">
           Contact Legal Desk
         </a>
       </div>

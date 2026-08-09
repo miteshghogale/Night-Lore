@@ -21,6 +21,11 @@
     --status-ongoing: #22d3ee;
   }
 
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -313,6 +318,27 @@
   margin-top: 0.15rem;
   color: var(--glow);
   font-family: 'Geist Mono', monospace;
+}
+
+@media (max-width: 640px) {
+  .prose-dark > p:first-of-type::first-letter {
+    font-size: 2.25rem;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+  }
+}
+
+.prose-dark pre,
+.prose-dark table {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+}
+
+.prose-dark code {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .prose-dark h2 {

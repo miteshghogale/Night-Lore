@@ -17,7 +17,7 @@ const statusMap = {
 const current = statusMap[status] || statusMap.unresolved;
 ---
 
-<span class={`status-stamp ${current.class} ${className}`}>
-  <span class="w-1.5 h-1.5 rounded-full bg-current opacity-80 inline-block"></span>
+<span class={`status-stamp flex-shrink-0 ${current.class} ${className}`}>
+  <span class="w-1.5 h-1.5 rounded-full bg-current opacity-80 inline-block flex-shrink-0"></span>
   {current.label}
 </span>

@@ -10,7 +10,7 @@ import BackButton from '../components/BackButton.astro';
   <div class="max-w-3xl mx-auto">
     <!-- Header -->
     <div class="mb-10 border-b border-[var(--color-border)] pb-8">
-      <div class="flex items-center justify-between gap-4 mb-4 flex-wrap font-mono-meta text-xs">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 font-mono-meta text-xs">
         <BackButton fallbackHref="/" label="Back" />
         <div class="flex items-center gap-2 text-[var(--color-text-dim)]">
           <a href="/" class="hover:text-[var(--glow)] transition-colors">ARCHIVE</a>
@@ -19,7 +19,7 @@ import BackButton from '../components/BackButton.astro';
         </div>
       </div>
 
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4">
+      <h1 class="text-2xl sm:text-5xl font-bold tracking-tight text-[var(--color-text)] mb-4 break-words">
         Contact Editorial Desk
       </h1>
 
@@ -46,7 +46,7 @@ import BackButton from '../components/BackButton.astro';
         <div>
           <a
             href="mailto:contact@mynightlore.com"
-            class="inline-flex items-center gap-2 text-sm font-mono-meta font-bold text-[var(--glow)] hover:underline"
+            class="inline-flex items-center gap-2 text-sm font-mono-meta font-bold text-[var(--glow)] hover:underline min-h-[44px]"
           >
             <span>contact@mynightlore.com</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -73,7 +73,7 @@ import BackButton from '../components/BackButton.astro';
         <div>
           <a
             href="mailto:contact@mynightlore.com?subject=Privacy%20Data%20Request"
-            class="inline-flex items-center gap-2 text-sm font-mono-meta font-bold text-[var(--color-text)] hover:text-[var(--glow)] transition-colors"
+            class="inline-flex items-center gap-2 text-sm font-mono-meta font-bold text-[var(--color-text)] hover:text-[var(--glow)] transition-colors min-h-[44px]"
           >
             <span>contact@mynightlore.com</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -86,7 +86,7 @@ import BackButton from '../components/BackButton.astro';
     </div>
 
     <!-- Reader Story Submission Callout Banner -->
-    <div class="nl-card p-8 bg-[var(--color-surface-2)] border border-[var(--color-border)] mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+    <div class="nl-card p-6 sm:p-8 bg-[var(--color-surface-2)] border border-[var(--color-border)] mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
       <div>
         <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-black border border-[var(--color-border)] font-mono-meta text-[11px] text-[var(--status-witnessed)] mb-3">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
@@ -99,7 +99,7 @@ import BackButton from '../components/BackButton.astro';
           Do not email raw story narratives directly. Please use our structured submission portal to specify incident location, category taxonomy, and anonymization preferences.
         </p>
       </div>
-      <a href="/submit" class="btn-primary text-xs whitespace-nowrap px-6 py-3 shadow-md">
+      <a href="/submit" class="btn-primary text-xs whitespace-nowrap px-6 py-3 min-h-[44px] inline-flex items-center justify-center shadow-md w-full sm:w-auto">
         Go to Submission Portal →
       </a>
     </div>
