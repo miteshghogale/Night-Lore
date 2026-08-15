@@ -26,7 +26,7 @@ In mid-July 1518, within the free imperial city of Strasbourg, then part of the 
 
 Participants danced uncontrollably under the summer sun, moving with rhythmic frenzy through public squares, unable to stop even as their feet swelled, their shoes tore, and their bodies collapsed from extreme physical exhaustion. Municipal leaders, physicians, and clergy struggled to comprehend or contain the compulsion. In their confusion, city authorities implemented public measures that unintentionally fueled the mania, turning a localized disturbance into a citywide catastrophe.
 
-Five centuries later, the Strasbourg dancing plague remains one of history's most fascinating medical mysteries. On Night Lore, this event is categorized as UNRESOLVED. Although medical historians have proposed compelling models ranging from fungal poisoning to mass psychological contagion, fundamental questions remain unanswered. The precise neurophysiological mechanisms driving hundreds of people to dance to collapse, alongside the absence of verified primary documentation regarding fatalities, leave the true nature of the 1518 epidemic unresolved.
+Five centuries later, the Strasbourg dancing plague remains one of history's most fascinating medical mysteries. On Night Lore, this event is categorized as UNRESOLVED. Although medical historians have proposed compelling models ranging from fungal poisoning to mass psychological contagion, fundamental questions remain unanswered. The precise neurophysiological mechanisms driving hundreds of people to dance until total physical collapse, alongside the absence of verified documentation regarding fatalities, leave the true nature of the 1518 epidemic unresolved.
 
 ## Frau Troffea and the Onset of the Mania
 
@@ -48,7 +48,7 @@ Accepting this advice, the city council mobilized municipal resources to facilit
 
 1. **Public Venues:** Authorities cleared and refurbished local guild halls to accommodate the dancers.
 2. **Wooden Stages:** The council erected a large wooden stage in the central horse market (*Roßmarkt*).
-3. **Musicians:** Municipal funds paid for professional drummers and pipers to maintain a constant rhythm.
+3. **Musicians:** Municipal funds paid professional drummers and pipers to keep a relentless, constant beat.
 4. **Strongmen Stewards:** The city hired robust stewards to hold up exhausted dancers and keep them moving.
 
 This strategy backfired completely. By providing stages, continuous music, and official encouragement, the council created an environment of heightened sensory stimulation and social permission. Rather than exhausting the illness, the music and venues acted as a powerful psychological catalyst, drawing scores of vulnerable onlookers into the trance. Dancers pushed far past human endurance, collapsing from heat exhaustion and cardiovascular failure.

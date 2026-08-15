@@ -62,7 +62,7 @@ Meanwhile, school authorities in Kashasha attempted to reopen the boarding schoo
 
 In June 1962, the epidemic spread to Ramashenye Girls' Middle School, situated near the town of Bukoba. Forty-eight female pupils at Ramashenye were affected by the condition, leading to the prompt closure of that institution as well.
 
-Another affected location was the village of Kanyangereko, which was affected to some degree following the arrival of individuals connected to the outbreak.
+Another impacted location was the village of Kanyangereko, which experienced cases following the arrival of individuals connected to the outbreak.
 
 By the time the epidemic gradually waned and ceased entirely in mid-1963, fourteen separate schools had been forced to close across the region. All affected communities were contained within a one-hundred-mile radius of Bukoba. Epidemiological records indicate that over one thousand people had been directly affected during the eighteen-month period.
 

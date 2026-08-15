@@ -34,7 +34,7 @@ As detailed by researcher Jerome Clark, the object was described as an intensely
 
 The thermal radiation made the car's metallic body painful to touch. Cash wrapped her coat around her hand to open the door handle when re-entering. Landrum claimed that when she pressed her hand against the dashboard, her palm sank into the heat-softened vinyl, leaving an imprint evident weeks later, featured in the 1985 HBO documentary UFOs: What's Going On.
 
-The object then ascended above the treetops. A group of 23 helicopters surrounded it in tight formation. Witnesses identified several as tandem-rotor Boeing CH-47 Chinooks, with Cash claiming they bore United States Air Force markings. Cash drove on toward Dayton, seeing glimpses of the craft and helicopters receding in the distance. The encounter lasted about 20 minutes. Based on John F. Schuessler's 1998 book, researchers placed the initial location on Texas FM 1485 / 2100 south of Inland Road (coordinates 30°05′33″N 95°06′39″W / 30.0926°N 95.1109°W).
+The object then ascended above the treetops. A group of 23 helicopters surrounded it in tight formation. Witnesses identified several as tandem-rotor Boeing CH-47 Chinooks, with Cash claiming they bore United States Air Force markings. Cash drove on toward Dayton, seeing glimpses of the craft and helicopters receding in the distance. The encounter lasted about 20 minutes. Based on John F. Schuessler's 1998 book, researchers placed the initial location along Texas FM 1485, south of Inland Road.
 
 ## Unraveling Sourcing: Primary Contradictions in the Record
 
@@ -68,7 +68,7 @@ Brad Sparks evaluated the radiation claims, noting that while symptoms mirrored 
 
 Physician Gary P. Posner reviewed Cash's actual medical records in Schuessler's book. Posner found that Cash was hospitalized from January 2 to 19, 1981. Her attending physician noted little, if any, hair loss upon admission (it developed weeks later), and her dermatologist diagnosed cellulitis and swelling of the face and scalp, with no mention of skin loss.
 
-Brian Dunning reported on Skeptoid that Cash's doctor attributed her hair loss to alopecia areata, an autoimmune disease causing hair to fall out in patches. Dunning noted that Cash's other symptoms matched pre-existing illnesses and Landrum's only documented illness was a cataract, concluding the witnesses mistakenly blamed health problems on the UFO and pushed the truth seeking Air Force compensation.
+Brian Dunning reported on Skeptoid that Cash's doctor attributed her hair loss to alopecia areata, an autoimmune disease causing hair to fall out in patches. Dunning noted that Cash's other symptoms matched pre-existing conditions, while Landrum's only documented issue was a cataract. He concluded the witnesses mistakenly blamed their health problems on the encounter while seeking Air Force compensation.
 
 Philip J. Klass and Peter Brookesmith emphasized that Schuessler provided no baseline medical records for Cash, Landrum, or Colby prior to the incident, making causal claims unproven.
 
