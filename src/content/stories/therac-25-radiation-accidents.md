@@ -11,6 +11,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Therac-25"
 tags: ["therac-25", "radiation-accidents", "medical-devices", "software-engineering", "aecl", "race-condition", "tyler-texas", "yakima-washington"]
 draft: false
+coverImage: "/images/covers/therac-25-radiation-accidents.webp"
+coverAlt: "Historical computer-controlled medical linear accelerator radiation therapy unit inside a treatment vault"
+coverCredit: "National Cancer Institute"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:External_beam_radiotherapy_retinoblastoma_nci-vol-1924-300.jpg"
+coverLicense: "Public Domain"
 ---
 
 > **STATUS: WITNESSED**

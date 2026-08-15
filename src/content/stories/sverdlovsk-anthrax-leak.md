@@ -18,6 +18,11 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/7973702/"
 tags: ["sverdlovsk", "anthrax", "biological-weapons", "soviet-union", "compound-19", "biopreparat", "matthew-meselson", "ken-alibek"]
 draft: false
+coverImage: "/images/covers/sverdlovsk-anthrax-leak.webp"
+coverAlt: "Landscape view of the industrial reservoir in Sverdlovsk Oblast"
+coverCredit: "Vasily Iakovlev"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Reftinsky_reservoir_of_Sverdlovsk_region.jpg"
+coverLicense: "CC BY 4.0"
 ---
 
 > **STATUS: WITNESSED**  

@@ -14,9 +14,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Travis_Walton_incident"
 tags: ["travis-walton", "ufo-sighting", "alien-abduction", "heber-arizona", "mike-rogers", "fire-in-the-sky"]
 draft: false
-coverImage: "/images/covers/rendlesham-forest-incident.webp"
-coverAlt: "Dense forest under a dark night sky"
-coverCredit: "Wikimedia Commons"
+coverImage: "/images/covers/travis-walton-incident.webp"
+coverAlt: "Dense ponderosa pine forest timberland in Apache-Sitgreaves National Forests, Arizona"
+coverCredit: "Zereshk"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Apache_Sitgreaves_Nima1.JPG"
+coverLicense: "CC BY-SA 3.0"
 ---
 
 Status: DISPUTED. Justification: The Travis Walton incident remains heavily contested, with witness testimony of a craft encounter directly opposed by documented contract pressures, pre-existing media influences, mixed polygraph results, and competing hoax hypotheses.

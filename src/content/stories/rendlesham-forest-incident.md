@@ -17,8 +17,10 @@ sources:
 tags: ["rendlesham-forest", "charles-halt", "raf-woodbridge", "orfordness-lighthouse", "ufo-sighting", "suffolk-england"]
 draft: false
 coverImage: "/images/covers/rendlesham-forest-incident.webp"
-coverAlt: "Dense pine trees in Rendlesham Forest under a dark night sky"
-coverCredit: "Wikimedia Commons"
+coverAlt: "Atmospheric clearing deep inside Rendlesham Forest, Suffolk, location of the 1980 military encounter"
+coverCredit: "Simon Leatherdale"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Supposed_UFO_landing_site_-_Rendlesham_Forest_-_geograph.org.uk_-_263104.jpg"
+coverLicense: "CC BY-SA 2.0"
 ---
 
 Status: DISPUTED. Justification: The status is DISPUTED because eyewitness statements from military personnel describing an extraordinary craft landing directly conflict with documented astronomical, navigational, and geographic counter-explanations without consensus.

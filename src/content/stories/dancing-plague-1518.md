@@ -18,6 +18,11 @@ sources:
     url: "https://doi.org/10.1016/S0140-6736(09)60386-X"
 tags: ["dancing-plague", "strasbourg-1518", "mass-psychogenic-illness", "frau-troffea", "john-waller", "ergotism", "saint-vitus", "psychology-of-fear"]
 draft: false
+coverImage: "/images/covers/dancing-plague-1518.webp"
+coverAlt: "Historic 17th-century engraving depicting women afflicted with severe dancing mania"
+coverCredit: "Hendrik Hondius I (after Pieter Bruegel I) / Metropolitan Museum of Art"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Epileptics_Walking_to_the_Left_from_Pilgrimage_of_the_Epileptics_to_the_Church_at_Molenbeeck_MET_DP825760.jpg"
+coverLicense: "CC0 1.0 Universal Public Domain"
 ---
 
 > **STATUS: UNRESOLVED**  

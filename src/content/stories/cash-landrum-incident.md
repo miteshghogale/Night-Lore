@@ -14,9 +14,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Cash%E2%80%93Landrum_incident"
 tags: ["cash-landrum", "ufo-sighting", "dayton-texas", "betty-cash", "vickie-landrum", "colby-landrum", "chinook-helicopters", "radiation-sickness"]
 draft: false
-coverImage: "/images/covers/rendlesham-forest-incident.webp"
-coverAlt: "An artistic depiction of a glowing light hovering over a dark forested road"
-coverCredit: "Wikimedia Commons"
+coverImage: "/images/covers/cash-landrum-incident.webp"
+coverAlt: "Dense pine timberland in the East Texas Piney Woods region near Dayton, Texas"
+coverCredit: "Jay Carriker (User:JCarriker)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Piney_Woods_2.jpg"
+coverLicense: "CC BY-SA 2.5"
 ---
 
 Status: DISPUTED. Justification: The Cash-Landrum incident remains heavily contested due to internal contradictions between early witness statements and later accounts, conflicting medical records, unconfirmed military helicopter involvement, and inconclusive physical radiation testing.

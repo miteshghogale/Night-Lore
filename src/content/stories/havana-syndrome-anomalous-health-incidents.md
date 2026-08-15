@@ -11,6 +11,11 @@ sources:
     url: "https://en.wikipedia.org/wiki/Havana_syndrome"
 tags: ["havana-syndrome", "unsolved-mysteries", "directed-energy", "anomalous-health-incidents", "psychogenic", "neurology", "diplomacy"]
 draft: false
+coverImage: "/images/covers/havana-syndrome-anomalous-health-incidents.webp"
+coverAlt: "Exterior photograph of the Embassy of the United States in Havana, Cuba along the Malecón"
+coverCredit: "Bjen78"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:US_Embassy_in_Havana,_Cuba.jpg"
+coverLicense: "CC BY 4.0"
 ---
 
 > **STATUS: UNRESOLVED**  

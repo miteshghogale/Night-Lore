@@ -18,6 +18,11 @@ sources:
     url: "https://www.washingtonpost.com/wp-srv/inatl/longterm/coldwar/shatter021099b.htm"
 tags: ["petrov-incident", "stanislav-petrov", "oko", "serpukhov-15", "cold-war", "nuclear-false-alarm", "kal-007", "operation-ryan"]
 draft: false
+coverImage: "/images/covers/petrov-nuclear-false-alarm.webp"
+coverAlt: "Representative Cold War Soviet Daryal early-warning radar station building array (not Serpukhov-15)"
+coverCredit: "VargaA (Representative Cold War Radar Facility)"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Mukacheve_Daryal-UM_LPAR.jpg"
+coverLicense: "CC BY-SA 4.0"
 ---
 
 > **STATUS: WITNESSED**  

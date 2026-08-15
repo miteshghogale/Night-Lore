@@ -18,6 +18,11 @@ sources:
     url: "https://www.theguardian.com/world/2007/nov/21/society.health"
 tags: ["tanganyika", "mass-psychogenic-illness", "mass-hysteria", "bukoba", "kashasha", "rankin-and-philip", "hempelmann", "psychology-of-fear"]
 draft: false
+coverImage: "/images/covers/tanganyika-laughter-epidemic.webp"
+coverAlt: "Historic overview of Bukoba town along Lake Victoria in Kagera Region, Tanzania"
+coverCredit: "Andrewcoe22 at English Wikipedia"
+coverCreditUrl: "https://commons.wikimedia.org/wiki/File:Bukoba.JPG"
+coverLicense: "Public Domain"
 ---
 
 > **STATUS: DEBUNKED**  
