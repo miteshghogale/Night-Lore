@@ -274,6 +274,12 @@ const categories = [
             toast.textContent = `SUCCESS: ${data.message} (Reference ID: ${data.id || 'SUBMITTED'})`;
             form.reset();
             if (counterEl) counterEl.textContent = '0 / 150 min characters';
+
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'story_submission', {
+                event_category: 'engagement'
+              });
+            }
           } else {
             toast.className = 'mb-8 p-4 rounded-md border border-[var(--status-debunked)] bg-[var(--color-surface)] text-[var(--status-debunked)] font-mono-meta text-sm';
             toast.textContent = `ERROR: ${data.error || 'Submission failed.'}`;
