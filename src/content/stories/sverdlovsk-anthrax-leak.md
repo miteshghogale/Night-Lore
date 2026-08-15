@@ -58,11 +58,7 @@ Medical staff recognized that the cases represented anthrax, but the clinical fo
 
 ## Disputed Casualty Figures: Analyzing 64, 68, and 94
 
-The exact death toll and infection count from the Sverdlovsk anthrax leak are genuinely disputed across historical and scientific documentation. Because Soviet state security agencies seized hospital files and pathologically restricted records, figures vary across primary sources:
-
-1. **64 Fatalities:** PBS Frontline reporting documents 64 reported deaths associated with the outbreak.
-2. **68 Confirmed Fatalities:** The international scientific investigation led by Matthew Meselson, alongside data recorded in Wikipedia, confirmed at least 68 distinct deaths from inhalation anthrax.
-3. **94 Total Infected Cases:** Documentation across reputable scientific and investigative reports tracks a total count of 94 confirmed infected individuals within the exposure area.
+The exact death toll and infection count from the Sverdlovsk anthrax leak are genuinely disputed across historical and scientific documentation. Because Soviet state security agencies seized hospital files and pathologically restricted records, figures vary across primary sources: PBS Frontline reporting documents 64 reported deaths associated with the outbreak; the international scientific investigation led by Matthew Meselson, alongside data recorded in Wikipedia, confirmed at least 68 distinct deaths from inhalation anthrax; and documentation across reputable scientific and investigative reports tracks a total count of 94 confirmed infected individuals within the exposure area.
 
 Documented records track between 64 and 68 confirmed fatalities out of 94 total infected cases. Inhalation anthrax carries a high mortality rate, particularly when medical intervention is delayed or when the underlying exposure vector is initially unrecognized.
 
@@ -91,8 +87,11 @@ The team's research was published in *Science* on November 18, 1994, under the t
 The Meselson investigation provided definitive epidemiological proof of an airborne release based on geographic mapping:
 
 * **Daytime Location Alignment:** When researchers plotted the home locations of victims, the residential addresses did NOT form a clear geographic pattern. However, when researchers mapped the victims' daytime and working-hours locations on April 2, 1979, the spatial pattern aligned precisely within a narrow corridor extending directly downwind south-southeast from Military Compound 19.
+
 * **Meteorological Correlation:** Weather observations from Sverdlovsk on April 2, 1979, confirmed that winds blew from the north toward the south-southeast. The alignment of daytime victim locations matched the downwind vector of the atmospheric cloud from the facility vent.
+
 * **Livestock Case Locations:** Livestock anthrax fatalities occurred directly downwind along the same wind line across six specific villages, including Bol'shoe Sedelnikovo, Kashino, and Abramovo.
+
 * **Refutation of the Foodborne Claim:** The strict alignment of daytime working locations along a single downwind axis disproved the foodborne contaminated meat explanation. Ingestion of contaminated black-market beef distributed across markets would have produced scattered residential clusters throughout the city, rather than a single downwind line based on daytime working locations on April 2.
 
 The 1994 Meselson paper demonstrated how spatial epidemiological analysis can resolve complex historical and geopolitical questions.
