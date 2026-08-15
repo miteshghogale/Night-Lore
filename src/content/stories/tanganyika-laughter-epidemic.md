@@ -6,6 +6,9 @@ status: "debunked"
 location: "Kashasha, Bukoba District, Tanganyika (now Tanzania)"
 eventDate: "January 30, 1962"
 pubDate: "2026-08-15"
+audioUrl: "/audio/tanganyika-laughter-epidemic.mp3"
+audioDuration: "15:04"
+ambientTrack: "folklore-ambient.mp3"
 sources:
   - label: "Wikipedia: Tanganyika laughter epidemic"
     url: "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
@@ -44,13 +47,7 @@ In 1962, researchers A. M. Rankin and P. J. Philip conducted an investigation in
 
 Rankin and Philip documented the clinical presentation of the patients, noting that episodes of laughing and crying lasted anywhere from a few hours to sixteen days, with an average duration of approximately seven days.
 
-Despite the popular designation of the outbreak as a "laughter epidemic," the attacks were accompanied by significant distress and a range of physical and behavioral symptoms, including:
-
-1. **Laughter and Crying:** Involuntary, recurring bouts of laughter intermixed with crying spells.
-2. **Physical Restlessness:** Marked physical agitation, aimless running, and sudden behavioral changes.
-3. **Pain and Respiratory Problems:** Reports of bodily pain, discomfort, and acute respiratory difficulties during symptomatic episodes.
-4. **Fainting and Rashes:** Occasional fainting spells and skin rashes among affected individuals.
-5. **Absence of Organic Signs:** Medical examinations revealed no underlying physical or infectious disease, and laboratory tests yielded no biological pathogens or toxic agents. No fatalities occurred throughout the entire course of the epidemic.
+Despite the popular designation of the outbreak as a "laughter epidemic," the attacks were accompanied by significant distress and a range of physical and behavioral symptoms. Patients experienced involuntary, recurring bouts of laughter intermixed with crying spells; marked physical agitation, aimless running, and sudden behavioral changes; reports of bodily pain, discomfort, and acute respiratory difficulties during symptomatic episodes; and occasional fainting spells and skin rashes among affected individuals. Remarkably, medical examinations revealed no underlying physical or infectious disease, and laboratory tests yielded no biological pathogens or toxic agents, with zero fatalities occurring throughout the entire course of the epidemic.
 
 ## Epidemiological Spread Across Bukoba District
 

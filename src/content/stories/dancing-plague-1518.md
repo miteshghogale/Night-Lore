@@ -44,33 +44,19 @@ As the compulsion spread, the Strasbourg city council (*Rat*) convened emergency
 
 Based on this diagnosis, medical authorities prescribed a disastrous treatment. Rather than recommending rest, isolation, or bloodletting, physicians advised that dancers must be encouraged to continue dancing continuously day and night. They believed continuous exertion would burn off malignant heat and purge the disease naturally.
 
-Accepting this advice, the city council mobilized municipal resources to facilitate non-stop dancing:
-
-1. **Public Venues:** Authorities cleared and refurbished local guild halls to accommodate the dancers.
-2. **Wooden Stages:** The council erected a large wooden stage in the central horse market (*Roßmarkt*).
-3. **Musicians:** Municipal funds paid professional drummers and pipers to keep a relentless, constant beat.
-4. **Strongmen Stewards:** The city hired robust stewards to hold up exhausted dancers and keep them moving.
+Accepting this advice, the city council mobilized municipal resources to facilitate non-stop dancing. Authorities cleared and refurbished local guild halls to accommodate the crowds; erected a large wooden stage in the central horse market (*Roßmarkt*); paid professional drummers and pipers with municipal funds to keep a relentless, constant beat; and hired robust stewards to hold up exhausted dancers and keep them moving.
 
 This strategy backfired completely. By providing stages, continuous music, and official encouragement, the council created an environment of heightened sensory stimulation and social permission. Rather than exhausting the illness, the music and venues acted as a powerful psychological catalyst, drawing scores of vulnerable onlookers into the trance. Dancers pushed far past human endurance, collapsing from heat exhaustion and cardiovascular failure.
 
 ## The Cult of Saint Vitus and the Shrine Pilgrimage
 
-Realizing their policy had aggravated the epidemic, Strasbourg officials executed a complete reversal. Council members shut down the stages, dismissed the musicians, and instituted strict public bans:
-
-* All public music, piping, and drumming were prohibited throughout Strasbourg under threat of heavy fines.
-* Open-air dancing was banned, with exceptions permitted only for quiet private wedding celebrations.
-* Compulsive dancers were forbidden from congregating in public squares.
+Realizing their policy had aggravated the epidemic, Strasbourg officials executed a complete reversal. Council members shut down the stages, dismissed the musicians, and instituted strict public bans. All public music, piping, and drumming were prohibited throughout Strasbourg under threat of heavy fines; open-air dancing was banned, with exceptions permitted only for quiet private wedding celebrations; and compulsive dancers were strictly forbidden from congregating in public squares.
 
 The city council shifted from secular medicine to religious authority, appealing to Saint Vitus (*Sankt Veit*). In late medieval German folklore, Saint Vitus was a third-century Christian martyr believed to possess the power to strike sinners with a dancing curse or cure those who sought his mercy.
 
 To appease the saint, authorities organized a state-sponsored pilgrimage. Dancers were gathered by guards, placed into covered wagons, and transported to a shrine dedicated to Saint Vitus and later to a mountaintop chapel to seek divine healing.
 
-At the shrine, priests subjected dancers to a structured healing ritual:
-
-1. **Consecrated Footwear:** Dancers were fitted with small red shoes blessed by clergy.
-2. **Sacred Anointing:** Holy water was sprinkled over their feet, and holy oil was signed on their foreheads.
-3. **Altar Processions:** Victims were led around the altar of Saint Vitus while holding wax candles and small crosses.
-4. **Religious Intercession:** Priests celebrated solemn masses, praying for divine forgiveness.
+At the shrine, priests subjected dancers to a structured healing ritual. Dancers were fitted with small red shoes blessed by clergy; holy water was sprinkled over their feet, and holy oil was signed on their foreheads; victims were led around the altar of Saint Vitus while holding wax candles and small crosses; and priests celebrated solemn masses, praying for divine forgiveness.
 
 This religious intervention proved remarkably effective. Physical removal from crowded streets, combined with the cessation of music, church authority, and calming ritual, dissolved the psychological trance. Within days of completing the rituals at the shrine, most participants regained control over their bodies. By early September 1518, the dancing plague subsided fully, and Strasbourg returned to quiet normalcy.
 
@@ -82,10 +68,7 @@ However, historical analysis by John Waller, alongside evidence in Wikipedia and
 
 No contemporary 1518 primary source confirms any deaths or a daily death toll. Official city council minutes (*Ratsliste*), municipal chronicle entries written in 1518, cathedral records, and local physician notes record the mania, the hiring of musicians, and the pilgrimage to the shrine of Saint Vitus, but contain zero explicit references to fatalities on the dancing floors.
 
-The figure of fifteen deaths per day originates entirely from secondary chroniclers writing years or centuries later:
-
-* **Paracelsus (1526):** Writing eight years later, Paracelsus noted the physical severity of the dancing, but his work was a medical polemic rather than a statistical record.
-* **Seventeenth-Century Chroniclers:** Writers such as Daniel Specklin and Dom Calmet synthesized local oral traditions, repeating dramatic exaggerations that accumulated over generations.
+The figure of fifteen deaths per day originates entirely from secondary chroniclers writing years or centuries later. Writing eight years after the event in 1526, Paracelsus noted the physical severity of the dancing, but his work was a medical polemic rather than a statistical record. Later in the seventeenth century, chroniclers such as Daniel Specklin and Dom Calmet synthesized local oral traditions, repeating dramatic exaggerations that had accumulated over generations.
 
 While it is plausible that fragile or elderly participants suffered fatal heart attacks or strokes during weeks of intense dancing in summer heat, presenting fifteen deaths per day as confirmed fact is historically inaccurate. Primary sources verify no specific death count, leaving the true mortality rate historically unrecorded and unresolved.
 
@@ -99,11 +82,7 @@ The ergot hypothesis suggests the epidemic resulted from ingesting toxic fungi. 
 
 ### John Waller's Objections to Ergotism
 
-In his 2009 Lancet analysis and historical books, historian John Waller presented decisive objections discrediting the ergot theory:
-
-1. **Physiological Incompatibility:** Ergot alkaloids cause severe vasoconstriction, restricting blood flow to limbs and causing burning pain, gangrene, and loss of extremities. Victims of acute ergotism would be physically incapable of sustained, rhythmic, marathon dancing for days or weeks.
-2. **Symptom Profile:** Convulsive ergotism produces violent, painful contortions and seizures rather than coordinated dancing.
-3. **Epidemiological Patterns:** Food poisoning strikes randomly across households based on grain consumption. Ergotism cannot explain the structured social spread of the mania or its rapid resolution following religious rituals at the shrine of Saint Vitus.
+In his 2009 Lancet analysis and historical books, historian John Waller presented decisive objections discrediting the ergot theory. First, ergot alkaloids cause severe vasoconstriction, restricting blood flow to limbs and causing burning pain, gangrene, and loss of extremities, which would render victims of acute ergotism physically incapable of sustained, rhythmic, marathon dancing for days or weeks. Second, convulsive ergotism produces violent, painful contortions and seizures rather than coordinated dancing. Third, food poisoning strikes randomly across households based on grain consumption, so ergotism cannot explain the structured social spread of the mania or its rapid resolution following religious rituals at the shrine of Saint Vitus.
 
 ### The Mass Psychogenic Illness Model
 
